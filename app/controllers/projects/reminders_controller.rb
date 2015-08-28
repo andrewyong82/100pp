@@ -12,7 +12,7 @@ class Projects::RemindersController < ApplicationController
   end
 
   def destroy
-    project.delete_from_reminder_queue(current_user.id)
+    project.notifications.where(template_name: 'reminder', user_id: current_user.id).destroy_all
     redirect_to project_by_slug_path(project.permalink)
   end
 

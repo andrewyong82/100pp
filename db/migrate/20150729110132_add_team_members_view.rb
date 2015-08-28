@@ -75,6 +75,7 @@ class AddTeamMembersView < ActiveRecord::Migration
 
   def down
     execute <<-SQL
+      DROP ROLE anonymous NOLOGIN;
       drop view "1".team_members;
       drop view if exists "1".team_totals;
       drop index if exists user_totals_user_id_ix;

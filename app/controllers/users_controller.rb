@@ -101,11 +101,9 @@ class UsersController < ApplicationController
   end
 
   def update_reminders
-    if params[:user][:reminders]
-      params[:user][:reminders].keys.each do |project_id|
-        if params[:user][:reminders][:"#{project_id}"] == "false"
-          Project.find(project_id).delete_from_reminder_queue(@user.id)
-        end
+    @user.projects_in_reminder.each do |project|
+      unless params[:user][:reminders] && params[:user][:reminders].find {|p| p['project_id'] == project.id.to_s}
+        project.delete_from_reminder_queue(@user.id)
       end
     end
   end
