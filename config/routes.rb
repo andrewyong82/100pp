@@ -38,8 +38,8 @@ Catarse::Application.routes.draw do
     end
   end
   resources :auto_complete_projects, only: [:index]
+  resources :auto_complete_cities, only: [:index]
   resources :projects, only: [:index, :create, :update, :edit, :new, :show] do
-    resources :metrics, only: [:index], controller: "projects/metrics"
     resources :accounts, only: [:create, :update]
     resources :posts, controller: 'projects/posts', only: [ :index, :destroy ]
     resources :rewards, only: [ :index ] do
