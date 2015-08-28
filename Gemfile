@@ -156,3 +156,5 @@ gem 'sprockets'
 # FIXME: Not-anymore-on-development
 # Gems that are with 1 or more years on the vacuum
 gem 'weekdays'
+
+gem 'localeapp'

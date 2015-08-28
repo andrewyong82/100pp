@@ -336,6 +336,7 @@ GEM
     foreman (0.78.0)
       thor (~> 0.19.1)
     formatador (0.2.5)
+    gli (2.13.1)
     google-api-client (0.8.6)
       activesupport (>= 3.2)
       addressable (~> 2.3)
@@ -404,6 +405,13 @@ GEM
       launchy (~> 2.2)
     libxml-ruby (2.8.0)
     little-plugger (1.1.3)
+    localeapp (0.9.3)
+      gli
+      i18n
+      json
+      rack
+      rest-client
+      ya2yaml
     logging (2.0.0)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
@@ -663,6 +671,7 @@ GEM
     weekdays (1.0.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    ya2yaml (0.31)
     zonebie (0.5.1)
 
 PLATFORMS
@@ -706,6 +715,7 @@ DEPENDENCIES
   kaminari
   launchy
   letter_opener
+  localeapp
   mail_form
   mini_magick
   mixpanel-ruby
@@ -751,3 +761,6 @@ DEPENDENCIES
   video_info (>= 1.1.1)
   weekdays
   zonebie
+
+BUNDLED WITH
+   1.10.6

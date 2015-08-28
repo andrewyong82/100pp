@@ -1,0 +1,20 @@
+fr:
+  pages:
+    explore:
+      header_html: "See projects to fund &nbsp;"
+      success_follow: "You are now following this category and will receive weekly projects in %{name}"
+      success_unfollow: "You are no longer following the category %{name}"
+      follow: "follow"
+      unfollow: "unfollow"
+      following: "Followers"
+      categories: "Categories"
+      expiring: "Last stretch"
+      in_funding: "Funded"
+      near: "Near me"
+      quick_explore: "Quick search"
+      recent: "Recent"
+      recommended: "Recommended"
+      subtitle: "Explore projects you believe in"
+      successful: "Successful"
+      title: "Find amazing projects"
+
