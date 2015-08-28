@@ -140,14 +140,9 @@ RSpec.describe User, type: :model do
 
     context "when he has credits in the user_total" do
       before do
-        with_credit = create(:confirmed_contribution, project: failed_project)
-        with_credit.payments.first.update_attributes({gateway: 'MoIP'})
-
-        @user_with_credits = with_credit.user
+        @user_with_credits = create(:confirmed_contribution, project: failed_project).user
         failed_project.update_attributes state: 'failed'
-        payment = create(:confirmed_contribution, project: successful_project).payments.first
-        payment.update_attributes({gateway: 'MoIP'})
-
+        create(:confirmed_contribution, project: successful_project)
         UserTotal.refresh_view
       end
       it{ is_expected.to eq([@user_with_credits]) }
@@ -156,12 +151,9 @@ RSpec.describe User, type: :model do
     context "when he has credits in the user_total but is checked with zero credits" do
       before do
         b = create(:confirmed_contribution, value: 100, project: failed_project)
-        b.payments.first.update_attributes({gateway: 'MoIP'})
         failed_project.update_attributes state: 'failed'
         @u = b.user
-
         b = create(:confirmed_contribution, value: 100, project: successful_project)
-        b.payments.first.update_attributes({gateway: 'MoIP'})
         @u.update_attributes(zero_credits: true)
         UserTotal.refresh_view
       end
@@ -181,9 +173,7 @@ RSpec.describe User, type: :model do
 
     context "when he has not used credits in the last month" do
       before do
-        with_credits  = create(:confirmed_contribution, project: failed_project)
-        with_credits.payments.first.update_attributes({gateway: 'MoIP'})
-        @user_with_credits = with_credits.user
+        @user_with_credits = create(:confirmed_contribution, project: failed_project).user
         failed_project.update_attributes state: 'failed'
         UserTotal.refresh_view
       end
@@ -426,7 +416,7 @@ RSpec.describe User, type: :model do
         published_projects: user.published_projects.count,
         created: user.created_at,
         has_online_project: user.has_online_project?,
-        has_created_post: user.has_sent_notification?,
+        has_sent_notification: user.has_sent_notification?,
         last_login: user.last_sign_in_at,
         created_today: user.created_today?
       }.to_json)
