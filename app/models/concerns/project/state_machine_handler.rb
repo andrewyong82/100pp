@@ -16,7 +16,7 @@ module Project::StateMachineHandler
             self.user.errors.add_on_blank(attr)
           end
           self.user.errors.each {|error, error_message| self.errors.add('user.' + error.to_s, error_message)}
-          self.errors['rewards.size'] << "Deve haver pelo menos uma recompensa" if self.rewards.size == 0
+          self.errors['rewards.size'] << "There must at least be one reward" if self.rewards.size == 0
           self.errors['account.agency_size'] << "Agência deve ter pelo menos 4 dígitos" if self.account && self.account.agency.size < 4
         end
       end

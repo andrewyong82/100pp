@@ -14,11 +14,13 @@ en:
         order_desc: 'Goal desc'
         order_created_at: 'Submission date'
         last_modification: 'Last update'
+        menu: Projects
     financials:
       index:
         submit: 'Filter'
         by_state: 'By state'
         by_progress: By progress %
+        menu: Financials
     users:
       index:
         title: "Management contributions"
@@ -64,6 +66,7 @@ en:
         created_at: 'Created at'
         title: "Contributions management"
         menu: Contributions
+        new_menu: "Contributions - Beta"
         anonymous: Anonymous?
         confirmed: Confirmed?
         credits: "Used credits?"

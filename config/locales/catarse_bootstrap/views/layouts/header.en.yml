@@ -1,0 +1,22 @@
+---
+en:
+  layouts:
+    header:
+      blog: Blog
+      discover: Explore
+      faq: FAQ
+      help: Help
+      about: About
+      profile: My Profile
+      projects: My Campaigns
+      signin: Login
+      signup: Register
+      submit: Start your campaign
+      search: Search campaigns
+    login:
+      login_with_facebook: Login with your facebook account
+    user:
+      my_contributions: my support
+      logout: Sign Out
+      my_credits: Credit balance
+      refund_link: refund request

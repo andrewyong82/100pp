@@ -1,13 +1,322 @@
 en:
   activerecord:
+    models:
+      channel: Channel
+      project: Project
+      reward: Reward
+      contribution: Contribution
+      category: Category
+      bank_account: Bank Account
+    attributes:
+      project_account:
+        address_city: City
+        address_complement: Region
+        address_neighbourhood: Suburb
+        address_number: Number
+        address_state: State
+        address_street: Street
+        address_zip_code: Postcode
+        cpf: 'CPF / CNPJ '
+        state_inscription: 'Inscrição Estadual'
+        email: Email
+        full_name: "Full name"
+        phone_number: "Telephone"
+        bank: 'Bank'
+        bank_id: 'Bank ID'
+        owner_name: 'Name'
+        owner_document: 'CPF do titular da conta bancária'
+        agency: 'Agency'
+        agency_digit: 'Agency Digits'
+        account: 'Account Number'
+        account_digit: 'Account Digits'
+        account_type: 'Account Type'
+      bank_account:
+        input_bank_number: "Número do banco"
+        bank: 'Banco'
+        bank_id: 'Banco'
+        owner_name: 'Nome do titular'
+        owner_document: 'CPF / CNPJ do titular'
+        agency: 'Agência'
+        agency_digit: 'Dígito agência'
+        account: 'No. da conta'
+        account_digit: 'Dígito conta'
+      payment:
+        state: 'Status'
+      contribution:
+        payer_name: "Name"
+        payer_email: "Email"
+        payer_document: "CPF ou CNPJ"
+        country: "Country"
+        address_street: "Street"
+        address_number: "Number"
+        address_complement: "Complemento"
+        address_neighbourhood: "Bairro"
+        address_state: "Estado"
+        address_city: "Cidade"
+        address_zip_code: "CEP"
+        address_phone_number: "Telefone"
+        value: Valor do apoio
+        payer_name: "Full name"
+        payer_email: "Email"
+        country: "Country"
+        address_street: "Street"
+        address_number: "Number"
+        address_complement: "Complement"
+        address_neighbourhood: "Suburb"
+        address_state: "State"
+        address_city: "City"
+        address_zip_code: "Postcode"
+        address_phone_number: "Telephone"
+        reward: Reward
+        project: Project
+      reward:
+        deliver_at: Previsão de entrega
+      project:
+        channels: channels
+        category: Category
+        expires_at: time Frame
+        online_days: Deadline for collection
+        headline: Catchphrase
+        image_url: Image URL
+        name: Campaign Name
+        goal: Amount to be raised
+        about_html: Campaign Description
+        user_id: User ID
+        video_url: Video URL
+        permalink: Link your campaign
+        more_links: Tell links for people to know more about your campaign and its
+          history.
+        traffic_sources: How did you meet ProduceRun?
+        first_contributions: Who are the first people you will ask to support your
+          project?
+        budget: Campaign budget
+        uploaded_image: Design Image
+      user:
+        address_city: City
+        address_complement: Complement
+        address_neighbourhood: Neighborhood
+        address_number: Number
+        address_state: State
+        address_street: Address
+        address_zip_code: Zip code
+        cpf: EIN Number
+        cpf_hint: "(?)"
+        state_inscription: State Registration
+        current_password: Current Password
+        email: Email
+        full_name: Full Name / Company Name
+        bio: Mini Bio
+        name: nickname
+        newsletter: I want to receive news from ProduceRun
+        password: password
+        password_confirmation: Password confirmation
+        phone_number: phone
+        cpf_hint_title: Invoice will be issued for this document
+        id: ID
+        moip_login: Login MoIP
+        moip_login_hint: "( How to create an account )"
+        reset_password_token: Link to recreate password
+      channel:
+        ga_code: Código do Analytics
+        description: Descrição
+        how_it_works: Como funciona
+        image: Imagem da novidade
+        name: Nome
+        video_url: Vídeo
+      channel_partner:
+        name: 'Nome'
+        url: 'Site'
+        image: 'Imagem'
+      project_post:
+        title: 'Título'
+        comment: 'Texto'
+      channel_post:
+        title: 'Título'
+        body: 'Conteúdo'
+        visible: 'Publicar (Marque caso queira publicar essa nóvidade)'
     errors:
       models:
+        payment:
+          duplicate: "Your payment is already being processed"
+        contribution: "Error saving contribution"
+        bank_account:
+          attributes:
+            bank:
+              blank: 'Bank cannot be blank'
+            owner_name:
+              blank: 'Name cannot be blank'
+              invalid: 'Informe um nome com no mínimo 5 e no máximo 30 letras'
+            owner_document:
+              blank: 'CPF / CNPJ do titular não pode ficar em branco'
+              invalid: 'CPF / CNPJ inválido'
+            agency:
+              blank: 'Agência não pode ficar em branco'
+              invalid: 'Agência inválida'
+            account:
+              blank: 'No. da conta não pode ficar em branco'
+            account_digit:
+              blank: 'Dígito da conta não pode ficar em branco'
+              invalid: 'Digito da conta inválido'
+            agency_digit:
+              blank: 'Dígito da agência não pode ficar em branco'
+              invalid: 'Digito da agência inválido'
+        project_account:
+          attributes:
+            full_name:
+              blank: "Razão social do usuário não pode ficar em branco"
+            email:
+              blank: "Email do usuário não pode ficar em branco"
+            cpf:
+              blank: "CPF do usuário não pode ficar em branco"
+            address_street:
+              blank: "Endereço do usuário não pode ficar em branco"
+            address_number:
+              blank: "Número no endereço do usuário não pode ficar em branco"
+            address_city:
+              blank: "Cidade do usuário não pode ficar em branco"
+            address_state:
+              blank: "Estado do usuário não pode ficar em branco"
+            address_zip_code:
+              blank: "CEP do usuário não pode ficar em branco"
+            phone_number:
+              blank: "Telefone do usuário não pode ficar em branco"
+            bank:
+              blank: "Banco do usuário não pode ficar em branco"
+            agency:
+              blank: "Agência do usuário não pode ficar em branco"
+            agency_digit:
+              blank: "Dígito agência do usuário não pode ficar em branco"
+            account:
+              blank: "No. da conta do usuário não pode ficar em branco"
+            account_digit:
+              blank: "Dígito conta do usuário não pode ficar em branco"
+            owner_name:
+              blank: "Nome do titular do usuário não pode ficar em branco"
+            owner_document:
+              blank: "CPF / CNPJ do titular do usuário não pode ficar em branco"
+              not_same: "CPF/CNPJ dos dados cadastrais e bancários preenchidos não estão iguais."
+            account_type:
+              blank: "Tipo de conta não pode ficar em branco"
         project:
           attributes:
+            video_url:
+              blank: The video of the campaign can not be blank
+            budget:
+              blank: The campaign budget can not be blank
+            uploaded_image:
+              blank: This design can not be blank
+            name:
+              blank: The campaign name can not be blank
             permalink:
-              invalid: Invalid project URL
+              blank: The URL of the campaign can not be blank
+              invalid: The URL of the design is invalid
+              taken: This campaign URL already exists
+            category:
+              blank: You must choose a category for your campaign
+            goal:
+              blank: The value of the goal can not be blank
+              greater_than: The goal must be greater than 9
+              not_a_number: Collection target only accepts numbers
+            online_days:
+              blank: The period of storage can not be blank
+              greater_than: The deadline must be greater than 0 days
+              not_a_number: The deadline should be a number of days
+              less_than_or_equal_to: "The deadline must be 60 days or less"
+            about_html:
+              blank: The campaign description can not be blank
+            headline:
+              blank: The catchphrase of the campaign can not be blank
+              too_long: The catch phrase is too long.
         user:
           attributes:
             email:
-              not_found: "Email not found, please sign up"
-              taken: "Email has already been taken"
+              not_found: The email is not registered , check the address or register
+                yourself
+              taken: The email is already registered , login
+              invalid: This email address is invalid
+              blank: Email can not be blank
+            password:
+              too_short: The password you chose is too short
+              confirmation: The password and the password confirmation met are not
+                equal
+              blank: The password can not be blank
+            current_password:
+              invalid: Current password is not valid
+            reset_password_token:
+              invalid: expired .
+            name:
+              blank: User name can not be blank
+            about_html:
+              blank: About you can not be blank
+            uploaded_image:
+              blank: User image can not be blank
+  project:
+    update:
+      success: The information has been updated
+      failed: The information was not saved , verify that all fields are filled in
+        correctly
+    delete:
+      posts: Deleted successfully Novelty
+    video_regex_validation: Youtube or Vimeo only URLs are accepted
+  payment:
+    state:
+      pending: "Aguardando confirmação do pagamento"
+      paid: "Confirmado em %{date}"
+      refunded: "Reembolsado em %{date}"
+      pending_refund: "Reembolso solicitado em %{date}"
+      refused: "Pagamento recusado em %{date}"
+      chargeback: "Contestado"
+  contribution:
+    payment_details:
+      desconhecido: ""
+      creditos: "Créditos"
+      boleto_bancario: "Boleto Bancário"
+      cartao_de_credito: "Cartão de crédito"
+      debito_bancario: "Débito bancário"
+      cartao_debito: "Cartão de débito"
+      transferencia_bancaria: "Transferência bancária"
+      carteira_mo_ip: "Carteira MoIP"
+      financiamento_bancario: "Financiamento Bancário"
+    project_should_be_online: Você não pode apoiar um projeto que não está no ar
+    reward_must_be_from_project: deve ser do mesmo projeto
+    should_not_contribute_if_maximum_contributions_been_reached: já atingiu seu número
+      máximo de apoiadores
+    value_must_be_at_least_rewards_value: deve ser pelo menos %{minimum_value} para
+      a recompensa selecionada
+  contribution_report_to_project_owner:
+    reward_description: Descrição da recompensa
+    deliver_at: Data de entrega da recompensa
+    confirmed_at: Data da confirmação do pagamento
+    contribution_value: Valor do apoio
+    service_fee: Taxa do Catarse
+    user_name: Nome do apoiador
+    user_email: Email perfil Catarse
+    cpf: Cpf do apoiador
+    payer_email: Email do meio de pagamento
+    gateway: Meio de pagamento
+    street: Rua
+    address_number: Número
+    complement: Complemento
+    neighbourhood: Bairro
+    city: Cidade
+    address_state: Estado
+    zip_code: CEP
+    anonymous: Anônimo
+  user:
+    no_name: nameless
+    contributions_text:
+      many: Supported this and more other campaigns %{total}
+      one: Only supported this campaign so far
+      two: Supported this and 1 other campaigns
+  channels_subscribers:
+    created: 'Agora você segue o %{channel}'
+    deleted: 'Você deixou de seguir o %{channel}'
+  channels:
+    edit: Atualizar canal
+    image_hint: Tamanho máximo (600x121px)
+    subscribed: "+ %{count} seguidores"
+    back_to_news: '← Voltar para as novidades'
+    follow: "Siga o canal"
+    following: "Seguindo"
+    unfollow: "Deixar de seguir"
+    subscribed: "%{count} seguindo o canal"

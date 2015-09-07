@@ -156,3 +156,6 @@ gem 'sprockets'
 # FIXME: Not-anymore-on-development
 # Gems that are with 1 or more years on the vacuum
 gem 'weekdays'
+
+gem 'i18n-tasks', '~> 0.8.7'
+gem 'axlsx', '~> 2.0'
