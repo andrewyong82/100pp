@@ -340,8 +340,8 @@ en:
       help: Help
       signup: "Sign up"
       signin: Login
-      discover: Discover
-      submit: Send your project
+      discover: Browse
+      submit: Start a project
       profile: "My profile"
       account: "My account"
     user:

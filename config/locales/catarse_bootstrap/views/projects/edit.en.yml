@@ -200,7 +200,7 @@ en:
       submit: Save
       card_label: "Project Card"
     dashboard_video:
-      submit: Salvar
+      submit: Save
       card_label: "Video"
       video_url: "Project Video"
       video_url_hint: "Important: Video can be submitted later - but for projects raising more than RM 5000 a video will be required."

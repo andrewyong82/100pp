@@ -124,16 +124,16 @@ en:
         name: Nome
         video_url: Vídeo
       channel_partner:
-        name: 'Nome'
+        name: 'Name'
         url: 'Site'
-        image: 'Imagem'
+        image: 'Image'
       project_post:
-        title: 'Título'
-        comment: 'Texto'
+        title: 'Title'
+        comment: 'Text'
       channel_post:
-        title: 'Título'
-        body: 'Conteúdo'
-        visible: 'Publicar (Marque caso queira publicar essa nóvidade)'
+        title: 'Title'
+        body: 'Body'
+        visible: 'Post (Check if you want to publish this news )'
     errors:
       models:
         payment:

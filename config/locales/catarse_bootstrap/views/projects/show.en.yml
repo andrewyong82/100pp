@@ -42,19 +42,19 @@ en:
     project_about:
       embed: "< embed >"
       embed_title: Embed this campaign on your site
-      active_btn: Remember me
-      deactive_btn: active reminder
+      active_btn: " Remind me"
+      deactive_btn: " Reminder active"
     show:
       menu:
-        panel_html: ''
-        about: about
+        panel_html: '&nbsp;&nbsp;Control Panel'
+        about: About
         add_reward: Add reward
-        comments: reviews
-        contributions: supports
-        metrics: metrics
-        edit: edition
-        reports: reports
-        posts: news
+        comments: Comments
+        contributions: Contributions
+        metrics: Metrics
+        edit: Edit
+        reports: Reports
+        posts: News
     project_main:
       twitter_profile: Twitter Profile 
       facebook_profile: Facebook Profile
@@ -83,14 +83,14 @@ en:
         without_city: A campaign
         with_city: A %{category_name} %{author} campaign by in %{city}
       menu:
-        about: about
+        about: About
         add_reward: Add reward
-        comments: reviews
-        contributions: supports
-        metrics: metrics
-        edit: edition
-        reports: reports
-        posts: news
+        comments: Comments
+        contributions: Contributions
+        metrics: Metrics
+        edit: Edit
+        reports: Reports
+        posts: News
       no_rewards_warning: Do not travel !
       no_rewards_warning_title: Create here your rewards
       contribution_states:

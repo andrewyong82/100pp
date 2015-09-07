@@ -11,9 +11,9 @@ en:
 #      available: "Quantidade disponível"
 #      submit: "Salvar"
     index:
-      select_reward: Select this price option
+      select_reward: Select this reward
       display_remaining: "%{remaining} of %{maximum} available"
-      dont_want: I do not want price option
+      dont_want: I do not want a reward
       or_more: "or more"
       limited: Limited
       sold_out: Sold out
@@ -21,6 +21,6 @@ en:
         one: 1 support in term of confirmation.
         other: "%{count} support in term of confirmation."
       edit_reward: Edit reward
-      new_reward: Sign price option
+      new_reward: New reward
       reward_deliver_time: "<b>Estimated delivery: </b> %{estimate}"
       reward_title: "%{minimum}"
