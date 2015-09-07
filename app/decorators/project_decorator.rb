@@ -10,12 +10,22 @@ class ProjectDecorator < Draper::Decorator
     "#{source.state}_warning"
   end
 
-  def time_to_go
-    time_and_unit = nil
-    %w(day hour minute second).detect do |unit|
-      time_and_unit = time_to_go_for unit
+  def show_city
+    if source.city.present?
+      source.city.show_name
+    elsif source.account && source.account.address_city.present? && source.account.address_state.present?
+      "#{source.account.address_city.capitalize}, #{source.account.address_state} "
+    elsif source.user.address_city.present? && source.user.address_state.present?
+      "#{source.user.address_city.capitalize}, #{source.user.address_state} "
     end
-    time_and_unit || time_and_unit_attributes(0, 'second')
+  end
+
+  def time_to_go
+    time_json = source.pluck_from_database("remaining_time_json")
+    {
+      time: time_json.try(:[], 'total'),
+      unit: pluralize_without_number(time_json.try(:[], 'total'), I18n.t("datetime.prompts.#{time_json.try(:[], 'unit')}").downcase)
+    }
   end
 
   def remaining_days
@@ -146,19 +156,5 @@ class ProjectDecorator < Draper::Decorator
   rescue
     nil
   end
-
-  def time_to_go_for(unit)
-    time = 1.send(unit)
-
-    if source.expires_at.to_i >= time.from_now.to_i
-      time = ((source.expires_at - Time.current).abs / time).floor
-      time_and_unit_attributes time, unit
-    end
-  end
-
-  def time_and_unit_attributes(time, unit)
-    { time: time, unit: pluralize_without_number(time, I18n.t("datetime.prompts.#{unit}").downcase) }
-  end
-
 end
 
