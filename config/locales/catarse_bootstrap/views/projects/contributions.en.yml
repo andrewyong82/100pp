@@ -44,7 +44,7 @@ en:
         installment_with_tax: without interest
         transaction_error: Transaction refused, please double check your data or contact
           the bank / card issuer for more information.
-        pagarme_warning_html: The ProduceRun is in testing phase of a new means of
+        pagarme_warning_html: 100% Project is in testing phase of a new means of
           payment that facilitate financial support and the possible repayment of
           the amounts to supporters.
         reward_sold_out: This reward is exhausted.

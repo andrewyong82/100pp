@@ -124,6 +124,9 @@ group :development do
   # Uncomment only for optimization, should be commented on master branch
   # gem 'rack-mini-profiler'
   # gem 'ruby-prof'
+
+  #gem 'i18n-tasks', '~> 0.8.7'
+  #gem 'axlsx', '~> 2.0'
 end
 
 group :test, :development do
@@ -156,6 +159,3 @@ gem 'sprockets'
 # FIXME: Not-anymore-on-development
 # Gems that are with 1 or more years on the vacuum
 gem 'weekdays'
-
-gem 'i18n-tasks', '~> 0.8.7'
-gem 'axlsx', '~> 2.0'

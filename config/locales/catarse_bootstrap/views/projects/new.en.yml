@@ -11,7 +11,7 @@ en:
           criteria: Selection Criteria
           suport_central: Support Center
           support_contact: Contact us
-          how_it_works: As the ProduceRun work?
+          how_it_works: How does 100% Project work?
           money: How will I get the money ?
           selection: How are campaigns selected ?
           all_or_nothing: Why All or Nothing ?
@@ -19,10 +19,10 @@ en:
         blocks:
           first:
             title: You Welcome!
-            description: Complete the information below to start the draft of your
+            description: Complete the information below to begin your
               project.
         info:
-          permalink: https://producerun.com/
+          permalink: 100percentproject.org/
           goal: "$"
           online_days: days
         submit: Save and Continue

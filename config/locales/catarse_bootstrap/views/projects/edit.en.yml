@@ -79,8 +79,8 @@ en:
         transparent_html: Keep your buyers informed and happy to have a long time customer.
         header2: 'Be sure to read:'
       rejected:
-        title: "%{name} unfortunately was not this time."
-        subtitle_html: You sent your campaign for analysis of ProduceRun and we understand
+        title: "%{name} unfortunately was not approved this time."
+        subtitle_html: You sent your campaign for analysis of 100% Project and we understand
           that it is not according to the site profile.
       online:
         title: "%{name}, your campaign is published online!"
@@ -105,15 +105,15 @@ en:
         title: "%{name}, your campaign has been approved!"
         subtitle_html: To publish this campaign online, fill
           in the required data in tab %{link1}. It is important to know that we charge
-          the rate of 10% of the total amount collected only for successful ProduceRun Campaigns.
+          the rate of 10% of the total amount collected only for successful 100% Project Campaigns.
       in_analysis:
         title: "%{name}, you sent your campaign for analysis. You will receive our response
           within 4 working days."
         subtitle_html: Thank you very much!
     dashboard_analysis_success:
-      title: "%{name}, seu projeto foi enviado para análise!"
-      subtitle: "Você receberá nossa resposta em até 4 dias úteis no email:"
-      next_steps: "Enquanto espera a sua resposta, você pode continuar editando o seu projeto! Recomendamos também que você vá coletando feedback com as pessoas próximas e planejando como será a sua campanha."
+      title: "%{name}, your project has been sent to our team for review!"
+      subtitle: "You will receive our response at your email within 4 working days"
+      next_steps: "In the meantime, you can continue editing your project! We also recommend that you go collect feedback from people nearby and plan this campaign."
     dashboard_nav:
       leave_link_html: "&nbsp; Exit control panel"
       start_tab: Useful info
@@ -203,8 +203,8 @@ en:
       submit: Salvar
       card_label: "Video"
       video_url: "Project Video"
-      video_url_hint: "Importante: Qualquer projeto pode ser enviado sem o vídeo para análise do atendimento do Catarse . O vídeo pode ser analisado posteriormente. Lembrando que ele só é obrigatório para projetos com metas acima de 5 mil reais."
-      video_url_subtitle: "Link do Vimeo ou Youtube"
+      video_url_hint: "Important: Video can be submitted later - but for projects raising more than RM 5000 a video will be required."
+      video_url_subtitle: "Link to Vimeo or Youtube"
     dashboard_basics:
       project_start: Fill out the information below
       project_start_subtitle: The data in this section may not be modified

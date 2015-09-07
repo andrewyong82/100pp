@@ -4,18 +4,18 @@ en:
     collections:
       project:
         traffic_sources:
-          one: I've run a ProduceRun campaign before.
-          two: someone who has run a campaign in ProduceRun told me
+          one: I've run a 100% Project campaign before.
+          two: someone who has run a campaign in 100% Project told me
           three: A friend / colleague / professional contact referred me.
           four: from a campaign that was picking up on the platform
           five: article in a blog
           six: Did you see a story in the press ( news portal on the Internet, TV, newspaper,
             magazine? )
           seven: Heard about it in a class / course / lecture / event.
-          eight: Manage My Market Referred me.
-          nine: My Farmers Market Organisers referred me.
-          ten: I did a search on the internet and found ProduceRun.
-          other: 
+          eight: Teach for Malaysia referred me.
+          nine: MaGIC referred me.
+          ten: I did a search on the internet and found 100% Project.
+          other:
     validation_texts:
       reward:
         minimum_value: Enter a minimum value greater than or equal to 0
@@ -48,11 +48,11 @@ en:
       project:
         category: Select a category
         select: Select an option
-        traffic_sources: How did you meet ProduceRun?
+        traffic_sources: How did you know about 100% Project?
     hints:
       project:
         select: Select an option
-        traffic_sources: How did you meet ProduceRun?
+        traffic_sources: How did you know about 100% Project?
         name: Give a name that people will easily remember.
         permalink: Prefer something simple, straightforward, and well identifies your
           project.
@@ -60,7 +60,7 @@ en:
         goal: Plan a consistent goal with your campaign proposes.
         online_days: You can choose between 1 and 60 days for your campaign.
         video_url: Link your video on Vimeo or Youtube.<br/>
-        about_html: Share with public what makes your farm the best. Share your farm practises. What's special about your goods and why they should buy from you?
+        about_html: Share with public what makes your classroom special. Share your teaching practises. What's special about your classroom and why they should support you?
         headline: Phrase in the campaign card to catch supporters attention.
         uploaded_image: This image will be used as the thumbnail of your campaign (
           PNG, JPG size 600 x 340 )

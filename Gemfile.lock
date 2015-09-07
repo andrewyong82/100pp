@@ -39,38 +39,36 @@ GEM
   remote: https://rubygems.org/
   specs:
     CFPropertyList (2.3.1)
-    actionmailer (4.1.13)
-      actionpack (= 4.1.13)
-      actionview (= 4.1.13)
+    actionmailer (4.1.12)
+      actionpack (= 4.1.12)
+      actionview (= 4.1.12)
       mail (~> 2.5, >= 2.5.4)
-    actionpack (4.1.13)
-      actionview (= 4.1.13)
-      activesupport (= 4.1.13)
+    actionpack (4.1.12)
+      actionview (= 4.1.12)
+      activesupport (= 4.1.12)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    actionview (4.1.13)
-      activesupport (= 4.1.13)
+    actionview (4.1.12)
+      activesupport (= 4.1.12)
       builder (~> 3.1)
       erubis (~> 2.7.0)
     active_model_serializers (0.8.0)
       activemodel (>= 3.0)
-    activemodel (4.1.13)
-      activesupport (= 4.1.13)
+    activemodel (4.1.12)
+      activesupport (= 4.1.12)
       builder (~> 3.1)
-    activerecord (4.1.13)
-      activemodel (= 4.1.13)
-      activesupport (= 4.1.13)
+    activerecord (4.1.12)
+      activemodel (= 4.1.12)
+      activesupport (= 4.1.12)
       arel (~> 5.0.0)
-    activesupport (4.1.13)
+    activesupport (4.1.12)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    ansi (1.5.0)
     arel (5.0.1.20140414130214)
-    ast (2.1.0)
     auto_html (1.6.4)
       redcarpet (~> 3.1)
       rinku (~> 1.5.0)
@@ -78,10 +76,6 @@ GEM
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    axlsx (2.0.1)
-      htmlentities (~> 4.3.1)
-      nokogiri (>= 1.4.1)
-      rubyzip (~> 1.0.0)
     bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -89,7 +83,7 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    browser (1.0.1)
+    browser (0.9.0)
     builder (3.2.2)
     capybara (2.2.1)
       mime-types (>= 1.16)
@@ -118,7 +112,7 @@ GEM
       weekdays (>= 1.0.2)
     catarse_settings_db (0.1.1)
       rails (>= 4.1.1)
-    celluloid (0.17.1.2)
+    celluloid (0.17.0)
       bundler
       celluloid-essentials
       celluloid-extras
@@ -128,38 +122,38 @@ GEM
       dotenv
       nenv
       rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-essentials (0.20.2.1)
+      timers (~> 4.0.0)
+    celluloid-essentials (0.20.1.1)
       bundler
       dotenv
       nenv
       rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-extras (0.20.1)
+      timers (~> 4.0.0)
+    celluloid-extras (0.20.0)
       bundler
       dotenv
       nenv
       rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-fsm (0.20.1)
+      timers (~> 4.0.0)
+    celluloid-fsm (0.20.0)
       bundler
       dotenv
       nenv
       rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-pool (0.20.1)
+      timers (~> 4.0.0)
+    celluloid-pool (0.20.0)
       bundler
       dotenv
       nenv
       rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    celluloid-supervision (0.20.1.1)
+      timers (~> 4.0.0)
+    celluloid-supervision (0.20.0)
       bundler
       dotenv
       nenv
       rspec-logsplit (>= 0.1.2)
-      timers (>= 4.1.1)
-    chartkick (1.4.0)
+      timers (~> 4.0.0)
+    chartkick (1.3.2)
     childprocess (0.5.6)
       ffi (~> 1.0, >= 1.0.11)
     choice (0.2.0)
@@ -186,14 +180,14 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    compass-rails (2.0.5)
+    compass-rails (2.0.4)
       compass (~> 1.0.0)
-      sass-rails (< 5.1)
+      sass-rails (<= 5.0.1)
       sprockets (< 2.13)
     connection_pool (2.2.0)
     crack (0.1.8)
     daemons (1.2.3)
-    database_cleaner (1.5.0)
+    database_cleaner (1.4.1)
     dbhero (1.1.8)
       google_drive
       has_scope
@@ -202,7 +196,7 @@ GEM
       sass-rails
       slim-rails
     debug_inspector (0.0.2)
-    devise (3.5.2)
+    devise (3.5.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -218,18 +212,14 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
-    easy_translate (0.5.0)
-      json
-      thread
-      thread_safe
     enumerate_it (1.2.8)
       activesupport (>= 3.0.0)
     erubis (2.7.0)
     ethon (0.7.4)
       ffi (>= 1.3.0)
-    eventmachine (1.0.8)
+    eventmachine (1.0.7)
     excon (0.45.4)
-    execjs (2.6.0)
+    execjs (2.5.2)
     extlib (0.9.16)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -249,13 +239,12 @@ GEM
     ffi (1.9.10)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
-    fog (1.34.0)
+    fog (1.32.0)
       fog-atmos
       fog-aws (>= 0.6.0)
       fog-brightbox (~> 0.4)
       fog-core (~> 1.32)
-      fog-dynect (~> 0.0.2)
-      fog-ecloud (~> 0.1)
+      fog-ecloud (= 0.1.1)
       fog-google (>= 0.0.2)
       fog-json
       fog-local
@@ -276,27 +265,23 @@ GEM
     fog-atmos (0.1.0)
       fog-core
       fog-xml
-    fog-aws (0.7.6)
+    fog-aws (0.7.4)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
-    fog-brightbox (0.9.0)
+    fog-brightbox (0.8.0)
       fog-core (~> 1.22)
       fog-json
       inflecto (~> 0.0.2)
-    fog-core (1.32.1)
+    fog-core (1.32.0)
       builder
       excon (~> 0.45)
       formatador (~> 0.2)
       mime-types
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
-    fog-dynect (0.0.2)
-      fog-core
-      fog-json
-      fog-xml
-    fog-ecloud (0.3.0)
+    fog-ecloud (0.1.1)
       fog-core
       fog-xml
     fog-google (0.0.7)
@@ -324,7 +309,7 @@ GEM
       fog-core
       fog-json
       fog-xml
-    fog-sakuracloud (1.1.0)
+    fog-sakuracloud (1.0.1)
       fog-core
       fog-json
     fog-serverlove (0.1.2)
@@ -367,12 +352,12 @@ GEM
       nokogiri (>= 1.4.4, != 1.5.2, != 1.5.1)
       oauth (>= 0.3.6)
       oauth2 (>= 0.5.0)
-    googleauth (0.4.2)
+    googleauth (0.4.1)
       faraday (~> 0.9)
       jwt (~> 1.4)
       logging (~> 2.0)
       memoist (~> 0.12)
-      multi_json (~> 1.11)
+      multi_json (= 1.11)
       signet (~> 0.6)
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
@@ -381,7 +366,6 @@ GEM
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     high_voltage (2.4.0)
-    highline (1.7.3)
     hike (1.2.3)
     hitimes (1.2.2)
     htmlentities (4.3.4)
@@ -392,16 +376,8 @@ GEM
       crack (= 0.1.8)
     httpclient (2.6.0.1)
     i18n (0.7.0)
-    i18n-tasks (0.8.7)
-      activesupport (>= 2.3.18)
-      easy_translate (>= 0.5.0)
-      erubis
-      highline (>= 1.7.3)
-      i18n
-      term-ansicolor (>= 1.3.2)
-      terminal-table (>= 1.5.1)
-    i18n_alchemy (0.2.2)
-      activesupport (>= 3.2.0, < 5.0.0)
+    i18n_alchemy (0.2.1)
+      activesupport (>= 3.2.0, < 4.2)
       i18n (~> 0.6)
     inflecto (0.0.2)
     inherited_resources (1.6.0)
@@ -410,9 +386,8 @@ GEM
       railties (>= 3.2, < 5)
       responders
     ipaddress (0.8.0)
-    iso8601 (0.8.6)
     jasmine-core (2.3.4)
-    jasmine-rails (0.11.0)
+    jasmine-rails (0.10.8)
       jasmine-core (>= 1.3, < 3.0)
       phantomjs (>= 1.9)
       railties (>= 3.2.0)
@@ -422,17 +397,17 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.10.0)
+    kgio (2.9.3)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.4.1)
       launchy (~> 2.2)
     libxml-ruby (2.8.0)
-    little-plugger (1.1.4)
+    little-plugger (1.1.3)
     logging (2.0.0)
       little-plugger (~> 1.1)
       multi_json (~> 1.10)
-    loofah (2.0.3)
+    loofah (2.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
@@ -445,13 +420,13 @@ GEM
     memoist (0.12.0)
     method_source (0.8.2)
     mime-types (2.6.1)
-    mini_magick (4.3.2)
+    mini_magick (4.2.7)
     mini_portile (0.6.2)
-    minitest (5.8.0)
+    minitest (5.7.0)
     mixpanel-ruby (2.2.0)
     mixpanel_client (4.1.2)
       typhoeus
-    multi_json (1.11.2)
+    multi_json (1.11.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     nenv (0.2.0)
@@ -459,7 +434,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
     netrc (0.10.3)
-    newrelic_rpm (3.13.0.299)
+    newrelic_rpm (3.12.1.298)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     oauth (0.4.7)
@@ -469,9 +444,6 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
-    oga (1.3.0)
-      ast
-      ruby-ll (~> 2.1)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -480,13 +452,12 @@ GEM
     omniauth-oauth2 (1.3.1)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
     pagarme (1.10.0)
       multi_json
       rest-client
     pg (0.17.1)
-    pg_search (1.0.5)
+    pg_search (1.0.4)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
@@ -512,17 +483,17 @@ GEM
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
-    rails (4.1.13)
-      actionmailer (= 4.1.13)
-      actionpack (= 4.1.13)
-      actionview (= 4.1.13)
-      activemodel (= 4.1.13)
-      activerecord (= 4.1.13)
-      activesupport (= 4.1.13)
+    rails (4.1.12)
+      actionmailer (= 4.1.12)
+      actionpack (= 4.1.12)
+      actionview (= 4.1.12)
+      activemodel (= 4.1.12)
+      activerecord (= 4.1.12)
+      activesupport (= 4.1.12)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.1.13)
+      railties (= 4.1.12)
       sprockets-rails (~> 2.0)
-    rails-erd (1.4.2)
+    rails-erd (1.4.1)
       activerecord (>= 3.2)
       activesupport (>= 3.2)
       choice (~> 0.2.0)
@@ -533,17 +504,17 @@ GEM
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.4)
-    rails_stdout_logging (0.0.4)
-    railties (4.1.13)
-      actionpack (= 4.1.13)
-      activesupport (= 4.1.13)
+    rails_stdout_logging (0.0.3)
+    railties (4.1.12)
+      actionpack (= 4.1.12)
+      activesupport (= 4.1.12)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     raindrops (0.15.0)
     rake (10.4.2)
     ranked-model (0.4.0)
       activerecord (>= 3.1.12)
-    rb-fsevent (0.9.6)
+    rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rb-readline (0.5.3)
@@ -586,18 +557,15 @@ GEM
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
     ruby-graphviz (1.2.2)
-    ruby-ll (2.1.2)
-      ansi
-      ast
     ruby-ole (1.2.11.8)
-    rubyzip (1.0.0)
-    sass (3.4.18)
-    sass-rails (5.0.4)
+    rubyzip (1.1.7)
+    sass (3.4.16)
+    sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
+      tilt (~> 1.1)
     sax-machine (1.3.2)
     schema_plus (1.8.9)
       activerecord (>= 3.2, <= 4.2.0)
@@ -625,7 +593,7 @@ GEM
       faraday (~> 0.9)
       jwt (~> 1.5)
       multi_json (~> 1.10)
-    simple_form (3.1.1)
+    simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     slim (3.0.6)
@@ -640,7 +608,7 @@ GEM
     slop (3.6.0)
     spectator-validates_email (0.2.0)
       activemodel (>= 3.0.0)
-    spreadsheet (1.0.5)
+    spreadsheet (1.0.4)
       ruby-ole (>= 1.0)
     sprockets (2.12.4)
       hike (~> 1.2)
@@ -653,27 +621,22 @@ GEM
       sprockets (>= 2.8, < 4.0)
     state_machine (1.2.0)
     temple (0.7.6)
-    term-ansicolor (1.3.2)
-      tins (~> 1.0)
-    terminal-table (1.5.2)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
       rack (~> 1.0)
     thor (0.19.1)
-    thread (0.2.2)
     thread_safe (0.3.5)
     tilt (1.4.1)
-    timers (4.1.1)
+    timers (4.0.1)
       hitimes
-    tins (1.6.0)
     to_xls (1.5.3)
       spreadsheet
-    typhoeus (0.7.3)
+    typhoeus (0.7.2)
       ethon (>= 0.7.4)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.2)
+    uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unf (0.1.4)
@@ -687,13 +650,10 @@ GEM
       rails (>= 4.0.0)
       sidekiq
     valuable (0.9.9)
-    video_info (2.5.0)
+    video_info (2.4.2)
       addressable
       htmlentities
-      iso8601
-      multi_json (~> 1.11)
-      oga
-      open_uri_redirections
+      multi_json
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.2.2)
@@ -710,7 +670,6 @@ PLATFORMS
 
 DEPENDENCIES
   auto_html
-  axlsx (~> 2.0)
   best_in_place!
   better_errors
   binding_of_caller
@@ -741,7 +700,6 @@ DEPENDENCIES
   http_accept_language
   httparty (~> 0.6.1)
   httpclient (>= 2.2.5)
-  i18n-tasks (~> 0.8.7)
   i18n_alchemy
   inherited_resources
   jasmine-rails

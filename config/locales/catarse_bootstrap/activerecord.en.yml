@@ -86,7 +86,7 @@ en:
         permalink: Link your campaign
         more_links: Tell links for people to know more about your campaign and its
           history.
-        traffic_sources: How did you meet ProduceRun?
+        traffic_sources: How did you know of 100% Project?
         first_contributions: Who are the first people you will ask to support your
           project?
         budget: Campaign budget
@@ -107,7 +107,7 @@ en:
         full_name: Full Name / Company Name
         bio: Mini Bio
         name: nickname
-        newsletter: I want to receive news from ProduceRun
+        newsletter: I want to receive news from 100% Project
         password: password
         password_confirmation: Password confirmation
         phone_number: phone
@@ -252,12 +252,12 @@ en:
               blank: User image can not be blank
   project:
     update:
-      success: The information has been updated
-      failed: The information was not saved , verify that all fields are filled in
+      success: Your project has been updated
+      failed: Your project was not saved , verify that all fields are filled in
         correctly
     delete:
-      posts: Deleted successfully Novelty
-    video_regex_validation: Youtube or Vimeo only URLs are accepted
+      posts: Deleted successfully
+    video_regex_validation: Only Youtube or Vimeo URLs are accepted
   payment:
     state:
       pending: "Aguardando confirmação do pagamento"

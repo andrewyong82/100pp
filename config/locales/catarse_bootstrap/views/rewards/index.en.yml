@@ -12,7 +12,7 @@ en:
 #      submit: "Salvar"
     index:
       select_reward: Select this price option
-      display_remaining: "%{remaining} %{maximum} of available"
+      display_remaining: "%{remaining} of %{maximum} available"
       dont_want: I do not want price option
       or_more: "or more"
       limited: Limited
