@@ -18,37 +18,27 @@ RSpec.describe ProjectDecorator do
 
 
   describe "#time_to_go" do
-    let(:project){ create(:project, state: 'online') }
+    let(:project){ build(:project) }
+    let(:expires_at){ Time.zone.parse("23:00:00") }
     subject{ project.time_to_go }
     before do
       I18n.locale = :pt
+      allow(project).to receive(:expires_at).and_return(expires_at)
     end
 
     context "when there is more than 1 day to go but less than 2" do
-      before do
-        project.update_attributes({
-          expires_at:  Time.zone.now + 25.hours
-        })
-      end
+      let(:expires_at){ Time.zone.now + 25.hours }
       it{ is_expected.to eq({time:1, unit:"dia"}) }
     end
 
     context "when there is less than 1 day to go" do
-      before do
-        project.update_attributes({
-          expires_at:  Time.zone.now + 13.hours
-        })
-      end
-      it{ is_expected.to eq({time:13, unit:"horas"}) }
+      let(:expires_at){ Time.zone.now + 13.hours }
+      it{ is_expected.to eq({time:12, unit:"horas"}) }
     end
 
     context "when there is less than 1 hour to go" do
-      before do
-        project.update_attributes({
-          expires_at:  Time.zone.now + 59.minutes
-        })
-      end
-      it{ is_expected.to eq({time:59, unit:"minutos"}) }
+      let(:expires_at){ Time.zone.now + 59.minutes }
+      it{ is_expected.to eq({time:58, unit:"minutos"}) }
     end
   end
 

@@ -24,7 +24,6 @@ class Project < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :category
-  belongs_to :city
   has_one :project_total
   has_one :account, class_name: "ProjectAccount", inverse_of: :project
   has_many :rewards
@@ -81,8 +80,8 @@ class Project < ActiveRecord::Base
   scope :to_finish, ->{ expired.with_states(['online', 'waiting_funds']) }
   scope :visible, -> { without_states(['draft', 'rejected', 'deleted', 'in_analysis', 'approved']) }
   scope :financial, -> { with_states(['online', 'successful', 'waiting_funds']).where(expires_at: 15.days.ago.. Time.current) }
-  scope :expired, -> { where("projects.is_expired") }
-  scope :not_expired, -> { where("not projects.is_expired") }
+  scope :expired, -> { where("expires_at < ?", Time.current) }
+  scope :not_expired, -> { where("expires_at >= ?", Time.current) }
   scope :expiring, -> { not_expired.where(expires_at: Time.current.. 2.weeks.from_now) }
   scope :not_expiring, -> { not_expired.where.not(expires_at: Time.current.. 2.weeks.from_now) }
   scope :recent, -> { where(online_date: 5.days.ago.. Time.current) }
@@ -193,7 +192,7 @@ class Project < ActiveRecord::Base
   end
 
   def expired?
-    expires_at && pluck_from_database("is_expired")
+    expires_at && expires_at < Time.current
   end
 
   def in_time_to_wait?
@@ -233,7 +232,7 @@ class Project < ActiveRecord::Base
   end
 
   def published?
-    pluck_from_database("is_published")
+    PUBLISHED_STATES.include? state
   end
 
   def expires_fragments *fragments
@@ -264,7 +263,4 @@ class Project < ActiveRecord::Base
     to_analytics.to_json
   end
 
-  def pluck_from_database attribute
-    Project.where(id: self.id).pluck("projects.#{attribute}").first
-  end
 end
