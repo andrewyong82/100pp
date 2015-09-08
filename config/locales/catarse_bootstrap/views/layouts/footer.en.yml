@@ -1,0 +1,33 @@
+---
+en:
+  layouts:
+    footer:
+      links:
+        jobs: Work with us
+        blog: Blog
+        contact: Contact
+        discover: Discover campaigns
+        start: How It Works
+        expiring: Ending soon
+        facebook: Facebook
+        faq: Help
+        guides: Guides
+        feedback: Feedback
+        github: Github
+        instagram: Instagram
+        near: Near me
+        press: Press
+        privacy: Privacy Policy
+        recents: Recent
+        recommended: Recommended
+        submit: Start your campaign
+        terms: Terms of use
+        twitter: Twitter
+      texts:
+        copyleft: 100% Project
+      titles:
+        about: Help
+        contact: Connect with us!
+        newsletter: Subscribe to our news
+        sitemap: Browse
+        social: Social networks

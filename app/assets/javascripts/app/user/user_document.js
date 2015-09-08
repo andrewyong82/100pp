@@ -21,8 +21,8 @@ App.addChild('UserDocumentView', _.extend({
       return true;
     }
     $documentField.prop('maxlength', 18);
-    var resultCpf = this.validateCpf(documentNumber);
-    var resultCnpj = this.validateCnpj(documentNumber.replace(/[\/.\-\_ ]/g, ''));
+    var resultCpf = true; //disable this for now -> this.validateCpf(documentNumber);
+    var resultCnpj = true; //disable this for now -> this.validateCnpj(documentNumber.replace(/[\/.\-\_ ]/g, ''));
     var numberLength = documentNumber.replace(/[.\-\_ ]/g, '').length;
     if(numberLength > 10) {
       if($documentField.attr('id') != 'payment_card_cpf'){

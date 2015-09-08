@@ -124,6 +124,9 @@ group :development do
   # Uncomment only for optimization, should be commented on master branch
   # gem 'rack-mini-profiler'
   # gem 'ruby-prof'
+
+  #gem 'i18n-tasks', '~> 0.8.7'
+  #gem 'axlsx', '~> 2.0'
 end
 
 group :test, :development do

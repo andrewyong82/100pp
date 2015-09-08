@@ -751,3 +751,6 @@ DEPENDENCIES
   video_info (>= 1.1.1)
   weekdays
   zonebie
+
+BUNDLED WITH
+   1.10.6
