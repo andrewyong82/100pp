@@ -31,3 +31,9 @@ node_modules/
 .rbenv-gemsets
 .idea
 dump.rdb
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+!.elasticbeanstalk/ruby.config
