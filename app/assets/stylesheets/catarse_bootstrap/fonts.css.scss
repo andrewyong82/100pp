@@ -16,3 +16,22 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'brandon-grotesque';
+  src: inline-font-files('../fonts/Brandon_med.otf', opentype);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandon-grotesque';
+  src: inline-font-files('../fonts/Brandon_reg.otf', opentype);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'brandon-grotesque';
+  src: inline-font-files('../fonts/Brandon_light.otf', opentype);
+  font-weight: 400;
+  font-style: normal;
+}
