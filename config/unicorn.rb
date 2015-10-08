@@ -8,7 +8,7 @@ else
 end
 
 # Requests with more than 30 sec will be killed
-timeout 120
+timeout 30
 
 
 # Preload entire app for fast forking.
