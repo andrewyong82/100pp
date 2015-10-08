@@ -11,108 +11,58 @@
     .fontweight-semibold.u-marginbottom-20.fontsize-megajumbo = t('.hero.title_html')
   .knowmore-hello 
     .fa.fa-chevron-down.fontcolor-dashboard
-.section
+.section-large
   .w-container
-    .w-hidden-main.w-hidden-medium.u-margintop-30
     .w-row.u-text-center
-      - statistics = Statistics.first
-      .w-col.w-col-4.u-marginbottom-20
-        .hello-stats= number_with_delimiter(statistics.total_contributors)
-        .fontsize-small = t('.hero.people_html')
-      .w-col.w-col-4.u-marginbottom-20
-        .hello-stats= number_with_delimiter(statistics.total_projects_success)
-        .fontsize-small = t('.hero.projects_html')
-      .w-col.w-col-4.u-marginbottom-20
-        .hello-stats= number_to_human(statistics.total_contributed)
-        .fontsize-small = t('.hero.money_html')
-    .w-hidden-main.w-hidden-medium.u-marginbottom-40
-.section-large.hello-idea
-  .w-container
-    .w-row
       .w-col.w-col-10.w-col-push-1
-        .u-marginbottom-20
-          = image_tag "lampada-white.png", class: "icon-hello-sm"
-        .u-marginbottom-20
-          = image_tag "marcio-avatar.jpg", class: "thumb.big u-round"
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-20 = t('.idea.title')
-        .fontsize-large.fontcolor-negative.u-marginbottom-40 = t('.idea.subtitle')
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 How does it work?
+      .w-col.w-col-4.u-marginbottom-20
+        = image_tag "find.png", width: "250", class: "u-marginbottom-20"
+        .fontsize-large.u-marginbottom-20.lineheight-tighter Find a project
+        .fontsize-small Find a classroom project you believe in
+      .w-col.w-col-4.u-marginbottom-20
+        = image_tag "fund.png", width: "250", class: "u-marginbottom-20"
+        .fontsize-large.u-marginbottom-20.lineheight-tighter Fund it
+        .fontsize-small Give as little as RM5 to fund it
+      .w-col.w-col-4.u-marginbottom-20
+        = image_tag "impact.png", width: "250", class: "u-marginbottom-20"
+        .fontsize-large.u-marginbottom-20.lineheight-tighter Receive updates and perks
+        .fontsize-small Get updated on the impact you’ve made and receive a perk for your investment.
+        .fontsize-small You can opt-out of the perk.
+    .w-hidden-main.w-hidden-medium.u-marginbottom-40
+
 .section-large.hello-catarse
   .w-container
-    .w-row.section-large
-      .w-col.w-col-10.w-col-push-1
-        = image_tag "icon-fincol.png", class: "icon-hello-lg"
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-20 = t('.fund.title')
-        .fontsize-large.u-marginbottom-40 = t('.fund.subtitle')
-    .w-row.section-large
-      .w-col.w-col-10.w-col-push-1
-        = image_tag "icon-campanha.png", class: "icon-hello-lg"        
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-20 = t('.campaign.title')
-        .fontsize-large.u-marginbottom-40 = t('.campaign.subtitle') 
-    .w-row.section-large
-      .w-col.w-col-10.w-col-push-1
-        = image_tag "icon-tudonada.png", class: "icon-hello-md"        
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-20 = t('.allornothing.title')
-        .fontsize-large.u-marginbottom-40 = t('.allornothing.subtitle')
-.u-text-center.section-large
-  .w-container
     .w-row
       .w-col.w-col-10.w-col-push-1
-        = image_tag "selo-verde.png", class: "icon-funded-with", width: "320"        
-        = image_tag "fotinhos_apoiadores.png", class: "w-hidden-small w-hidden-tiny u-marginbottom-20", width: "76%"                
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-20 = t(".success.title")
-        .fontsize-large.u-marginbottom-40 = t('.success.subtitle')
-.section-large.dark
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 Partner with us
+        = image_tag "collective-impact.png", class: "icon-hello-lg"
+        .fontsize-large.u-marginbottom-20 OUR VISION IS TO BE A COMMUNITY PLATFORM THAT COLLECTIVELY EMPOWERS EDUCATORS IN MALAYSIA
+        .fontsize-large.u-marginbottom-60 100% Project believes that great strides can only be made in education through collective impact. This means that we want to work with everyone - corporations, foundations, start-ups, social enterprises, schools, parents, teachers and individuals to move education forward in Malaysia.
   .w-container.u-text-center
-    .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 = t('.cta.title')
     .w-row
       .w-col.w-col-6.right-divider
-        .fontsize-large.lineheight-tight.u-marginbottom-30 = t('.cta.backer-cta') 
-        a.btn.btn-large.btn-inline href="#{explore_path(ref: 'hello', anchor: 'recommended')}" = t('.cta.backer-link') 
+        .fontsize-large.lineheight-tight.u-marginbottom-30 Adopt a Classroom Project
+        .fontsize-small Help our teachers raise funds for their classroom projects.
+        .fontsize-small Multiply your impact by match-funding a project or offer a discount on your product or services as a perk!
       .w-col.w-col-6.u-marginbottom-30
-        .fontsize-large.lineheight-tight.u-marginbottom-30 = t('.cta.maker-cta')
-        a.btn.btn-large.btn-inline href="#{start_path(ref: 'hello')}" = t('.cta.maker-link')
-.section-large.bg-humberto
-  .w-container
-    .w-row.u-marginbottom-20
+        .fontsize-large.lineheight-tight.u-marginbottom-30 Support our Operations
+        .fontsize-small We put classrooms first - <b>100% of public funds</b> goes directly to classroom projects. Help us keep our operations running so we can continue connecting you to classrooms in need.
+
+    .w-row.u-text-center
       .w-col.w-col-10.w-col-push-1
-        .fontsize-larger.u-marginbottom-40.lineheight-tight.fontcolor-negative.u-text-center-small-only = t('.testimonial.humberto.text_html')
-    .u-text-center
-      = image_tag "humberto-avatar.JPG", class: "thumb u-round u-marginbottom-10 big"        
-      .fontweight-semibold.fontsize-large.fontcolor-negative = t('.testimonial.humberto.name') 
-      .fontsize-base.fontcolor-negative = t('.testimonial.humberto.credentials')
-.section-one-column.bg-gray
-  .w-container.card-big.u-margintop-30.u-marginbottom-40
-    = image_tag "icon-hello-1.png", width: "47", class: "u-marginbottom-20"
-    .fontsize-larger.u-marginbottom-40.lineheight-tighter = t('.details.fund.title')
-    .fontsize-large = t('.details.fund.text')
-  .w-container.card-big.u-marginbottom-40
-    = image_tag "icon-hello-2.png", width: "47", class: "u-marginbottom-20"
-    .fontsize-larger.u-marginbottom-40.lineheight-tighter = t('.details.allornothing.title')
-    .fontsize-large = t('.details.allornothing.text_html')
-  .w-container.card-big.u-marginbottom-40
-    = image_tag "icon-hello-3.png", width: "47", class: "u-marginbottom-20"
-    .fontsize-larger.u-marginbottom-40.lineheight-tighter = t('.details.services.title')
-    .fontsize-large = t('.details.services.text')
-  .w-container.card-big.u-marginbottom-40
-    = image_tag "icon-hello-4.png", width: "47", class: "u-marginbottom-20"
-    .fontsize-larger.u-marginbottom-40.lineheight-tighter = t('.details.fees.title')
-    .fontsize-large = t('.details.fees.text')
-  .w-container.card-big
-    = image_tag "icon-hello-5.png", width: "47", class: "u-marginbottom-20"
-    .fontsize-larger.u-marginbottom-40.lineheight-tighter = t('.details.work.title')
-    .fontsize-large = t('.details.work.text')
-.section.bg-gray
+        .fontsize-large.lineheight-tight.u-marginbottom-30 Be our founding partner now.
+        a.btn.btn-large.btn-inline href="mailto:partner@100percentproject.org" Contact us
+
+.section.before-footer
   .w-container
     .w-row.u-marginbottom-80.u-text-center.u-margintop-30
-      .w-col.w-col-6.right-divider
-        .fontsize-large.lineheight-tight.u-marginbottom-30 = t('.cta.backer-cta')
-        a.btn.btn-large.btn-inline href="#{explore_path(ref: 'hello', anchor: 'recommended')}" = t('.cta.backer-link')
       .w-col.w-col-6
-        .fontsize-large.lineheight-tight.u-marginbottom-30 = t('.cta.maker-cta')
-        a.btn.btn-large.btn-inline href="#{start_path(ref: 'hello')}" = t('.cta.maker-link')
-.bg-people.before-footer
-  .w-container
-    .fontsize-large.u-text-center = t('.staff')
+        .fontsize-large.lineheight-tight.u-marginbottom-30 A social enterprise under
+        = image_tag "magic_logo.png", width: "250"
+      .w-col.w-col-6
+        .fontsize-large.lineheight-tight.u-marginbottom-30 In partnership with
+        = image_tag "tfm_logo.png", width: "250"
 
 .w-lightbox-backdrop.w-hidden tabindex="0"
   .w-lightbox-container
