@@ -17,7 +17,7 @@
           .fontsize-base.fontweight-semibold Address
           .fontsize-small.u-marginbottom-20 This is the address that will be sent to the project owner. If you change address, please update here. If you are expecting a reward, please inform the owner of the supported project.
           .w-row  
-            = form.association :country, as: :select, label_html:{class: 'field-label fontweight-semibold'}, wrapper_html: {class: 'w-col w-col-6 w-sub-col'}, input_html: {class: 'w-select positive', required: true}, required: true, label: 'Country'
+            = form.association :country, as: :string, label_html:{class: 'field-label fontweight-semibold'}, wrapper_html: {class: 'w-col w-col-6 w-sub-col'}, input_html: {class: 'w-input positive', required: true}, required: true, label: 'Country'
             .w-col.w-col-6
           .w-row
             = form.input :address_street, as: :string, label_html:{class: 'field-label fontweight-semibold'}, wrapper_html: {class: 'w-col w-col-6 w-sub-col'}, input_html: {class: 'w-input text-field positive', data: {required_in_brazil: true}}, validation_text: true
@@ -29,7 +29,7 @@
             = form.input :address_neighbourhood, as: :string, label_html:{class: 'field-label fontweight-semibold'}, wrapper_html:{class: 'w-col w-col-6 w-sub-col'},input_html: {class: 'w-input text-field positive'}
             = form.input :address_city, as: :string, label_html:{class: 'field-label fontweight-semibold'}, wrapper_html:{class: 'w-col w-col-6'},input_html: {class: 'w-input text-field positive', data: {required_in_brazil: true}}, validation_text: true
           .w-row
-            = form.input :address_state, as: :select, label_html:{class: 'field-label fontweight-semibold'}, collection: State.array, wrapper_html: {class: 'w-col w-col-6 w-sub-col'}, input_html: {class: "w-select text-field positive", data: {required_in_brazil: true}}, validation_text: true
+            = form.input :address_state, as: :string, label_html:{class: 'field-label fontweight-semibold'}, wrapper_html: {class: 'w-col w-col-6 w-sub-col'}, input_html: {class: "w-input text-field positive", data: {required_in_brazil: true}}, validation_text: true
             .w-col.w-col-6
               .w-row
                 = form.input :address_zip_code, as: :tel, label_html:{class: 'field-label fontweight-semibold'}, wrapper_html: {class: 'w-col w-col-6 w-col-small-6 w-col-tiny-6 w-sub-col-middle'}, input_html: {class: 'w-input text-field positive', data: {required_in_brazil: true, fixed_mask: '99999-999'}}, validation_text: true  
