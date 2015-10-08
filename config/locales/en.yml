@@ -345,7 +345,7 @@ en:
       profile: "My profile"
       account: "My account"
     user:
-      logout: Logout
+      logout: "Logout"
       my_credits: "My credit"
   not_informed: "not informed"
   notify_locale: "We identified your language through your browser. If you prefer another one, click on one of the flags on the right."

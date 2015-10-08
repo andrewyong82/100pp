@@ -11,7 +11,7 @@ en:
       feeds: "Ativities"
       submit: "Submit"
       contributions_fields:
-        no-project: "Você ainda não apoiou nenhum projeto no&nbsp;Catarse..."
+        no-project: "You have not backed any project on 100% Project..."
         contribute: "Participate !"
       about_fields:
         add_link: "+ add a link"
