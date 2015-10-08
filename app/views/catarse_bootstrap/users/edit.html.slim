@@ -33,8 +33,8 @@
       = link_to '#notifications', id: 'dashboard_notifications_link', class: 'dashboard-nav-link ' , data: {target: '#dashboard_notifications' } do
         | Notifications
 
-      = link_to '#billing', id: 'dashboard_billing_link', class: 'dashboard-nav-link ' , data: {target: '#dashboard_billing' } do
-        | Billing
+      /= link_to '#billing', id: 'dashboard_billing_link', class: 'dashboard-nav-link ' , data: {target: '#dashboard_billing' } do
+      /  | Billing
 
       = link_to user_path(resource), class: 'dashboard-nav-link u-right-big-only' do
         | Skip to public profile
@@ -61,7 +61,7 @@
                   .w-row
                     .w-col.w-col-3
                     .w-col.w-col-6
-                      = link_to 'Support a project!', start_path, class: 'btn btn-large'
+                      = link_to 'Start a project!', start_path, class: 'btn btn-large'
                     .w-col.w-col-3
                 .w-col.w-col-3
             - else
@@ -73,7 +73,7 @@
             = render 'dashboard_settings'
           #dashboard_notifications.content.w-hidden
             = render 'dashboard_notifications'
-          #dashboard_billing.content.w-hidden
-            = render 'dashboard_billing'
+          /#dashboard_billing.content.w-hidden
+          /  = render 'dashboard_billing'
 
 = render 'shared/footer_big'

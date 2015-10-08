@@ -9,17 +9,17 @@
                 .w-col.w-col-8
                   .w-checkbox.w-clearfix
                       = f.check_box :newsletter, class: 'w-checkbox-input'
-                      label.w-form-label.fontsize-base.fontweight-semibold for="checkbox"  Newsletter do Catarse (semanal)
-                      div Projetos em destaque e posts do nosso Blog&nbsp;
+                      label.w-form-label.fontsize-base.fontweight-semibold for="checkbox"  100% Project Newsletter
+                      div Featured projects and posts
               .w-row.u-marginbottom-20
                 .w-col.w-col-4
-                  .fontweight-semibold.fontsize-small.u-marginbottom-10 Projetos que você apoiou:
+                  .fontweight-semibold.fontsize-small.u-marginbottom-10 Projects that you supported:
                 .w-col.w-col-8
                   .w-checkbox.w-clearfix
                     = f.check_box :subscribed_to_project_posts, class: 'w-checkbox-input'
-                    label.w-form-label.fontsize-base.fontweight-semibold  Quero receber atualizações dos projetos
+                    label.w-form-label.fontsize-base.fontweight-semibold  I want to receive updates of projects
                     .u-marginbottom-20
-                      a.alt-link#toggle-notifications href="#"  Gerenciar as notificações de #{@user.contributed_projects.count} projetos
+                      a.alt-link#toggle-notifications href="#"  Manage notifications #{@user.contributed_projects.count} projects
                     - if @unsubscribes
                       ul.w-list-unstyled.u-radius.card.card-secondary.w-hidden#notifications-box
                         = f.simple_fields_for :unsubscribes, @unsubscribes do |u|
@@ -31,7 +31,7 @@
                               label.w-form-label.fontsize-small[for=unsubscribe_id] = u.object.project.name
               .w-row.u-marginbottom-20
                 .w-col.w-col-4
-                  .fontweight-semibold.fontsize-small.u-marginbottom-10 Categorias que você segue:
+                  .fontweight-semibold.fontsize-small.u-marginbottom-10 Categories that you follow:
                 .w-col.w-col-8
                   - @user.category_followers.all.each do |category_follower|
                     .w-checkbox.w-clearfix
@@ -40,7 +40,7 @@
                       label.w-form-label.fontsize-small= category_follower.category.name_pt
               .w-row.u-marginbottom-20
                 .w-col.w-col-4
-                  .fontweight-semibold.fontsize-small.u-marginbottom-10 Lembretes de projetos:
+                  .fontweight-semibold.fontsize-small.u-marginbottom-10 Project reminders:
                 .w-col.w-col-8
                   - @user.projects_in_reminder.each do |project|
                     .w-checkbox.w-clearfix
@@ -51,7 +51,7 @@
         .w-container
           .w-row
             .w-col.w-col-4.w-col-push-4
-              = f.submit 'Salvar',  id: 'save', class:'btn btn-large'
+              = f.submit 'Save',  id: 'save', class:'btn btn-large'
  
 
 

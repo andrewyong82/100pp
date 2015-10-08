@@ -4,41 +4,41 @@
 - project_link = edit_project_url(project)
 - company_name = CatarseSettings[:company_name]
 
-|Olá, #{user.name}!
+|Hello, #{user.name}!
 br
 br
-| Muito obrigado por nos enviar o projeto #{link_to project.name, project_link, target: '__blank'}
+| Thank you for sending us the project #{link_to project.name, project_link, target: '__blank'}
 br/
 br/
-| Apartir de agora, nossa equipe de projetos vai <strong>avaliar todo o conteúdo</strong> que você colocou na página e (em no máximo 4 dias úteis) 
-'  você receberá um e-mail informando se ela foi <strong>Aprovada, Recusada</strong> ou se vai continuar <strong>Em Análise</strong> por mais algum tempo.
+| From now, our project team will be <strong>evaluating all content</strong> you have placed on the page and (in a maximum of 4 days)
+'  you will receive and email whether it has been <strong>Approved, Denied</strong> or whether to continue <strong>in analysis</strong> for a while.
 br
 br
-strong O que significa isso?
+strong What does that mean?
 br/
 br/
-strong Página foi Recusada
+strong Page was refused
 br/
-| O seu projeto não tem o perfil do #{company_name} e/ou encontramos informações que desrespeitam as nossas regras. Essa página não poderá ser publicada na plataforma.
-br/
-br/
-strong Página continua Em Análise
-br/
-| O projeto tem o perfil do #{company_name} e está de acordo com as regras, só que a página ainda não está pronta para ser públicada na plataforma. Receba nossos comentários, dicas e sugestões. Finalize as edições na página do projeto e avise o nosso agente de suporte quando quiser que ele faça uma nova avaliação.
+| Your project does not have the profile #{company_name} and / or we find information that violate our rules. This page cannot be published on the platform.
 br/
 br/
-strong Página foi Aprovada 
+strong Page continues in analysis
 br/
-| Vamos em frente, iniciar a arrecadação só depende de você! Escolha a melhor data e publique a página do seu projeto na plataforma. 
+| The project has the profile #{company_name} and complies with the rules, only that the page is not yet ready to be published on the platform. Receive our comments , tips and suggestions. Finalize the issues in the project page and let our support agent when you want it to do a reassessment.
+br/
+br/
+strong Page has been approved
+br/
+| Let's move on, start the collection is up to you! Choose the best date and publish the page of your project on the platform.
 br/
 br/
 strong
-  | Para acompanhar a mudança de status da página do projeto #{link_to project.name, project_link, target: '__blank'} fique de olho na caixa de entrada do seu e-mail e na página do seu projeto.
+  | To accompany the change of status of the project page #{link_to project.name, project_link, target: '__blank'} keep an eye on the inbox of your email and your project page.
 br/
 br/
-| Lembrando que você pode tirar dúvidas conosco a qualquer momento respondendo diretamente a esta mensagem ou através do e-mail #{mail_to CatarseSettings[:email_projects]} 
+| Remembering that you can ask questions us at any time responding directly to this message or by e- mail #{mail_to CatarseSettings[:email_projects]}
 br/
 br/
-|Um abraço,
+|Regards,
 br/
 = company_name

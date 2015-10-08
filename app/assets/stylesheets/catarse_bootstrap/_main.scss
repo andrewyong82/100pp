@@ -1,5 +1,5 @@
 body {
-  font-family: proxima-nova, sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   color: #3f4752;
   font-size: 14px;
   line-height: 20px;
@@ -14,9 +14,9 @@ p {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid #7cc142;
+  border: 1px solid #ffcc00;
   border-radius: 5px;
-  background-color: #7cc142;
+  background-color: #ffcc00;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   color: white;
@@ -24,8 +24,8 @@ p {
   text-decoration: none;
 }
 .btn:hover {
-  border-color: #65bf1b;
-  background-color: #65bf1b;
+  border-color: #ffd839;
+  background-color: #ffd839;
   box-shadow: rgba(63, 71, 82, 0.38) 1px 1px 3px 0px;
 }
 .btn.bt-medium {
@@ -42,7 +42,7 @@ p {
 .btn.bt-medium.bt-fb {
   margin-top: 16px;
   background-color: #4b6fb8;
-  font-family: proxima-nova, sans-serif;
+  font-family: brandon-grotesque, sans-serif;
 }
 .btn.bt-medium.bt-fb:hover {
   background-color: #547fd6;
@@ -594,7 +594,7 @@ p {
   padding-top: 8px;
   padding-bottom: 21px;
   border-top: 1px solid rgba(255, 255, 255, 0.61);
-  font-family: proxima-nova, sans-serif;
+  font-family: brandon-grotesque, sans-serif;
 }
 .project-news {
   padding-right: 14px;
@@ -639,7 +639,7 @@ p {
   line-height: 100%;
 }
 .fontsize-larger {
-  font-family: proxima-nova, sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-size: 34px;
   line-height: 100%;
 }
@@ -1924,7 +1924,7 @@ p {
   padding-bottom: 36px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-family: proxima-nova, sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   color: #409ade;
   font-size: 22px;
   line-height: 150%;

@@ -31,15 +31,15 @@ en:
         account_digit: 'Account Digits'
         account_type: 'Account Type'
       bank_account:
-        input_bank_number: "Número do banco"
-        bank: 'Banco'
-        bank_id: 'Banco'
-        owner_name: 'Nome do titular'
-        owner_document: 'CPF / CNPJ do titular'
-        agency: 'Agência'
-        agency_digit: 'Dígito agência'
-        account: 'No. da conta'
-        account_digit: 'Dígito conta'
+        input_bank_number: "Bank number"
+        bank: 'Bank'
+        bank_id: 'Bank'
+        owner_name: 'Cardholder name'
+        owner_document: 'CPF / CNPJ of cardholder'
+        agency: 'Agency'
+        agency_digit: 'Agency number'
+        account: 'Account'
+        account_digit: 'Account number'
       payment:
         state: 'Status'
       contribution:

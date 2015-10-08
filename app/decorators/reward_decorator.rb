@@ -16,7 +16,7 @@ class RewardDecorator < Draper::Decorator
   def name
     deliver = %{
       <div class="fontsize-smallest fontcolor-secondary">
-        Estimated delivery:&nbsp;#{source.display_deliver_estimate || I18n.t('projects.contributions.no_estimate')}
+        Estimated delivery: #{source.display_deliver_estimate || I18n.t('projects.contributions.no_estimate')}
       </div>
     }
     %{
@@ -33,7 +33,7 @@ class RewardDecorator < Draper::Decorator
           </div>
           <div class="fontsize-smaller text-error u-marginbottom-20 w-hidden"><span class="fa fa-exclamation-triangle"></span> O valor do apoio está incorreto</div>
         </div>
-        <div class="submit-form w-col w-col-4 w-col-small-4 w-col-tiny-4"><a class="btn btn-large" href="#">Continue&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></a>
+        <div class="submit-form w-col w-col-4 w-col-small-4 w-col-tiny-4"><a class="btn btn-large" href="#">Continue  <span class="fa fa-chevron-right"></span></a>
         </div>
       </div>
       <div class="back-reward-reward-description">

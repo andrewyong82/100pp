@@ -2,10 +2,10 @@ en:
   shared:
     menus: 
       user: 
-        about: 'About you'
-        access_address: 'Date and address'
+        about: 'About me'
+        access_address: 'Settings'
         activity: 'Activity'
-        banking: 'Bank and cards'
+        banking: 'Finance'
         contributions_history: 'My history'
         contributions_history_nav: 'Contribution history'
         logged_as: 'You are logged in as'

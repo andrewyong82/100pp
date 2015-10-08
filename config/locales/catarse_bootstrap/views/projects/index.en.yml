@@ -8,7 +8,7 @@ en:
     index:
       back_a_project: "Buy Farm Fresh Now"
       banner_title: Take paper designs !
-      banner_before: 'Support '
+      banner_before: 'Fund '
       banner_words:
         0: 'conducive learning'
         1: 'innovative teaching'
@@ -22,7 +22,7 @@ en:
       recommended: Recommended
       banner_subtitle: Music, comics , cinema, social impact , technology and more.
       box:
-        by: by
+        by: "by "
         when: in
       banner: Check out the search
       explore: Explore campaigns

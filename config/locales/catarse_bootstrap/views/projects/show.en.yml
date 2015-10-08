@@ -19,11 +19,12 @@ en:
       a_project_by_html: A %{link} campaign in
     posts:
       project_post:
-        unavailable: This novelty is only available to supporters.
+        exclusive: This post is only visible to supporters.
+        unavailable: This post is only available to supporters.
         contribute: Buy
         unavailable_contribute: Now.
-        destroy: Remove Novelty
-        destroy_confirmation: Do you want to remove this news?
+        destroy: Remove post
+        destroy_confirmation: Do you want to remove this post?
       new:
         notice: Successfully sent New!
         comment: Text of your Novelty
