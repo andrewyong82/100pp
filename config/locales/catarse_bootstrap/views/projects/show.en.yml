@@ -98,5 +98,5 @@ en:
         confirmed: confirmed
         pending: printed slips
       sidebar:
-        contributions: support
-        goal: attained %{total}
+        contributions: supporters
+        goal: raised of %{total} goal

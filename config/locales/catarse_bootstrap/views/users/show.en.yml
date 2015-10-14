@@ -19,12 +19,12 @@ en:
       no_reward: "Não selecionou recompensa"
       delivery_estimate: "Estimativa de entrega:"
     card:
-      twitter_profile: "Perfil no Twitter"
-      facebook_profile: "Perfil no Facebook"
+      twitter_profile: "Twitter profile"
+      facebook_profile: "Facebook profile"
       author_website: "Site"
-      contact_author: "Enviar mensagem"
-    failed_reactivation: "O link para reativação é inválido, por favor entre em contato com a nossa equipe."
-    reactivated: "Seja bem vindo de volta, sua conta foi reativada."
+      contact_author: "Send message"
+    failed_reactivation: "The link reactivation is invalid, please contact our team."
+    reactivated: "Welcome back, your account has been reactivated."
     project:
       confirmed: "Confirmado"
       refunded: "Reembolsado"
@@ -119,6 +119,6 @@ en:
         settings: Preferências
         unsubscribes: Notificações
       user_social:
-        email: "Me envie um email"
-        facebook: "Perfil no facebook"
-        twitter: "Perfil no twitter"
+        email: "Send me an email"
+        facebook: "Facebook profile"
+        twitter: "Twitter profile"

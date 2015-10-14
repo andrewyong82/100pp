@@ -28,18 +28,23 @@
         = image_tag "impact.png", width: "250", class: "u-marginbottom-20"
         .fontsize-large.u-marginbottom-20.lineheight-tighter Receive updates and perks
         .fontsize-small Get updated on the impact you’ve made and receive a perk for your investment.
-        .fontsize-small You can opt-out of the perk.
     .w-hidden-main.w-hidden-medium.u-marginbottom-40
 
 .section-large.hello-catarse
   .w-container
     .w-row
       .w-col.w-col-10.w-col-push-1
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 Partner with us
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 Our vision
         = image_tag "collective-impact.png", class: "icon-hello-lg"
         .fontsize-large.u-marginbottom-20 OUR VISION IS TO BE A COMMUNITY PLATFORM THAT COLLECTIVELY EMPOWERS EDUCATORS IN MALAYSIA
-        .fontsize-large.u-marginbottom-60 100% Project believes that great strides can only be made in education through collective impact. This means that we want to work with everyone - corporations, foundations, start-ups, social enterprises, schools, parents, teachers and individuals to move education forward in Malaysia.
+        .fontsize-large 100% Project believes that great strides can only be made in education through collective impact. This means that we want to work with everyone - corporations, foundations, start-ups, social enterprises, schools, parents, teachers and individuals to move education forward in Malaysia.
+
+
+.section-large.bg-gray
   .w-container.u-text-center
+    .w-row
+      .w-col.w-col-10.w-col-push-1
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 Partner with us
     .w-row
       .w-col.w-col-6.right-divider
         .fontsize-large.lineheight-tight.u-marginbottom-30 Adopt a Classroom Project
@@ -54,26 +59,27 @@
         .fontsize-large.lineheight-tight.u-marginbottom-30 Be our founding partner now.
         a.btn.btn-large.btn-inline href="mailto:partner@100percentproject.org" Contact us
 
+
 .section.before-footer
   .w-container
     .w-row.u-marginbottom-80.u-text-center.u-margintop-30
       .w-col.w-col-6
-        .fontsize-large.lineheight-tight.u-marginbottom-30 A social enterprise under
+        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 A social enterprise under
         = image_tag "magic_logo.png", width: "250"
       .w-col.w-col-6
-        .fontsize-large.lineheight-tight.u-marginbottom-30 In partnership with
+        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 In partnership with
         = image_tag "tfm_logo.png", width: "250"
 
-.w-lightbox-backdrop.w-hidden tabindex="0"
-  .w-lightbox-container
-    .w-lightbox-content
-      .w-lightbox-view
-        .w-lightbox-frame
-          figure.w-lightbox-figure
-            #player
-            /iframe class="" width="1280" height="720" src="https://www.youtube.com/embed/cvBERv1kTL8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen
-        .w-lightbox-spinner
-      .w-lightbox-control.w-lightbox-close
-    .w-lightbox-strip
+/.w-lightbox-backdrop.w-hidden tabindex="0"
+/  .w-lightbox-container
+/    .w-lightbox-content
+/      .w-lightbox-view
+/        .w-lightbox-frame
+/          figure.w-lightbox-figure
+/            #player
+/            /iframe class="" width="1280" height="720" src="https://www.youtube.com/embed/cvBERv1kTL8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen
+/        .w-lightbox-spinner
+/      .w-lightbox-control.w-lightbox-close
+/    .w-lightbox-strip
 
 = render 'shared/footer_big'
