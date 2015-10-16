@@ -74,7 +74,7 @@ class Projects::ContributionsController < ApplicationController
         :email => @contribution.payer_email,
         :name => @contribution.payer_name,
         :amount => @contribution.value * 100,
-        :callback_url => CatarseSettings[:base_url] + bill_paid_project_contribution_path(project_id: @project.id, id: @contribution.id),
+        # :callback_url => CatarseSettings[:base_url] + bill_paid_project_contribution_path(project_id: @project.id, id: @contribution.id),
         :metadata => { :project => @project.name },
         :redirect_url => CatarseSettings[:base_url] + project_contribution_path(project_id: @project.id, id: @contribution.id)
     }
@@ -107,6 +107,8 @@ class Projects::ContributionsController < ApplicationController
       payment.pay;
       payment.save!
     end
+
+    render json: payment.to_json
   end
 
   # def second_slip
