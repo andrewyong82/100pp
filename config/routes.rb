@@ -103,6 +103,7 @@ Catarse::Application.routes.draw do
   get "/explore" => 'high_voltage/pages#show', id: 'explore'
   get "/team" => 'high_voltage/pages#show', id: 'team'
 
+  post "/bill_paid" => 'projects/contributions#bill_paid'
 
   # User permalink profile
   constraints SubdomainConstraint do
