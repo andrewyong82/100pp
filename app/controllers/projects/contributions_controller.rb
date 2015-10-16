@@ -1,8 +1,8 @@
 class Projects::ContributionsController < ApplicationController
   inherit_resources
   actions :index, :show, :new, :update, :review, :create
-  skip_before_filter :verify_authenticity_token, only: [:moip]
-  after_filter :verify_authorized, except: [:index, :bill_paid]
+  skip_before_filter :verify_authenticity_token, only: [:moip, :bill_paid]
+  after_filter :verify_authorized, except: [:index]
   belongs_to :project
   before_filter :detect_old_browsers, only: [:new, :create]
 
@@ -74,7 +74,7 @@ class Projects::ContributionsController < ApplicationController
         :email => @contribution.payer_email,
         :name => @contribution.payer_name,
         :amount => @contribution.value * 100,
-        # :callback_url => CatarseSettings[:base_url] + bill_paid_project_contribution_path(project_id: @project.id, id: @contribution.id),
+        :callback_url => CatarseSettings[:base_url] + bill_paid_project_contribution_path(project_id: @project.id, id: @contribution.id),
         :metadata => { :project => @project.name },
         :redirect_url => CatarseSettings[:base_url] + project_contribution_path(project_id: @project.id, id: @contribution.id)
     }
