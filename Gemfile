@@ -37,9 +37,9 @@ gem 'mixpanel-ruby'
 gem 'mixpanel_client'
 
 # Payment engines
-gem 'catarse_moip', '~> 3.2.0'
-gem 'catarse_pagarme', '~> 2.7.10'
-#gem 'catarse_pagarme', path: '../catarse_pagarme'
+# gem 'catarse_moip', '~> 3.2.0'
+# gem 'catarse_pagarme', '~> 2.7.10'
+# gem 'catarse_pagarme', path: '../catarse_pagarme'
 
 # Decorators
 gem 'draper'
@@ -87,8 +87,8 @@ gem 'http_accept_language'
 gem 'routing-filter', '~> 0.4.0.pre'
 
 # Payment
-gem 'moip', github: 'catarse/moip-ruby', ref: 'c0225ad71645cd1df35dafa1e45c9f092b3abb9e'
-gem 'httpclient',     '>= 2.2.5'
+# gem 'moip', github: 'catarse/moip-ruby', ref: 'c0225ad71645cd1df35dafa1e45c9f092b3abb9e'
+# gem 'httpclient',     '>= 2.2.5'
 
 group :production do
   # Gem used to handle image uploading

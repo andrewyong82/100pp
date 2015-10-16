@@ -1,4 +1,3 @@
----
 en:
   projects:
     contributions:
@@ -21,6 +20,24 @@ en:
         edit: edit
       credit_card_payment:
         payment_save_card: I want to save my credit card to facilitate future support
+      existing_payment:
+        page_title: 'Your contribution for %{name} has been registered'
+        warning: 'Warning'
+        warning_subtitle: 'You are trying to access an address referring to a contribution already in progress:'
+        check_email: "Check in your inbox whether the provisional receipt of support was sent. If not, please %{mail_to_link} us, informing the reference code of your contribution (%{gateway_id}), we will help you with anything you need."
+        new_contribution: "If you have accessed this page in error, and want to perform a new transaction, %{link}"
+        contact: 'contact'
+        click_here: 'click here'
+      faq:
+        common_questions: 'Common Questions'
+        how_contribute: 'How to support this project?'
+        how_contribute_answer: 'Choose the amount and the desired reward. Then fill in the form and details of the payment to finalize the support.'
+        when_made_payment: 'When payment is processed?'
+        when_made_payment_answer: 'You will be redirected to the BillPlz payment page, where you can choose your form of payment.'
+        when_project_fails: 'What if the project does not reach the target?'
+        when_project_fails_answer: 'In this case, you get back 100 % of what is paid through a refund.'
+        when_project_funded: 'If the project is funded , how do I get my reward?'
+        when_project_funded_answer: 'When your reward is ready, %{name} will contact you to arrange delivery.'
       edit:
         payment_slip_disclaimer: If the campaign is not successful , we will refund
           your support.
@@ -48,11 +65,9 @@ en:
           payment that facilitate financial support and the possible repayment of
           the amounts to supporters.
         reward_sold_out: This reward is exhausted.
-        page-title: Support the %{name}
-        credits_preview_html: You own 8459986593193533%{credits}8896836270477074 in
-          credits to make this support <strong>até day 10/11</strong> as <a href='http://blog.catarse.me/simplificacao-dos-reembolsos-e-o-fim-dos-creditos/'
-          target='__blank'>novas regras</a> released by Catharsis.
-        credits_submit: make Payment
+        page-title: Support %{name}
+        credits_preview_html: "Você possui <strong>%{credits}</strong> em créditos para realizar esse apoio <strong>até o dia 10/11</strong>, conforme <a href='http://blog.catarse.me/simplificacao-dos-reembolsos-e-o-fim-dos-creditos/' target='__blank'>novas regras</a> divulgadas pelo Catarse."
+        credits_submit: "make Payment"
         credits_title: Pay with credits
         insufficient_credits: You own %{credits} credits.
         choose_payment: Choose the payment method
@@ -72,10 +87,12 @@ en:
         submit:
           credits: confirm
           moip: Make payment by MoIP
-        subtitle: These data will be reported to the campaign organizer.
+        subtitle: This data will be passed to the campaign organizer.
         title: Complete and review the data for payment
         you_are_about_html: You are about to join the group that does everything for
           %{link} happen.
+        review_subtitle: This data will be passed to the campaign organizer.
+        review_title: Complete and review the data for payment
       new:
         page-title: Support the %{name}
         title: So many choices almost there!
@@ -92,14 +109,24 @@ en:
         Credits: credits
         error: Ooops .
         braintree: Click Here For Credit Card
+      thank_you:
+        thank_you: 'Thanks!'
+        thank_you_text_html: 'You just took an important step in the campaign to get %{link1} funded! You will receive a payment confirmation by email once it is processed. You can also track your contributions on your %{link2}.'
+        share: Share
+        tweet: Tweet
+        share_back: 'Share your support and increase the chances of this project hitting the target!'
+        follow: 'Follow'
+        follow_category: 'Interested in the category %{category}? You can receive news firsthand and directly to your email when new projects come online!'
+        project_recommendations: 'Project recommendations for you'
+        profile_link: 'profile'
       show:
         header_subtitle: Without you maybe this campaign did not have a chance .
         header_title: Thank you very much!
-        moip_message: The verification of your transaction is in progress and MoIP
-          code is " %{code} " .<br>Caso have any questions regarding the transaction
-          , please contact MoIP.
+        moip_message: "The verification of your transaction is in progress and MoIP
+          code is %{code} .<br>Caso have any questions regarding the transaction
+          , please contact MoIP."
         recommended_projects: 'You may also enjoy these campaigns :'
         text_subtitle: Tell everyone what you just did
-        text_title_html: You are now part of the group that does everything for the
-          project %{link} happen.
+        text_title_html: "You are now part of the group that does everything for the project %{link} happen."
         title: thank you very much
+        page-title: Thank you!

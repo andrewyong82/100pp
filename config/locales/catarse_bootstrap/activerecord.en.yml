@@ -10,7 +10,7 @@ en:
     attributes:
       project_account:
         address_city: City
-        address_complement: Region
+        address_complement: Building
         address_neighbourhood: Suburb
         address_number: Number
         address_state: State
@@ -61,7 +61,7 @@ en:
         country: "Country"
         address_street: "Street"
         address_number: "Number"
-        address_complement: "Complement"
+        address_complement: "Building"
         address_neighbourhood: "Suburb"
         address_state: "State"
         address_city: "City"
@@ -70,7 +70,7 @@ en:
         reward: Reward
         project: Project
       reward:
-        deliver_at: Previsão de entrega
+        deliver_at: 'Estimated delivery'
       project:
         channels: channels
         category: Category
@@ -93,12 +93,12 @@ en:
         uploaded_image: Design Image
       user:
         address_city: City
-        address_complement: Complement
-        address_neighbourhood: Neighborhood
+        address_complement: Building
+        address_neighbourhood: Suburb
         address_number: Number
         address_state: State
         address_street: Address
-        address_zip_code: Zip code
+        address_zip_code: Postcode
         cpf: EIN Number
         cpf_hint: "(?)"
         state_inscription: State Registration
@@ -260,14 +260,15 @@ en:
     video_regex_validation: Only Youtube or Vimeo URLs are accepted
   payment:
     state:
-      pending: "Aguardando confirmação do pagamento"
-      paid: "Confirmado em %{date}"
-      refunded: "Reembolsado em %{date}"
-      pending_refund: "Reembolso solicitado em %{date}"
-      refused: "Pagamento recusado em %{date}"
-      chargeback: "Contestado"
+      pending: "Awaiting confirmation of payment"
+      paid: "Paid on %{date}"
+      refunded: "Refunded on %{date}"
+      pending_refund: "Requested reimbursement on %{date}"
+      refused: "Payment declined on %{date}"
+      chargeback: "Contested"
   contribution:
     payment_details:
+      bill: "BillPlz"
       desconhecido: ""
       creditos: "Créditos"
       boleto_bancario: "Boleto Bancário"

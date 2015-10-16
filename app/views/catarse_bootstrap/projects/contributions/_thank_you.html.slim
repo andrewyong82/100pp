@@ -30,7 +30,7 @@
         == render_projects @contribution.recommended_projects.limit(3), 'thankyou', { wrapper_class: 'w-col w-col-4' }
 
 - unless current_user.following_this_category?(@project.category_id)
-  .section.section-gray-one
+  .section
     .w-container
       .fontsize-larger.lineheight-tight.u-text-center.u-marginbottom-40 
         = t('.follow_category', category: @project.category.name_pt)

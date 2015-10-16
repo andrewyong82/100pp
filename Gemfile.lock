@@ -17,16 +17,6 @@ GIT
       rails (~> 4.0)
 
 GIT
-  remote: git://github.com/catarse/moip-ruby.git
-  revision: c0225ad71645cd1df35dafa1e45c9f092b3abb9e
-  ref: c0225ad71645cd1df35dafa1e45c9f092b3abb9e
-  specs:
-    moip (1.0.2)
-      activesupport (>= 2.3.2)
-      httparty (~> 0.6.1)
-      nokogiri (>= 1.5.0)
-
-GIT
   remote: git://github.com/catarse/redactor-rails.git
   revision: 4bd0eadf2f4e451c755ab169fd6210220cda450b
   specs:
@@ -96,20 +86,10 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
-    catarse_moip (3.2.0)
-      enumerate_it
-      httparty
-      libxml-ruby (~> 2.8.0)
-      rails (~> 4.0)
     catarse_monkeymail (0.1.6)
       mailchimp-api (~> 2.0.4)
       rails (>= 4.0.3)
       rails-observers
-    catarse_pagarme (2.7.10)
-      pagarme (= 1.10.0)
-      rails (~> 4.0)
-      sidekiq
-      weekdays (>= 1.0.2)
     catarse_settings_db (0.1.1)
       rails (>= 4.1.1)
     celluloid (0.17.0)
@@ -204,16 +184,12 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    domain_name (0.5.24)
-      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.0.2)
     draper (2.1.0)
       actionpack (>= 3.0)
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0)
-    enumerate_it (1.2.8)
-      activesupport (>= 3.0.0)
     erubis (2.7.0)
     ethon (0.7.4)
       ffi (>= 1.3.0)
@@ -369,12 +345,9 @@ GEM
     hike (1.2.3)
     hitimes (1.2.2)
     htmlentities (4.3.4)
-    http-cookie (1.0.2)
-      domain_name (~> 0.5)
     http_accept_language (2.0.5)
     httparty (0.6.1)
       crack (= 0.1.8)
-    httpclient (2.6.0.1)
     i18n (0.7.0)
     i18n_alchemy (0.2.1)
       activesupport (>= 3.2.0, < 4.2)
@@ -402,7 +375,6 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.4.1)
       launchy (~> 2.2)
-    libxml-ruby (2.8.0)
     little-plugger (1.1.3)
     logging (2.0.0)
       little-plugger (~> 1.1)
@@ -433,7 +405,6 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
-    netrc (0.10.3)
     newrelic_rpm (3.12.1.298)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -453,9 +424,6 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
-    pagarme (1.10.0)
-      multi_json
-      rest-client
     pg (0.17.1)
     pg_search (1.0.4)
       activerecord (>= 3.1)
@@ -525,10 +493,6 @@ GEM
     request_store (1.2.0)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
-    rest-client (1.8.0)
-      http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
     retriable (1.4.1)
     rinku (1.5.1)
     routing-filter (0.4.0.1)
@@ -639,9 +603,6 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.1)
     unicorn (4.9.0)
       kgio (~> 2.6)
       rack
@@ -677,9 +638,7 @@ DEPENDENCIES
   capybara (~> 2.2.0)
   carrierwave (~> 0.10.0)
   catarse_api!
-  catarse_moip (~> 3.2.0)
   catarse_monkeymail (>= 0.1.6)
-  catarse_pagarme (~> 2.7.10)
   catarse_settings_db (>= 0.1.0)
   chartkick
   cocoon
@@ -699,7 +658,6 @@ DEPENDENCIES
   high_voltage
   http_accept_language
   httparty (~> 0.6.1)
-  httpclient (>= 2.2.5)
   i18n_alchemy
   inherited_resources
   jasmine-rails
@@ -710,7 +668,6 @@ DEPENDENCIES
   mini_magick
   mixpanel-ruby
   mixpanel_client
-  moip!
   newrelic_rpm
   omniauth
   omniauth-facebook
