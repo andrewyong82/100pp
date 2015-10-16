@@ -96,7 +96,7 @@ en:
       no_rewards_warning_title: Create here your rewards
       contribution_states:
         confirmed: confirmed
-        pending: printed slips
+        pending: pending
       sidebar:
         contributions: supporters
         goal: raised of %{total} goal

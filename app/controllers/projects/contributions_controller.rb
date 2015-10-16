@@ -109,10 +109,10 @@ class Projects::ContributionsController < ApplicationController
     end
   end
 
-  def second_slip
-    authorize resource
-    redirect_to resource.details.ordered.first.second_slip_path
-  end
+  # def second_slip
+  #   authorize resource
+  #   redirect_to resource.details.ordered.first.second_slip_path
+  # end
 
   def toggle_anonymous
     authorize resource

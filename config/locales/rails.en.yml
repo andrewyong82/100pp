@@ -187,13 +187,14 @@ en:
         delimiter: ''
   support:
     array:
-      last_word_connector: ! ', and '
-      two_words_connector: ! ' and '
-      words_connector: ! ', '
+      last_word_connector: " and "
+      two_words_connector: " and "
+      words_connector: ", "
   time:
     am: am
     formats:
       estimate: "%B/%Y"
+      simple: "%d/%m/%Y, %H:%M h"
       default: ! '%a, %d %b %Y %H:%M:%S %z'
       long: ! '%B %d, %Y %H:%M'
       short: ! '%d %b %H:%M'
