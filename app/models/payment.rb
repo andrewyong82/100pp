@@ -3,7 +3,7 @@ class Payment < ActiveRecord::Base
 
   include Shared::StateMachineHelpers
   # include Payment::PaymentEngineHandler
-  include Payment::RequestRefundHandler
+  # include Payment::RequestRefundHandler
 
   delegate :user, :project, :invalid_refund, to: :contribution
 
