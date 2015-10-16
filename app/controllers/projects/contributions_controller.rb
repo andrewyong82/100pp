@@ -74,7 +74,7 @@ class Projects::ContributionsController < ApplicationController
         :email => @contribution.payer_email,
         :name => @contribution.payer_name,
         :amount => @contribution.value * 100,
-        :callback_url => CatarseSettings[:base_url] + "/bill_paid",
+        :callback_url => CatarseSettings[:base_url] + "/en/bill_paid",
         :metadata => { :project => @project.name },
         :redirect_url => CatarseSettings[:base_url] + project_contribution_path(project_id: @project.id, id: @contribution.id)
     }
