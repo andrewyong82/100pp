@@ -103,7 +103,7 @@ class Projects::ContributionsController < ApplicationController
 
   def bill_paid
     payment = PaymentEngines.find_payment({ gateway_id: params[:id] })
-    if (payment && param[:state] == "paid" && param[:paid])
+    if (payment && params[:state] == "paid" && params[:paid])
       payment.pay;
       payment.save!
     end
