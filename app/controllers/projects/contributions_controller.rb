@@ -1,8 +1,8 @@
 class Projects::ContributionsController < ApplicationController
   inherit_resources
   actions :index, :show, :new, :update, :review, :create
-  skip_before_filter :verify_authenticity_token, only: [:moip]
-  after_filter :verify_authorized, except: [:index]
+  skip_before_filter :verify_authenticity_token, only: [:moip, :bill_paid]
+  after_filter :verify_authorized, except: [:index, :bill_paid]
   belongs_to :project
   before_filter :detect_old_browsers, only: [:new, :create]
 
@@ -66,10 +66,55 @@ class Projects::ContributionsController < ApplicationController
     @thank_you_id = @project.id
   end
 
-  def second_slip
+  def prepare_bill
     authorize resource
-    redirect_to resource.details.ordered.first.second_slip_path
+    url = "https://www.billplz.com/api/v2/bills"
+    data = {
+        :collection_id => CatarseSettings[:billplz_collection_id],
+        :email => @contribution.payer_email,
+        :name => @contribution.payer_name,
+        :amount => @contribution.value * 100,
+        :callback_url => CatarseSettings[:base_url] + bill_paid_path,
+        :metadata => { :project => @project.name },
+        :redirect_url => CatarseSettings[:base_url] + project_contribution_path(project_id: @project.id, id: @contribution.id)
+    }
+    response = HTTParty.post(url,
+                             :body => data,
+                             :basic_auth => { :username => CatarseSettings[:billplz_key] }
+    )
+
+    # create transaction
+    response_data = JSON.parse(response.body)
+    attributes = {
+        contribution: @contribution,
+        value: @contribution.value,
+        payment_method: "Bill",
+        gateway_id: response_data['id'],
+        gateway: 'BillPlz',
+        gateway_data: response_data,
+        installments: 1
+    }
+    payment = PaymentEngines.new_payment(attributes)
+    payment.save!
+    payment.payment_notifications.create(contribution_id: payment.contribution_id, extra_data: data)
+
+    render json: response
   end
+
+  def bill_paid
+    payment = PaymentEngines.find_payment({ gateway_id: params[:id] })
+    if (payment && params[:state] == "paid" && params[:paid])
+      payment.pay;
+      payment.save!
+    end
+
+    render json: payment.to_json
+  end
+
+  # def second_slip
+  #   authorize resource
+  #   redirect_to resource.details.ordered.first.second_slip_path
+  # end
 
   def toggle_anonymous
     authorize resource
@@ -90,4 +135,5 @@ class Projects::ContributionsController < ApplicationController
   def engine
     PaymentEngines.find_engine('Pagarme')
   end
+
 end

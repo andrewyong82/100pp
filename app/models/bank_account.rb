@@ -1,5 +1,5 @@
 class BankAccount < ActiveRecord::Base
-  include CatarsePagarme::BankAccountConcern
+  # include CatarsePagarme::BankAccountConcern
 
   belongs_to :user
   belongs_to :bank

@@ -8,23 +8,23 @@ en:
       single_project_created: " and created 1 project"
       multiple_project_created: " and created %{n_projects} projects"
     contribution_row:
-      anonymous: Marcar apoio como anônimo
-      print_slip: Imprimir boleto
-      slip_copy: Gerar 2a via
-      contributed_projects: "Projetos que apoiei"
-      contribution_value: "Valor do apoio"
-      contribution_status: "Status do apoio"
-      request_refund: 'Solicitar reembolso'
-      reward: Recompensa
-      no_reward: "Não selecionou recompensa"
-      delivery_estimate: "Estimativa de entrega:"
+      anonymous: Mark support as anonymous
+      print_slip: Print bill
+      slip_copy: Generate copy
+      contributed_projects: "Projects supported"
+      contribution_value: "Contribution value"
+      contribution_status: "Contribution status"
+      request_refund: 'Request refund'
+      reward: Reward
+      no_reward: "No reward"
+      delivery_estimate: "Estimated delivery:"
     card:
-      twitter_profile: "Perfil no Twitter"
-      facebook_profile: "Perfil no Facebook"
+      twitter_profile: "Twitter profile"
+      facebook_profile: "Facebook profile"
       author_website: "Site"
-      contact_author: "Enviar mensagem"
-    failed_reactivation: "O link para reativação é inválido, por favor entre em contato com a nossa equipe."
-    reactivated: "Seja bem vindo de volta, sua conta foi reativada."
+      contact_author: "Send message"
+    failed_reactivation: "The link reactivation is invalid, please contact our team."
+    reactivated: "Welcome back, your account has been reactivated."
     project:
       confirmed: "Confirmado"
       refunded: "Reembolsado"
@@ -119,6 +119,6 @@ en:
         settings: Preferências
         unsubscribes: Notificações
       user_social:
-        email: "Me envie um email"
-        facebook: "Perfil no facebook"
-        twitter: "Perfil no twitter"
+        email: "Send me an email"
+        facebook: "Facebook profile"
+        twitter: "Twitter profile"

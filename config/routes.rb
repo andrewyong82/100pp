@@ -18,8 +18,8 @@ Catarse::Application.routes.draw do
 
   filter :locale, exclude: /\/auth\//
 
-  mount CatarseMoip::Engine => "/", as: :catarse_moip
-  mount CatarsePagarme::Engine => "/", as: :catarse_pagarme
+  # mount CatarseMoip::Engine => "/", as: :catarse_moip
+  # mount CatarsePagarme::Engine => "/", as: :catarse_pagarme
   mount CatarseApi::Engine => "/api", as: :catarse_api
  #mount CatarseWepay::Engine => "/", as: :catarse_wepay
   mount Dbhero::Engine => "/dbhero", as: :dbhero
@@ -53,6 +53,7 @@ Catarse::Application.routes.draw do
       member do
         get 'toggle_anonymous'
         get :second_slip
+        post :prepare_bill
       end
       put :credits_checkout, on: :member
     end
@@ -101,6 +102,7 @@ Catarse::Application.routes.draw do
   get "/explore" => 'high_voltage/pages#show', id: 'explore'
   get "/team" => 'high_voltage/pages#show', id: 'team'
 
+  post "/bill_paid" => 'projects/contributions#bill_paid', id: 'bill_paid'
 
   # User permalink profile
   constraints SubdomainConstraint do

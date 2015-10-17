@@ -56,12 +56,12 @@ en:
     payer_email: 'Payment gateway user email'
     payment_method: 'Payment method'
     address_street: 'Street'
-    address_complement: 'Complement'
+    address_complement: 'Building'
     address_number: 'Number'
-    address_neighbourhood: 'Neighborhood'
+    address_neighbourhood: 'Suburb'
     address_city: 'City'
     address_state: 'State'
-    address_zip_code: 'Zip code'
+    address_zip_code: 'Postcode'
     anonymous: 'Anonymous'
   edit_project: 'Edit this project'
   facebook_locale: 'en_US'
@@ -185,12 +185,12 @@ en:
         minimum_value: "Minimum value"
       user:
         address_city: City
-        address_complement: Complement
-        address_neighbourhood: Neighbourhood
+        address_complement: Building
+        address_neighbourhood: Suburb
         address_number: Number
         address_state: State
         address_street: Street
-        address_zip_code: "Zip code"
+        address_zip_code: "Postcode"
         cpf: 'CPF / CNPJ '
         cpf_hint_title: 'An invoice will be issued for this document.'
         cpf_hint: '(?)'
@@ -204,7 +204,7 @@ en:
         name: "Nickname"
         password: Password
         password_confirmation: "Password Confirmation"
-        phone_number: "Mobile phone number"
+        phone_number: "Telephone"
         newsletter: 'I want receive news about Catarse'
     models:
       contribution: Contribution

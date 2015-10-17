@@ -11,7 +11,7 @@ en:
 #      available: "Quantidade disponível"
 #      submit: "Salvar"
     index:
-      select_reward: Select this reward
+      select_reward: Select this amount
       display_remaining: "%{remaining} of %{maximum} available"
       dont_want: I do not want a reward
       or_more: "or more"

@@ -1,3 +1,5 @@
+- content_for :title, t('.page-title', name: @project.name)
+
 = render 'shared/header'
 - if @contribution.was_confirmed? || !@contribution.slip_payment?
   = render 'thank_you'

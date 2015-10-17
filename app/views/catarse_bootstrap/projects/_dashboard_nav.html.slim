@@ -18,7 +18,7 @@
           = link_to (edit ? '#posts' : edit_project_path(@project, anchor: 'posts')), id: 'dashboard_posts_link', class: 'dashboard-nav-link-left ' , data: {target: '#dashboard_posts', tab_group: 'edit'} do
             span.fa.fa-bullhorn.fa-fw.fa-lg>
             = t('.posts_tab')
-            | &nbsp
+            =(" ")
             span.badge= @project.posts.count
           = link_to (edit ? '#reports' : edit_project_path(@project, anchor: 'reports')), id: 'dashboard_reports_link', class: 'dashboard-nav-link-left u-marginbottom-30' , data: {target: '#dashboard_reports', tab_group: 'edit'} do
             span.fa.fa-bar-chart.fa-fw.fa-lg>

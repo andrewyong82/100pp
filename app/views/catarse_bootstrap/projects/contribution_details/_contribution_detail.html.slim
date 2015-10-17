@@ -15,7 +15,7 @@
           .fontsize-smaller 
             = number_to_currency contribution.value
             - if contribution.anonymous?
-              |&nbsp;-&nbsp;
+              = " - "
               strong= t('.anonymous_contribution')
         .fontsize-smaller = l(contribution.created_at, format: :simple)
         .fontsize-smaller = contribution.user.contributions_text
