@@ -31,7 +31,7 @@ class RewardDecorator < Draper::Decorator
               <input class="user-reward-value back-reward-input-reward" type="tel" min="#{number_with_precision(source.minimum_value, precision: 0)}" placeholder="#{source.minimum_value > 0 ? number_with_precision(source.minimum_value, precision: 0) : '10'}">
             </div>
           </div>
-          <div class="fontsize-smaller text-error u-marginbottom-20 w-hidden"><span class="fa fa-exclamation-triangle"></span> O valor do apoio está incorreto</div>
+          <div class="fontsize-smaller text-error u-marginbottom-20 w-hidden"><span class="fa fa-exclamation-triangle"></span> The contribution amount is invalid</div>
         </div>
         <div class="submit-form w-col w-col-4 w-col-small-4 w-col-tiny-4"><a class="btn btn-large" href="#">Continue  <span class="fa fa-chevron-right"></span></a>
         </div>
