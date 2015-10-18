@@ -91,7 +91,7 @@ en:
   count_contributed_projects: "contributed %{total} projects"
   rewards:
     index:
-      dont_want: "I don't want any reward."
+      dont_want: "I don't want any perks."
   footer:
     titles:
       about: "About us"
@@ -698,7 +698,7 @@ en:
   require_permission: "You don't have permission to perform this action."
   reward:
     display_remaining: "%{remaining} of %{maximum} available"
-    dont_want: "I don't want a reward"
+    dont_want: "I don't want a perk"
     limited: Limited
     sold_out: "Sold out"
   sessions:

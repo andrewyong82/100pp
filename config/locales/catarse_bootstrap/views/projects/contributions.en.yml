@@ -11,12 +11,12 @@ en:
       contribution:
         anonymous_contribution: anonymous supporter
         anonymous_description: Opt-in to remain incognito
-        no_reward: This supporter did not select any reward
+        no_reward: This supporter did not select any perk
       selected_reward:
         review_without_reward_html: You will support with <strong>%{value}</strong>
-          and do not want any reward for their support.
+          and do not want any perk for their support.
         value: Support amount
-        reward: selected reward
+        reward: selected perk
         edit: edit
       credit_card_payment:
         payment_save_card: I want to save my credit card to facilitate future support
@@ -24,20 +24,20 @@ en:
         page_title: 'Your contribution for %{name} has been registered'
         warning: 'Warning'
         warning_subtitle: 'You are trying to access an address referring to a contribution already in progress:'
-        check_email: "Check in your inbox whether the provisional receipt of support was sent. If not, please %{mail_to_link} us, informing the reference code of your contribution (%{gateway_id}), we will help you with anything you need."
+        check_email: "Check in your inbox whether the interim receipt of support was sent. If not, please %{mail_to_link} us, informing the reference code of your contribution (%{gateway_id}), we will help you with anything you need."
         new_contribution: "If you have accessed this page in error, and want to perform a new transaction, %{link}"
         contact: 'contact'
         click_here: 'click here'
       faq:
         common_questions: 'Common Questions'
         how_contribute: 'How to support this project?'
-        how_contribute_answer: 'Choose the amount and the desired reward. Then fill in the form and details of the payment to finalize the support.'
+        how_contribute_answer: 'Choose the amount and the desired perk. Then fill in the form and details of the payment to finalize the support.'
         when_made_payment: 'When payment is processed?'
         when_made_payment_answer: 'You will be redirected to the BillPlz payment page, where you can choose your form of payment.'
         when_project_fails: 'What if the project does not reach the target?'
         when_project_fails_answer: 'In this case, you get back 100 % of what is paid through a refund.'
-        when_project_funded: 'If the project is funded , how do I get my reward?'
-        when_project_funded_answer: 'When your reward is ready, %{name} will contact you to arrange delivery.'
+        when_project_funded: 'If the project is funded , how do I get my perk?'
+        when_project_funded_answer: 'When your perk is ready, %{name} will contact you to arrange delivery.'
       edit:
         payment_slip_disclaimer: If the campaign is not successful , we will refund
           your support.
@@ -64,7 +64,7 @@ en:
         pagarme_warning_html: 100% Project is in testing phase of a new means of
           payment that facilitate financial support and the possible repayment of
           the amounts to supporters.
-        reward_sold_out: This reward is exhausted.
+        reward_sold_out: This perk is exhausted.
         page-title: Support %{name}
         credits_preview_html: "Você possui <strong>%{credits}</strong> em créditos para realizar esse apoio <strong>até o dia 10/11</strong>, conforme <a href='http://blog.catarse.me/simplificacao-dos-reembolsos-e-o-fim-dos-creditos/' target='__blank'>novas regras</a> divulgadas pelo Catarse."
         credits_submit: "make Payment"
@@ -81,7 +81,7 @@ en:
         payment_boleto: Payment with boletus
         payment_card: Payment with credit card
         review_with_reward_html: 'You will support with <strong>%{value}</strong>
-          and earn the following rewards :'
+          and earn the following perks :'
         select_account: 'You will be redirected to your bank''s website :'
         select_boleto: 'To continue, please select :'
         submit:
@@ -94,11 +94,11 @@ en:
         review_subtitle: This data will be passed to the campaign organizer.
         review_title: Complete and review the data for payment
       new:
-        page-title: Support the %{name}
+        page-title: Support %{name}
         title: So many choices almost there!
         you_have_credits: You have <strong>%{credits}</strong> in credits to make
           this support.
-        choose_reward: Pricing
+        choose_reward: Choose amount
         choose_value: Please enter the amount you would like to buy.
         minimum_disclaimer: From $<span id="minimum-value">1</span>
         next_step: Review and make payment
