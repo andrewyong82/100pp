@@ -32,7 +32,7 @@ App.addChild('Contribution', {
   },
 
   activate: function(){
-    this.$('.user-reward-value').mask('000.000.000,00', {reverse: true});
+    this.$('.user-reward-value').mask('000,000,000', {reverse: true});
     this.$value = this.$('#contribution_value');
     this.$minimum = this.$('#minimum-value');
     this.clickReward({currentTarget: this.$('input[type=radio]:checked').parent()});
