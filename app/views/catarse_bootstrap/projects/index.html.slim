@@ -43,15 +43,15 @@ section#projects.before-footer
     .w-row
       == render_projects @recommends, 'home_recommended', { wrapper_class: 'w-col w-col-4' }
 
-  article.section.w-container
-    .w-row.u-marginbottom-30
-      .w-col.w-col-10.w-col-small-6.w-col-tiny-6
-        .fontsize-large.lineheight-looser
-          = t('.expiring')
-      .w-col.w-col-2.w-col-small-6.w-col-tiny-6
-        = link_to t('.see_all'), explore_path(ref: :home_expiring, anchor: :expiring), class: 'btn btn-small btn-terciary'
-    .w-row
-      == render_projects @expiring, 'home_expiring', { wrapper_class: 'w-col w-col-4' }
+  /article.section.w-container
+  /  .w-row.u-marginbottom-30
+  /    .w-col.w-col-10.w-col-small-6.w-col-tiny-6
+  /      .fontsize-large.lineheight-looser
+  /        = t('.expiring')
+  /    .w-col.w-col-2.w-col-small-6.w-col-tiny-6
+  /      = link_to t('.see_all'), explore_path(ref: :home_expiring, anchor: :expiring), class: 'btn btn-small btn-terciary'
+  /  .w-row
+  /    == render_projects @expiring, 'home_expiring', { wrapper_class: 'w-col w-col-4' }
 
   article.section.recent-projects.w-container
     .w-row.u-marginbottom-30
