@@ -2,9 +2,9 @@ en:
   users:
     profile:
       user_since: "User since %{date}"
-      no_project_contribution: "Not yet supported projects"
-      single_project_contribution: "Supported 1 project"
-      multiple_project_contribution: "Supported %{n_projects} projects"
+      no_project_contribution: "Not contributed to any projects"
+      single_project_contribution: "Contributed to 1 project"
+      multiple_project_contribution: "Contributed to %{n_projects} projects"
       single_project_created: " and created 1 project"
       multiple_project_created: " and created %{n_projects} projects"
     contribution_row:

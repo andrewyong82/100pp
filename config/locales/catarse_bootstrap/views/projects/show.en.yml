@@ -57,6 +57,8 @@ en:
         reports: Reports
         posts: News
     project_main:
+      post_call: 'All posts published here will be sent directly to the email from those who have supported your project and is also available for viewing on the site. You can choose to let it public, or visible only to its supporters here in this tab.'
+      send_post: 'Publish post'
       twitter_profile: Twitter Profile 
       facebook_profile: Facebook Profile
       author_website: Site
@@ -98,5 +100,5 @@ en:
         confirmed: confirmed
         pending: pending
       sidebar:
-        contributions: supporters
-        goal: raised of %{total} goal
+        contributions: contributions
+        goal: out of %{total} raised

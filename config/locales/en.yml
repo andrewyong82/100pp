@@ -690,8 +690,8 @@ en:
       site_title: "Sign up"
       submit: "Sign Up"
       title: "Sign up using you email"
-  remaining_plural: left
-  remaining_singular: left
+  remaining_plural: to go
+  remaining_singular: to go
   remove: remove
   require_admin: "You must be an admin to perform this action."
   require_login: "You must be logged in to perform this action."

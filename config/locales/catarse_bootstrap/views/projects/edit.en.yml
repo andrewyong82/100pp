@@ -62,7 +62,7 @@ en:
         financed: funded
         backed: Raised
         contributions: support
-        left: remaining
+        left: to go
       waiting_funds:
         title: "%{name}, we are processing the final payments."
         subtitle_html: This campaign was completed in %{expires} and is awaiting confirmation
