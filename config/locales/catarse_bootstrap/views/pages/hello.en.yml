@@ -4,9 +4,9 @@ en:
       page-title: "100% Project | About us"
       hero:
         title_html: "Build a better Malaysia,<br>one classroom at a time"
-        people_html: "Pessoas já apoiaram pelo menos <br>1 projeto no Catarse"
-        projects_html: "Projetos já foram <br>financiados no Catarse"
-        money_html: "Doados para projetos <br>publicados por aqui"
+        people_html: "people have contributed on<br>100% PROJECT"
+        projects_html: "projects have been funded on<br>100% PROJECT"
+        money_html: "funds raised so far on<br>100% PROJECT"
         success: "Projetos já foram financiados no Catarse"
         money: "Doados para projetos publicados por aqui"
       idea:

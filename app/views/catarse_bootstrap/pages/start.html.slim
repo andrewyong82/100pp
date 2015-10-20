@@ -5,12 +5,12 @@
 .project-start-wrapper
   .page-header
     .w-container.no-responsive
-      h1.fontsize-largest.u-text-center.u-marginbottom-70.u-margintop-40 Are you a teacher in need of funding?
+      h1.fontweight-semibold.fontsize-jumbo.u-text-center.u-marginbottom-70.u-margintop-40 Are you a teacher in need of funding?
       .w-row.u-margintop-20.u-marginbottom-60.u-text-center
         .w-col.w-col-4.w-col-push-4
           a.btn.btn-large.btn-inline href="https://docs.google.com/forms/d/1lRbPRqiTNFroyFartTeO5lryAOzPv7fc5LU4NhoNGi4/viewform" Register your interest
 
-.section-large.before-footer
+.section-large
   .w-container
     .w-row.u-text-center
       .w-col.w-col-10.w-col-push-1
@@ -27,6 +27,15 @@
         = image_tag "exploration_exposure.png", width: "250", class: "u-marginbottom-20"
         .fontsize-large.u-marginbottom-20.lineheight-tighter EXPOSURE AND EXPLORATION
         .fontsize-small Educational field trips provide students with exposure beyond the classroom
-    .w-hidden-main.w-hidden-medium.u-marginbottom-40
+
+.section.before-footer.bg-gray
+  .w-container
+    .w-row.u-marginbottom-80.u-text-center.u-margintop-30
+      .w-col.w-col-6
+        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 A social enterprise under
+        = image_tag "magic_logo.png", width: "250"
+      .w-col.w-col-6
+        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 In partnership with
+        = image_tag "tfm_logo.png", width: "250"
 
 = render 'shared/footer_big'

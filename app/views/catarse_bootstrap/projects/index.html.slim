@@ -20,7 +20,7 @@ section#hero-home.hero-full.hero-knowmore
       .w-col.w-col-4.w-col-push-4
         a.btn.btn-large.u-marginbottom-10 href="#{hello_path(ref: 'home_banner')}" Find out more
 
-section#projects.before-footer
+section#projects
   - if current_user && @projects_near.present?
     article.section.u-marginbottom-40
       .w-container
@@ -63,6 +63,36 @@ section#projects.before-footer
     .w-row
       == render_projects @recent, 'home_recent', { wrapper_class: 'w-col w-col-4' }
 
+.section-large.bg-gray
+  .w-container
+    .w-row.u-text-center
+      .w-col.w-col-10.w-col-push-1
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 How does it work?
+      .w-col.w-col-4.u-marginbottom-20
+        = image_tag "find.png", width: "250", class: "u-marginbottom-20"
+        .fontsize-large.u-marginbottom-20.lineheight-tighter Find a project
+        .fontsize-small Find a classroom project you believe in
+      .w-col.w-col-4.u-marginbottom-20
+        = image_tag "fund.png", width: "250", class: "u-marginbottom-20"
+        .fontsize-large.u-marginbottom-20.lineheight-tighter Fund it
+        .fontsize-small Give as little as RM10 to fund it
+      .w-col.w-col-4.u-marginbottom-20
+        = image_tag "impact.png", width: "250", class: "u-marginbottom-20"
+        .fontsize-large.u-marginbottom-20.lineheight-tighter Receive updates and perks
+        .fontsize-small Get updated on the impact you’ve made and receive a perk for your investment.
+    .w-row.u-margintop-20
+      .w-col.w-col-4.w-col-push-4
+        = link_to 'Start exploring projects', explore_path, class: 'btn btn-large'
+    .w-hidden-main.w-hidden-medium.u-marginbottom-40
 
+.section.before-footer
+  .w-container
+    .w-row.u-marginbottom-80.u-text-center.u-margintop-30
+      .w-col.w-col-6
+        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 A social enterprise under
+        = image_tag "magic_logo.png", width: "250"
+      .w-col.w-col-6
+        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 In partnership with
+        = image_tag "tfm_logo.png", width: "250"
 
 = render 'shared/footer_big'

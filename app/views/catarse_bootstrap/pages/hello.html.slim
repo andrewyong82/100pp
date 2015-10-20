@@ -11,25 +11,21 @@
     .fontweight-semibold.u-marginbottom-20.fontsize-megajumbo = t('.hero.title_html')
   .knowmore-hello 
     .fa.fa-chevron-down.fontcolor-dashboard
-.section-large
+.section
   .w-container
+    .w-hidden-main.w-hidden-medium.u-margintop-30
     .w-row.u-text-center
-      .w-col.w-col-10.w-col-push-1
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 How does it work?
+      - statistics = Statistics.first
       .w-col.w-col-4.u-marginbottom-20
-        = image_tag "find.png", width: "250", class: "u-marginbottom-20"
-        .fontsize-large.u-marginbottom-20.lineheight-tighter Find a project
-        .fontsize-small Find a classroom project you believe in
+        .hello-stats= number_with_delimiter(statistics.total_contributors)
+        .fontsize-small = t('.hero.people_html')
       .w-col.w-col-4.u-marginbottom-20
-        = image_tag "fund.png", width: "250", class: "u-marginbottom-20"
-        .fontsize-large.u-marginbottom-20.lineheight-tighter Fund it
-        .fontsize-small Give as little as RM10 to fund it
+        .hello-stats= number_with_delimiter(statistics.total_projects_success)
+        .fontsize-small = t('.hero.projects_html')
       .w-col.w-col-4.u-marginbottom-20
-        = image_tag "impact.png", width: "250", class: "u-marginbottom-20"
-        .fontsize-large.u-marginbottom-20.lineheight-tighter Receive updates and perks
-        .fontsize-small Get updated on the impact you’ve made and receive a perk for your investment.
+        .hello-stats= number_to_human(statistics.total_contributed)
+        .fontsize-small = t('.hero.money_html')
     .w-hidden-main.w-hidden-medium.u-marginbottom-40
-
 .section-large.hello-catarse
   .w-container
     .w-row
@@ -56,9 +52,8 @@
 
     .w-row.u-text-center
       .w-col.w-col-10.w-col-push-1
-        .fontsize-large.lineheight-tight.u-marginbottom-30 Be our founding partner now.
+        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 Be our founding partner now.
         a.btn.btn-large.btn-inline href="https://docs.google.com/forms/d/1wRbTWvwRstuxIol_mehTxkmxA6u4OWNOOJ_CKZGPcdc/viewform" Get in touch with us
-
 
 .section.before-footer
   .w-container
@@ -69,6 +64,7 @@
       .w-col.w-col-6
         .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 In partnership with
         = image_tag "tfm_logo.png", width: "250"
+
 
 /.w-lightbox-backdrop.w-hidden tabindex="0"
 /  .w-lightbox-container

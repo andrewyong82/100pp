@@ -1,17 +1,18 @@
-footer.main-footer.main-footer-neg style="padding-top:20px"
-  /section.w-container
-  /  .w-row
-  /    .w-col.w-col-9
-  /      .w-row
-  /        .w-col.w-col-4.w-col-small-4.w-col-tiny-4.w-hidden-tiny
-  /          = render 'shared/footer_welcome'
-  /        .w-col.w-col-4.w-col-small-4.w-col-tiny-4.footer-full-firstcolumn
-  /          = render 'shared/footer_about'
-  /        .w-col.w-col-4.w-col-small-4.w-col-tiny-4.footer-full-lastcolumn
-  /          = render 'shared/footer_navigate'
-  /    .w-col.w-col-3.column-social-media-footer
-  /      a.w-hidden-small.w-hidden-tiny.link-footer href="#{start_path}"  #{t('layouts.footer.links.submit')}
-        /.footer-full-signature-text.fontsize-small Subscribe to our news
+footer.main-footer.main-footer-neg
+  section.w-container
+    .w-row
+      .w-col.w-col-8
+        .w-row
+          .w-col.w-col-6.w-col-small-6.w-col-tiny-6.footer-full-firstcolumn
+            = render 'shared/footer_welcome'
+          .w-col.w-col-2.w-col-small-2.w-col-tiny-2
+            /= render 'shared/footer_about'
+          .w-col.w-col-4.w-col-small-4.w-col-tiny-4
+            = render 'shared/footer_navigate'
+      .w-col.w-col-4.column-social-media-footer
+        /a.w-hidden-small.w-hidden-tiny.link-footer href="#{start_path}"  #{t('layouts.footer.links.submit')}
+        /.footer-full-signature-text.fontsize-small Keep in touch
+        <div class="fb-page" data-href="https://facebook.com/100pproject" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://facebook.com/100pproject"><a href="https://facebook.com/100pproject">100% Project</a></blockquote></div></div>
         /.w-form
         /  = render 'shared/newsletter'
         /.footer-full-signature-text.fontsize-small Social networks
@@ -20,6 +21,6 @@ footer.main-footer.main-footer-neg style="padding-top:20px"
         /.w-widget.w-widget-twitter
         /  = link_to "Follow @#{CatarseSettings[:twitter_username]}", "http://twitter.com/#{CatarseSettings[:twitter_username]}", :class => 'twitter-follow-button', :"data-button"=>"blue", :"data-text-color" => "#ffffff", :"data-link-color"=>"#fffffff", :"data-width" => "224px"
   .w-container
-    .footer-full-copyleft style="margin-top:20px"
+    .footer-full-copyleft
       = image_tag "logo-footer.png", class: "u-marginbottom-20"
-      .lineheight-loose: a.link-footer-inline[href="#{CatarseSettings[:github_url]}"] Copyright #{Date.today.year} | EdSpace Projects Sdn. Bhd.
+      .lineheight-loose: a.link-footer-inline[href="#{hello_path}"] Copyright #{Date.today.year} | EdSpace Projects Sdn Bhd
