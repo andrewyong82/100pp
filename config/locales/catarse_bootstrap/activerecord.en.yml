@@ -230,9 +230,9 @@ en:
         user:
           attributes:
             email:
-              not_found: The email is not registered , check the address or register
+              not_found: The email is not registered, please check the address or register
                 yourself
-              taken: The email is already registered , login
+              taken: The email is already registered
               invalid: This email address is invalid
               blank: Email can not be blank
             password:
@@ -243,7 +243,7 @@ en:
             current_password:
               invalid: Current password is not valid
             reset_password_token:
-              invalid: expired .
+              invalid: The reset token is invalid
             name:
               blank: User name can not be blank
             about_html:
@@ -268,7 +268,7 @@ en:
       chargeback: "Contested"
   contribution:
     payment_details:
-      bill: "BillPlz"
+      bill: "Billplz"
       desconhecido: ""
       creditos: "Créditos"
       boleto_bancario: "Boleto Bancário"

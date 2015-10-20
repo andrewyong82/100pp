@@ -90,7 +90,7 @@ class Projects::ContributionsController < ApplicationController
         value: @contribution.value,
         payment_method: "Bill",
         gateway_id: response_data['id'],
-        gateway: 'BillPlz',
+        gateway: 'Billplz',
         gateway_data: response_data,
         installments: 1
     }

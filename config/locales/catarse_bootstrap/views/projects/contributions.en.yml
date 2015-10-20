@@ -33,7 +33,7 @@ en:
         how_contribute: 'How to support this project?'
         how_contribute_answer: 'Choose the amount and the desired perk. Then fill in the form and details of the payment to finalize the support.'
         when_made_payment: 'When payment is processed?'
-        when_made_payment_answer: 'You will be redirected to the BillPlz payment page, where you can choose your form of payment.'
+        when_made_payment_answer: 'You will be redirected to the Billplz payment page, where you can choose your form of payment.'
         when_project_fails: 'What if the project does not reach the target?'
         when_project_fails_answer: 'In this case, you get back 100 % of what is paid through a refund.'
         when_project_funded: 'If the project is funded , how do I get my perk?'
