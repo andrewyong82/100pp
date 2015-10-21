@@ -329,8 +329,8 @@ en:
   found_plural: Found
   found_singular: Found
   here: here
-  i_contributed: "I contributed the project %{name} on @catarse"
-  i_just_contributed: "I just contributed the project %{name} on @catarse"
+  i_contributed: "I contributed to the project %{name} on @100pproj"
+  i_just_contributed: "I just contributed to the project %{name} on @100pproj"
   layouts:
     login:
       login_with_facebook: "sign in with your Facebook account"

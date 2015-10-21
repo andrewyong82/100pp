@@ -13,7 +13,7 @@ header class="main-header w-section #{'alert' if can_display_pending_refund_aler
 
     = link_to t('layouts.header.help'), CatarseSettings[:support_forum], target: :_blank, class: 'w-nav-link w-hidden-small w-hidden-tiny header-link w-nav-link u-right',  id: 'guidelines_header_modal' if CatarseSettings[:support_forum].present?
 
-    .w-widget.w-widget-facebook style="display: inline-block;margin-top: 8px;float: right;margin-right: 20px;height:25px"
+    .w-widget.w-widget-facebook style="display: inline-block;margin-top: 8px;float: right;margin-right: 20px;height:20px;overflow:hidden"
       = render_facebook_like colorscheme: "dark"
 
   = yield :headermobile_controls
