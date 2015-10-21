@@ -15,7 +15,7 @@ App.addChild('Contribution', {
 
   submitForm: function(event){
     var $target_row = $(event.target).parents('.back-reward-money'),
-        user_value = this.$('.selected').find('.user-reward-value').val().replace(/\./g,'');
+        user_value = this.$('.selected').find('.user-reward-value').val().replace(/,/g,'');
     if(user_value === ''){
       this.$value.val(this.minimumValue());
     }else{
