@@ -67,6 +67,10 @@ section.section[itemtype="http://schema.org/CreativeWork"]
             = t(".contribute_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
 
         = render 'users/card', resource: @project.user
+
+        -if @project.partner.present?
+          = render 'card_partner', resource: @project
+
         .w-hidden-main.w-hidden-medium.project-share
           .div-share-mobile-fb
             = render_facebook_share_mobile(url: project_by_slug_url(permalink: @project.permalink, ref: 'facebook'), title: @project.name)

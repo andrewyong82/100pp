@@ -12,6 +12,7 @@ class Project < ActiveRecord::Base
   include Project::VideoHandler
   include Project::CustomValidators
   include Project::ErrorGroups
+  include Project::Partner
 
   has_notifications
 

@@ -1,0 +1,11 @@
+.card.u-radius.u-marginbottom-30[itemprop="partner"]
+  .w-row
+    .w-col.w-col-4.w.col-small-4.w-col-tiny-4.w-clearfix  
+      = image_tag resource.partner[:image], width: "100", class: "thumb u-round", itemprop: "image"
+    .w-col.w-col-8.w-col-small-8.w-col-tiny-8
+      .fontsize-small.fontweight-semibold.lineheight-tighter[itemprop="name"] = link_to resource.partner[:name] + " is 100% for education", resource.partner[:link], class: 'link-hidden'
+      .fontsize-smallest.u-margintop-10 = resource.partner[:description]
+  .project-author-contacts
+    ul.w-list-unstyled.fontsize-smaller.fontweight-semibold
+        li
+          = link_to "Visit " + resource.partner[:name], resource.partner[:link], target: '_blank', class: 'link-hidden', itemprop: "url"

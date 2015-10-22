@@ -14,7 +14,7 @@ en:
     push_to_online: Your campaign is online!
     push_to_online_error: Error while placing the online campaign.
     twitter:
-      take_a_look: Check out the campaign %{name} in catarse
+      take_a_look: Check out the project %{name} on 100% Project
     video_embed:
       a_project_by_html: A %{link} campaign in
     posts:
