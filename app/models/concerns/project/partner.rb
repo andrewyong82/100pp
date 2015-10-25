@@ -18,6 +18,12 @@ module Project::Partner
               link: "https://kfit.com",
               image: baselink + "kfit2.png",
               description: "As a token of appreciation, KFit will be giving out limited vouchers to thank some contributors of this project"
+          },
+          foodpanda: {
+              name: "foodpanda",
+              link: "https://foodpanda.my",
+              image: baselink + "foodpanda.png",
+              description: "As a token of appreciation, foodpanda will be giving out limited vouchers to thank some contributors of this project"
           }
       }
 
@@ -27,6 +33,8 @@ module Project::Partner
           partner = partners[:kfit]
         when self.id == 1
           partner = partners[:kfit]
+        when self.id == 8
+          partner = partners[:foodpanda]
         else
           return
       end
