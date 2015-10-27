@@ -31,11 +31,17 @@
 .section.before-footer.bg-gray
   .w-container
     .w-row.u-marginbottom-80.u-text-center.u-margintop-30
-      .w-col.w-col-6
-        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 A social enterprise supported by
+      .w-col.w-col-4.u-marginbottom-30
+        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 A social enterprise <br/> supported by
         = image_tag "magic_logo.png", width: "250"
-      .w-col.w-col-6
+      .w-col.w-col-8
         .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 In partnership with
-        = image_tag "tfm_logo.png", width: "250"
+        .w-row
+          .w-col.w-col-6.u-marginbottom-20
+            = image_tag "tfm_logo.png", width: "250"
+          .w-col.w-col-6.u-marginbottom-20
+            = image_tag "https://s3.amazonaws.com/100pp/assets/partners/ytlf.png", width: "250"
+            p.u-marginbottom-20
+            = image_tag "https://s3.amazonaws.com/100pp/assets/partners/frogasia.png", width: "250"
 
 = render 'shared/footer_big'
