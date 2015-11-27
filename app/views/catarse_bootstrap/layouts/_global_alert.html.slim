@@ -1,8 +1,8 @@
-#global-alert.w-clearfix.global-alert.u-text-center.w-hidden
-  = link_to ' ', '#', class: 'link-icon-light fa fa-close fa-lg u-right', id: 'close-global-alert'
-  /.w-container
-  /  | If you are having trouble accessing the catharsis , you may need to clear the cookies from your browser. #{link_to 'Know more', 'https://100percentproject.zendesk.com', target: :blank, class: 'link-hidden-white'}
-  /.w-container
-    | Welcome to the new Catharsis ! The previous version will be in the air until 03/11/2015. #{link_to 'Know more', 'https://100percentproject.zendesk.com', target: :blank, class: 'link-hidden-white'}
-  .w-container
-    | Welcome to 100% Project (Alpha), please bear with us while we prepare for launch! #{link_to 'Follow us', 'https://facebook.com/100pproject', target: :blank, class: 'link-hidden-white'}
+- if !@project && controller_name != 'donations'
+  #global-alert.w-clearfix.global-alert.u-text-center.w-hidden
+    .w-section.w-clearfix.alert-top.alert-flex.float
+      a#close-global-alert.w-inline-block.u-right.fa.fa-times.link-hidden href="#" 
+      .w-container
+        div
+          span.alert-content Are you a teacher in need of funding?
+          a.btn.btn-inline.btn-small href="https://docs.google.com/forms/d/1lRbPRqiTNFroyFartTeO5lryAOzPv7fc5LU4NhoNGi4/viewform" Register your interest

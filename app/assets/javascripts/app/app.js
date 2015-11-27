@@ -9,26 +9,31 @@ var App = window.App = Skull.View.extend({
     "click #pg_search_submit" : "searchProject",
   },
 
-  openAlert: function(){
-    if($('#global-alert').length === 0 || this.$('body').data('mobile')){
-      return;
-    }
-    if(!window.store.get('globalClosedCookies')){
-      $('#global-alert').show();
-      $('body').css('padding-top', '30px');
-      $('#global-alert')
-        .css('z-index', '100');
-    }
-    else{
-      this.closeAlert();
-    }
-  },
+    openAlert: function(){
+        if($('#global-alert').length === 0 || this.$('body').data('mobile')){
+            return;
+        }
+        if($('#fixed-alert').length > 0 && !this.$('body').data('mobile')){
+            $('#fixed-alert').addClass('fixed-alert-visible');
+            $('.main-header, .hero-search').addClass('with-fixed-alert');
+            this.fixedAlert = true;
+        }
+        if(!window.store.get('globalClosedCookies')){
+            $('#global-alert').slideDown(400);
+            $('.main-header').addClass('with-global-alert');
+            if(this.fixedAlert){
+                $('.main-header, #global-alert').addClass('with-two-alerts');
+            }
+        }
 
-  closeAlert: function(event){
-    $('body').css('padding-top', '0');
-    $('#global-alert').slideUp('slow');
-    window.store.set('globalClosedCookies', true);
-  },
+    },
+
+    closeAlert: function(event){
+        $('#global-alert').slideUp(400);
+        $('.main-header').removeClass('with-global-alert').removeClass('with-two-alerts');
+        window.store.set('globalClosedCookies', true);
+        this.globalAlert = false;
+    },
 
   searchProject: function(){
     this.$('.discover-form:visible').submit();
@@ -41,14 +46,15 @@ var App = window.App = Skull.View.extend({
   },
 
   activate: function(){
-    this.openAlert();
-    this.$(".best_in_place").best_in_place();
-    this.$dropdown = this.$('.dropdown-list.user-menu');
-    this.flash();
-    this.notices();
-    Backbone.history.start({pushState: false});
-    this.maskAllElements();
-    this.applyErrors();
+      this.openAlert();
+      if (this.$(".best_in_place").best_in_place)
+        this.$(".best_in_place").best_in_place();
+      this.$dropdown = this.$('.dropdown-list.user-menu');
+      this.flash();
+      this.notices();
+      Backbone.history.start({pushState: false});
+      this.maskAllElements();
+      this.applyErrors();
   },
 
   flash: function() {
