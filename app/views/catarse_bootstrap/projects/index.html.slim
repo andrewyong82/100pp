@@ -20,6 +20,15 @@ section#hero-home.hero-full.hero-knowmore
       .w-col.w-col-4.w-col-push-4
         a.btn.btn-large.u-marginbottom-10 href="#{hello_path(ref: 'home_banner')}" Find out more
 
+.section
+  .w-container
+    .w-hidden-main.w-hidden-medium.u-margintop-30
+    .w-row.u-text-center
+      .w-col.w-col-12.u-marginbottom-20
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 New projects launching soon
+        <div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="January 16, 2016 23:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+    .w-hidden-main.w-hidden-medium.u-marginbottom-40
+
 section#projects
   /- if current_user && @projects_near.present?
   /  article.section.u-marginbottom-40

@@ -55,7 +55,26 @@ var App = window.App = Skull.View.extend({
       Backbone.history.start({pushState: false});
       this.maskAllElements();
       this.applyErrors();
+      this.countdown();
   },
+
+    countdown: function() {
+        var e = jQuery(".countdown");
+        if (e.length > 0) {
+            e.each(function () {
+                var e = jQuery(this),
+                    t = e.attr("data-from"),
+                    a = e.attr("data-labels");
+                if (a && (a = a.split(",")), t) {
+                    var r = new Date(t);
+                    jQuery(this).countdown({
+                        until: new Date(r),
+                        labels: a || ["Years", "Months", "Weeks", "Days", "Hours", "Minutes", "Seconds"]
+                    })
+                }
+            });
+        }
+    },
 
   flash: function() {
     var that = this;
