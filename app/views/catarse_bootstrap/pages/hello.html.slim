@@ -11,21 +11,24 @@
     .fontweight-semibold.u-marginbottom-20.fontsize-megajumbo = t('.hero.title_html')
   .knowmore-hello 
     .fa.fa-chevron-down.fontcolor-dashboard
-.section
-  .w-container
-    .w-hidden-main.w-hidden-medium.u-margintop-30
-    .w-row.u-text-center
-      - statistics = Statistics.first
-      .w-col.w-col-4.u-marginbottom-20
-        .hello-stats= number_with_delimiter(statistics.total_contributors)
-        .fontsize-small = t('.hero.people_html')
-      .w-col.w-col-4.u-marginbottom-20
-        .hello-stats= number_with_delimiter(statistics.total_projects_success)
-        .fontsize-small = t('.hero.projects_html')
-      .w-col.w-col-4.u-marginbottom-20
-        .hello-stats= number_to_human(statistics.total_contributed)
-        .fontsize-small = t('.hero.money_html')
-    .w-hidden-main.w-hidden-medium.u-marginbottom-40
+/.section
+/  .w-container
+/    .w-hidden-main.w-hidden-medium.u-margintop-30
+/    .w-row.u-text-center
+/      /- statistics = Statistics.first
+/      .w-col.w-col-4.u-marginbottom-20
+/        /.hello-stats= number_with_delimiter(statistics.total_contributors)
+/        .hello-stats= number_with_delimiter(264)
+/        .fontsize-small = t('.hero.people_html')
+/      .w-col.w-col-4.u-marginbottom-20
+/        .hello-stats= number_with_delimiter(11)
+/        /.hello-stats= number_with_delimiter(statistics.total_projects_success)
+/        .fontsize-small = t('.hero.projects_html')
+/      .w-col.w-col-4.u-marginbottom-20
+/        /.hello-stats= number_to_human(statistics.total_contributed)
+/        .hello-stats= "RM" + number_with_delimiter(29390)
+/        .fontsize-small = t('.hero.money_html')
+/    .w-hidden-main.w-hidden-medium.u-marginbottom-40
 .section-large.hello-catarse
   .w-container
     .w-row
@@ -57,19 +60,7 @@
 
 .section.before-footer
   .w-container
-    .w-row.u-marginbottom-80.u-text-center.u-margintop-30
-      .w-col.w-col-4.u-marginbottom-30
-        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 A social enterprise <br/> supported by
-        = image_tag "magic_logo.png", width: "250"
-      .w-col.w-col-8
-        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 In partnership with
-        .w-row
-          .w-col.w-col-6.u-marginbottom-20
-            = image_tag "tfm_logo.png", width: "250"
-          .w-col.w-col-6.u-marginbottom-20
-            = image_tag "https://s3.amazonaws.com/100pp/assets/partners/ytlf.png", width: "250"
-            p.u-marginbottom-20
-            = image_tag "https://s3.amazonaws.com/100pp/assets/partners/frogasia.png", width: "250"
+    = render 'shared/socialproof'
 
 
 /.w-lightbox-backdrop.w-hidden tabindex="0"

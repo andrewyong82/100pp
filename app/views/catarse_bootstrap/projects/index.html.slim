@@ -26,7 +26,7 @@ section#hero-home.hero-full.hero-knowmore
     .w-row.u-text-center
       .w-col.w-col-12.u-marginbottom-20
         .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 New projects launching soon
-        <div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="January 16, 2016 23:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+        <div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="January 15, 2016 23:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
     .w-hidden-main.w-hidden-medium.u-marginbottom-40
 
 section#projects
@@ -102,18 +102,6 @@ section#projects
         .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 Follow our stories
         .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 Join us in supporting our teachers and classrooms
         <script id="twine-script" src="//apps.twinesocial.com/embed?app=100pproj&showLoadMore=yes&autoload=no"><a href="http://www.twinesocial.com/blog/display-youtube-on-website/" id="twine-hub-url">embed youtube on website</a></script>
-    .w-row.u-text-center.u-marginbottom-30.u-margintop-60
-      .w-col.w-col-4.u-marginbottom-30
-        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 A social enterprise <br/> supported by
-        = image_tag "magic_logo.png", width: "250"
-      .w-col.w-col-8
-        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 In partnership with
-        .w-row
-          .w-col.w-col-6.u-marginbottom-20
-            = image_tag "tfm_logo.png", width: "250"
-          .w-col.w-col-6.u-marginbottom-20
-            = image_tag "https://s3.amazonaws.com/100pp/assets/partners/ytlf.png", width: "250"
-            p.u-marginbottom-20
-            = image_tag "https://s3.amazonaws.com/100pp/assets/partners/frogasia.png", width: "250"
+    = render 'shared/socialproof'
 
 = render 'shared/footer_big'

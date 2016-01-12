@@ -8,7 +8,7 @@
       h1.fontweight-semibold.fontsize-jumbo.u-text-center.u-marginbottom-70.u-margintop-40 Are you a teacher in need of funding?
       .w-row.u-margintop-20.u-marginbottom-60.u-text-center
         .w-col.w-col-4.w-col-push-4
-          a.btn.btn-large.btn-inline href="https://docs.google.com/forms/d/1lRbPRqiTNFroyFartTeO5lryAOzPv7fc5LU4NhoNGi4/viewform" Register your interest
+          a.btn.btn-large.btn-inline href="https://docs.google.com/forms/d/1lRbPRqiTNFroyFartTeO5lryAOzPv7fc5LU4NhoNGi4/viewform" Submit your project
 
 .section-large
   .w-container
@@ -30,18 +30,6 @@
 
 .section.before-footer.bg-gray
   .w-container
-    .w-row.u-marginbottom-80.u-text-center.u-margintop-30
-      .w-col.w-col-4.u-marginbottom-30
-        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 A social enterprise <br/> supported by
-        = image_tag "magic_logo.png", width: "250"
-      .w-col.w-col-8
-        .fontsize-large.lineheight-tight.u-marginbottom-30.u-margintop-30 In partnership with
-        .w-row
-          .w-col.w-col-6.u-marginbottom-20
-            = image_tag "tfm_logo.png", width: "250"
-          .w-col.w-col-6.u-marginbottom-20
-            = image_tag "https://s3.amazonaws.com/100pp/assets/partners/ytlf.png", width: "250"
-            p.u-marginbottom-20
-            = image_tag "https://s3.amazonaws.com/100pp/assets/partners/frogasia.png", width: "250"
+    = render 'shared/socialproof'
 
 = render 'shared/footer_big'
