@@ -49,6 +49,7 @@ class Projects::ContributionsController < ApplicationController
     @contribution.value = permitted_params[:value]
     @contribution.referral_link = referral_link
     @contribution.reward_id = (params[:contribution][:reward_id].to_i == 0 ? nil : params[:contribution][:reward_id])
+    @contribution.payment_service_fee = @contribution.value.to_d * 0.15
     authorize @contribution
     @contribution.update_current_billing_info
     create! do |success,failure|
@@ -68,12 +69,14 @@ class Projects::ContributionsController < ApplicationController
 
   def prepare_bill
     authorize resource
+    resource.update_attributes(permitted_params)
+
     url = "https://www.billplz.com/api/v2/bills"
     data = {
         :collection_id => CatarseSettings[:billplz_collection_id],
         :email => @contribution.payer_email,
         :name => @contribution.payer_name,
-        :amount => @contribution.value * 100,
+        :amount => (@contribution.value + @contribution.payment_service_fee) * 100,
         :callback_url => CatarseSettings[:base_url] + bill_paid_path,
         :metadata => { :project => @project.name },
         :redirect_url => CatarseSettings[:base_url] + project_contribution_path(project_id: @project.id, id: @contribution.id)
@@ -92,6 +95,7 @@ class Projects::ContributionsController < ApplicationController
         gateway_id: response_data['id'],
         gateway: 'Billplz',
         gateway_data: response_data,
+        gateway_fee: @contribution.payment_service_fee,
         installments: 1
     }
     payment = PaymentEngines.new_payment(attributes)

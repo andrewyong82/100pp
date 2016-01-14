@@ -2862,13 +2862,13 @@ html.w-mod-js *[data-ix="icon-funded-with"] {
   }
   .back-reward-input-reward {
     height: 54px;
-    font-size: 36px;
-    line-height: 55px;
+    font-size: 22px;
+    line-height: normal;
   }
   .back-reward-input-reward.placeholder {
     height: 54px;
-    font-size: 29px;
-    line-height: 7px;
+    font-size: 22px;
+    line-height: 3px;
   }
   .back-reward-radio-reward {
     border-width: 2px;
@@ -3316,7 +3316,7 @@ html.w-mod-js *[data-ix="icon-funded-with"] {
   }
   .back-reward-input-reward {
     float: none;
-    font-size: 36px;
+    font-size: 22px;
   }
   .back-reward-radio-reward {
     width: auto;
@@ -3861,14 +3861,14 @@ html.w-mod-js *[data-ix="icon-funded-with"] {
     padding-left: 20px;
   }
   .back-reward-input-reward {
-    font-size: 25px;
+    font-size: 16px;
   }
   .back-reward-input-reward:hover {
     border-style: solid;
     border-width: 1px;
   }
   .back-reward-input-reward.placeholder {
-    font-size: 20px;
+    font-size: 16px;
   }
   .back-reward-radio-reward {
     width: auto;
