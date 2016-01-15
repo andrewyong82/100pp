@@ -32,12 +32,12 @@
               .w-col.w-col-12
                 input type="checkbox" class= 'boolean optional w-input checkbox-fix text-field' checked="checked" id="toggle-fee" value="1"
                 =" "
-                label.w-form-label.fontsize-smallest for="toggle-fee" =("Add RM" + number_with_precision(@contribution.payment_service_fee, precision: 2) + " to help 100% Project cover expenses")
+                label.w-form-label.fontsize-smallest for="toggle-fee" =("Include a RM" + number_with_precision(@contribution.payment_service_fee, precision: 2) + " service fee for 100% Project to cover expenses")
             .w-row
               .w-col.w-col-12
                 #fee-confirmation.card.card-message.u-radius.zindex-10.fontsize-smallest.w-hidden
                   .fontweight-bold Please, we need your help!
-                  = ('This platform is free for teachers to use - 100% of funds raised go directly to their projects. Therefore, we also need your contributions to keep us running. Your support goes into running our servers, vetting teachers and projects, and processing transactions and rewards for donors.')
+                  = ('This platform is free for teachers to use - 100% of funds raised go directly to their projects. This fee helps keep us running and covers the cost of connecting you to classrooms in need - e.g running our website, vetting teachers and projects, processing transactions and rewards for contributors, etc.')
             .w-row
               .w-col.w-col-12
                 = form.input_field :anonymous, boolean_style: :inline, class: 'checkbox-fix'

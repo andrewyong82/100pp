@@ -18,16 +18,16 @@ section#hero-home.hero-full.hero-knowmore
           span = t('.banner_after')
     .w-row
       .w-col.w-col-4.w-col-push-4
-        a.btn.btn-large.u-marginbottom-10 href="#{hello_path(ref: 'home_banner')}" Find out more
+        a.btn.btn-large.u-marginbottom-10 href="#{explore_path(ref: 'home_banner')}" Start now
 
 .section
   .w-container
-    .w-hidden-main.w-hidden-medium.u-margintop-30
+    /.w-hidden-main.w-hidden-medium.u-margintop-30
     .w-row.u-text-center
-      .w-col.w-col-12.u-marginbottom-20
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 New projects launching soon
-        <div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="January 15, 2016 23:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
-    .w-hidden-main.w-hidden-medium.u-marginbottom-40
+      .w-col.w-col-12
+        .fontweight-semibold.fontsize-jumbo.lineheight-tighter Help great teachers provide<br/> the best learning experience
+        /<div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="January 15, 2016 23:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+    /.w-hidden-main.w-hidden-medium.u-marginbottom-40
 
 section#projects
   /- if current_user && @projects_near.present?
@@ -63,21 +63,30 @@ section#projects
     .w-row
       == render_projects @recommends, 'home_recommended', { wrapper_class: 'w-col w-col-4' }
 
-  /article.section.recent-projects.w-container
-  /  .w-row.u-marginbottom-30
-  /    .w-col.w-col-10.w-col-small-6.w-col-tiny-6
-  /      .fontsize-large.lineheight-looser
-  /        = t('.recents')
-  /    .w-col.w-col-2.w-col-small-6.w-col-tiny-6
-  /      = link_to t('.see_all'), explore_path(ref: :home_recent, anchor: :recent), class: 'btn btn-small btn-terciary'
-  /  .w-row
-  /    == render_projects @recent, 'home_recent', { wrapper_class: 'w-col w-col-4' }
+  article.section.recent-projects.w-container
+    .w-row.u-marginbottom-30
+      .w-col.w-col-10.w-col-small-6.w-col-tiny-6
+        .fontsize-large.lineheight-looser
+          = t('.recents')
+      .w-col.w-col-2.w-col-small-6.w-col-tiny-6
+        = link_to t('.see_all'), explore_path(ref: :home_recent, anchor: :recent), class: 'btn btn-small btn-terciary'
+    .w-row
+      == render_projects @recent, 'home_recent', { wrapper_class: 'w-col w-col-4' }
+
+  article.section.w-container
+    .w-row.u-marginbottom-30
+      .w-col.w-col-10.w-col-small-6.w-col-tiny-6
+        .fontsize-large.lineheight-looser
+          text =("View our successful projects ")
+          a href=(explore_path + "#successful") here >>
+
 
 .section-large.bg-gray
   .w-container
     .w-row.u-text-center
       .w-col.w-col-10.w-col-push-1
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 How does it work?
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 Now everyone can help a classroom in need
+        /.fontsize-large.u-marginbottom-60 Here's how
       .w-col.w-col-4.u-marginbottom-20
         = image_tag "find.png", width: "250", class: "u-marginbottom-20"
         .fontsize-large.u-marginbottom-20.lineheight-tighter Find a project
