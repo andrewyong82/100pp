@@ -1,7 +1,7 @@
 # coding: utf-8
 class Project < ActiveRecord::Base
   PUBLISHED_STATES = ['online', 'waiting_funds', 'successful', 'failed']
-  HEADLINE_MAXLENGTH = 100
+  HEADLINE_MAXLENGTH = 140
 
   include PgSearch
 
