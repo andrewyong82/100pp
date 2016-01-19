@@ -49,7 +49,7 @@ class Projects::ContributionsController < ApplicationController
     @contribution.value = permitted_params[:value]
     @contribution.referral_link = referral_link
     @contribution.reward_id = (params[:contribution][:reward_id].to_i == 0 ? nil : params[:contribution][:reward_id])
-    @contribution.payment_service_fee = @contribution.value.to_d * 0.15
+    @contribution.payment_service_fee = @contribution.value.gsub(',','').to_d * 0.15
     authorize @contribution
     @contribution.update_current_billing_info
     create! do |success,failure|
