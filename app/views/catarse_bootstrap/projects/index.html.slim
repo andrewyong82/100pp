@@ -74,11 +74,14 @@ section#projects
       == render_projects @recent, 'home_recent', { wrapper_class: 'w-col w-col-4' }
 
   article.section.w-container
-    .w-row.u-marginbottom-30.u-text-center
+    .w-row.u-text-center
       .w-col.w-col-12.w-col-small-12.w-col-tiny-12
         .fontsize-large.lineheight-looser
           text =("View our successful projects ")
           a href=(explore_path + "#successful") here >>
+
+  .w-row.u-text-center.u-marginbottom-60
+    = render 'shared/press'
 
 
 .section-large.bg-gray
@@ -104,15 +107,30 @@ section#projects
         = link_to 'Start exploring projects', explore_path, class: 'btn btn-large'
     .w-hidden-main.w-hidden-medium.u-marginbottom-40
 
-.section.before-footer
+.section-large
   .w-container
-    .w-row.u-marginbottom-60.u-margintop-30
+    .w-row.u-text-center
+      .w-col.w-col-10.w-col-push-1
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 Our 100% Commitment
+        .fontsize-large.u-marginbottom-30
+          text =("We put our classrooms first - 100% of your contributions will go directly to classroom projects. Every disbursement to our projects will be open for public review.")
+        .fontsize-large
+          text =("View our transparency document ")
+          a href="https://docs.google.com/spreadsheets/d/1bF7A7FD0_TRTgTZ6N4EjHyS9ylcxZjM9mgJIC-Nk6ec" target="_blank" here >>
+
+.section-large.bg-gray
+  .w-container
+    .w-row
       .w-col.w-col-12.u-text-center
-        .fontweight-semibold.fontsize-jumbo.u-marginbottom-30 Sign up for inspiring Cikgu stories
+        .fontweight-semibold.fontsize-jumbo.u-marginbottom-60 Sign up for inspiring Cikgu stories
         a.btn.btn-large.btn-inline.u-marginbottom-30 href="https://docs.google.com/forms/d/1py9WU4RrpjGM5Eabgiqv5TqfpjmGxjcc0jA4ThtptDM/viewform" Subscribe to our newsletter
         .fontsize-small We will never share your email with others and you can unsubscribe at anytime.
+
+.section.before-footer
+  .w-container
     /<script id="twine-script" src="//apps.twinesocial.com/embed?app=100pproj&showLoadMore=yes&autoload=no"><a href="http://www.twinesocial.com/blog/display-youtube-on-website/" id="twine-hub-url">embed youtube on website</a></script>
-    = render 'shared/socialproof'
+    .w-row.u-marginbottom-80.u-text-center.u-margintop-30
+      = render 'shared/partners'
 
 
 = render 'shared/footer_big'
