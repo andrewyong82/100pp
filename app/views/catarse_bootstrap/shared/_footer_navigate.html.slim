@@ -1,11 +1,11 @@
 .footer-full-signature-text.fontsize-small #{t('layouts.footer.titles.sitemap')}
 a.w-hidden-small.w-hidden-tiny.link-footer href="#{hello_path}"  About us
 a.w-hidden-small.w-hidden-tiny.link-footer href="#{start_path}"  Start a project
-a.link-footer href="#{explore_path}"  Explore projects
-a.w-hidden-main.w-hidden-medium.w-hidden-small.link-footer href="#{CatarseSettings[:blog_url]}"  Contact us
-a.w-hidden-main.w-hidden-medium.w-hidden-small.link-footer href="#{CatarseSettings[:zendesk_url]}"  Help
-- if current_user.try(:adress_state)
-  a.w-hidden-tiny.link-footer href="#{explore_path(anchor: ('near_of/' + current_user.address_state))}" #{t('layouts.footer.links.near')}
-a.w-hidden-tiny.link-footer href="#{explore_path(anchor: "recommended")}"  #{t('layouts.footer.links.recommended')}
-/a.w-hidden-tiny.link-footer href="#{explore_path(anchor: "expiring")}"  #{t('layouts.footer.links.expiring')}
-a.w-hidden-tiny.link-footer href="#{explore_path(anchor: "recent")}"  #{t('layouts.footer.links.recents')}
+a.link-footer href="https://100percentproject.zendesk.com/hc/en-us/sections/203811198-Refund-Return-Policy"  Refund Policy
+a.link-footer href="https://100percentproject.zendesk.com/hc/en-us/categories/201626407-Legal"  Terms & Privacy Policy
+a.link-footer href="https://100percentproject.zendesk.com/hc/en-us/categories/200621588-Help"  Help
+/- if current_user.try(:adress_state)
+/  a.w-hidden-tiny.link-footer href="#{explore_path(anchor: ('near_of/' + current_user.address_state))}" #{t('layouts.footer.links.near')}
+/a.w-hidden-tiny.link-footer href="#{explore_path(anchor: "recommended")}"  #{t('layouts.footer.links.recommended')}
+//a.w-hidden-tiny.link-footer href="#{explore_path(anchor: "expiring")}"  #{t('layouts.footer.links.expiring')}
+/a.w-hidden-tiny.link-footer href="#{explore_path(anchor: "recent")}"  #{t('layouts.footer.links.recents')}
