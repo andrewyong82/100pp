@@ -865,7 +865,7 @@ en:
   user:
     contributions_text:
       many: "Contributed to this and other %{total} projects"
-      one: "Contributed to only this project until now"
+      one: "Contributed to only this project"
       two: "Contributed to this and 1 other project"
       # TODO: there will be a dynamic version of this somewhere which needs a "to" added
     no_name: Unnamed

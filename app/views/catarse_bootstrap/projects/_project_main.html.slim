@@ -61,7 +61,7 @@ section.section[itemtype="http://schema.org/CreativeWork"]
                 .fontsize-small #{@project.time_to_go[:unit]} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
 
           - if @project.online? && !@project.expired?
-            = link_to t('.contribute_project.submit'), new_project_contribution_path(@project), id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20"
+            = link_to t('.contribute_project.submit'), new_project_contribution_path(@project), id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20", target: "_top"
 
           .fontsize-smaller.u-marginbottom-30[class=@project.display_card_class]
             = t(".contribute_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
