@@ -9,7 +9,7 @@ div[itemtype="http://schema.org/CreativeWork" class="#{defined?(wrapper_class) ?
     .card-project-description
       .fontweight-semibold.fontsize-base.u-marginbottom-10.u-text-center-small-only.lineheight-tight=link_to truncate(@project.name, length: 60, separator: ''), project_by_slug_path(@project.permalink, ref: ref), title: @project.name, target: target, class: 'link-hidden', itemprop: "name"
       .w-hidden-small.w-hidden-tiny.fontcolor-secondary.fontsize-smaller
-        = link_to project_by_slug_path(@project.permalink, ref: ref), title: @project.headline, target: target, class: 'link-hidden' do
+        = link_to "./project.html?classroom=" + @project.permalink, title: @project.headline, target: target, class: 'link-hidden' do
           = truncate(@project.headline, length: 140)
     .w-clearfix.card-project-author.w-hidden-small.w-hidden-tiny[itemprop="author" itemscope itemtype="http://schema.org/Person"]
       -if @project.partner.present?
