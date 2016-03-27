@@ -1,6 +1,6 @@
 # coding: utf-8
 class ProjectsController < ApplicationController
-  after_filter :verify_authorized, except: %i[index video video_embed embed embed_panel about_mobile]
+  after_filter :verify_authorized, except: %i[index video video_embed embed embedfrog embedfrogproject embed_panel about_mobile]
   after_filter :redirect_user_back_after_login, only: %i[index show]
   before_action :authorize_and_build_resources, only: %i[edit show]
 
@@ -94,6 +94,16 @@ class ProjectsController < ApplicationController
   def embed
     resource
     render partial: 'card', layout: 'embed', locals: {embed_link: true, ref: (params[:ref] || 'embed')}
+  end
+
+  def embedfrog
+    resource
+    render partial: 'cardfrog', layout: 'embed', locals: {embed_link: true, ref: (params[:ref] || 'embedfrog')}
+  end
+
+  def embedfrogproject
+    resource
+    render partial: 'cardfrogproject', layout: 'embed', locals: {embed_link: true, ref: (params[:ref] || 'embedfrogproject')}
   end
 
   def embed_panel

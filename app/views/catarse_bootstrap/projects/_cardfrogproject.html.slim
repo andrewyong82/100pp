@@ -1,0 +1,64 @@
+= render 'project_header'
+
+= render 'mobile_video'
+
+section.section[itemtype="http://schema.org/CreativeWork"]
+  .w-container
+    .w-row
+      article.w-hidden-small.w-hidden-tiny
+        #project_about.content.w-col.w-col-8
+          - if resource.video_url.present?
+            .w-embed.w-video.project-video
+              iframe itemprop="video" src="#{@project.display_video_embed_url}" class="embedly-embed" width="100%" height="379" frameborder="0" allowFullScreen
+
+          .project-about
+            .fontsize-large.u-marginbottom-30[itemprop="name"] = @project.headline.try(:strip)
+            .no-mobile
+              .fontsize-base[itemprop="about"]
+                = @project.about_html.try(:html_safe)
+          .project-about
+            .no-mobile
+              .fontsize-base[itemprop="budget"]
+                = render 'budget'
+
+      #project-sidebar.aside.w-col.w-col-4
+        .project-stats
+          .project-stats-numbers.u-marginbottom-20.w-hidden-small.w-hidden-tiny
+            .w-hidden-small.w-hidden-tiny.u-marginbottom-10
+              .fontsize-largest = @project.display_pledged
+              .fontsize-small = t('.sidebar.goal', total: @project.display_goal).html_safe
+            .w-hidden-small.w-hidden-tiny.u-marginbottom-10
+              .fontsize-largest = @project.total_contributions
+              .fontsize-small = t('.sidebar.contributions')
+            .w-hidden-small.w-hidden-tiny.u-marginbottom-10
+              - if @project.draft? || @project.rejected?
+                .fontsize-largest = @project.online_days
+                .fontsize-small #{@project.online_days} #{pluralize_without_number(@project.online_days, I18n.t('datetime.prompts.day').downcase)} #{pluralize_without_number(@project.online_days, t('remaining_singular'), t('remaining_plural'))}
+              - else
+                .fontsize-largest = @project.remaining_days
+                .fontsize-small #{@project.time_to_go[:unit]} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
+
+          - if @project.online? && !@project.expired?
+            = link_to "Support Classroom", new_project_contribution_path(@project), id: 'contribute_project_form', class: "btn btn-large u-marginbottom-10", target: "_top"
+
+          .fontsize-smallest.u-marginbottom-30 Powered by 100% Project
+
+          .fontsize-smaller.u-marginbottom-30[class=@project.display_card_class]
+            = t(".contribute_project.display_status.#{@project.display_status}", goal: @project.display_goal, date: @project.display_expires_at)
+
+        = render 'users/card', resource: @project.user
+
+        -if @project.partner.present?
+          = render 'card_partner', resource: @project
+
+        .w-hidden-main.w-hidden-medium.project-share
+          .div-share-mobile-fb
+            = render_facebook_share_mobile(url: project_by_slug_url(permalink: @project.permalink, ref: 'facebook'), title: @project.name)
+          .div-share-mobile-fb
+            .btn.btn-medium.btn-fb.btn-tweet
+              = render_twitter_mobile(url: project_by_slug_url(permalink: @project.permalink, ref: 'twitter'), title: @project.name)
+              = t('.tweet')
+
+        - if @project.published?
+          .fontsize-small.fontweight-semibold.u-text-center-small-only = t('.funding_period')
+          .fontsize-small.u-text-center-small-only = "#{@project.display_online_date} - #{@project.display_expires_at}  (#{t('datetime.distance_in_words.x_days', count: @project.online_days)})"

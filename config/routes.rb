@@ -64,6 +64,8 @@ Catarse::Application.routes.draw do
       delete :reminder, to: 'projects/reminders#destroy'
       put 'pay'
       get 'embed'
+      get 'embedfrog'
+      get 'embedfrogproject'
       get 'video_embed'
       get 'about_mobile'
       get 'embed_panel'
