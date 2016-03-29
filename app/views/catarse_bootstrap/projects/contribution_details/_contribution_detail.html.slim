@@ -10,7 +10,7 @@
       .w-col.w-col-10
         .fontsize-base.fontweight-semibold
           = link_to user_path(contribution.user), class: 'link-hidden-dark' do
-            = contribution.user.medium_name
+            = contribution.payer_name
         /- if policy(@project).update?
         .fontsize-smaller
           = number_to_currency contribution.value
