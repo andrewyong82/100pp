@@ -24,6 +24,12 @@ module Project::Partner
               link: "https://foodpanda.my",
               image: baselink + "foodpanda.png",
               description: "As a token of appreciation, foodpanda will be giving out limited vouchers to thank some contributors of this project"
+          },
+          webe: {
+              name: "webe",
+              link: "https://community.webe.com.my/projects/a+container+classroom+for+special+needs_p293",
+              image: baselink + "webe.png",
+              description: "Head on to www.webe.com.my to download the webe community app to support Cikgu Tan's Project. You can #makeithappen!"
           }
       }
 
@@ -35,6 +41,8 @@ module Project::Partner
           partner = partners[:kfit]
         when self.id == 8
           partner = partners[:foodpanda]
+        when self.id == 17
+          partner = partners[:webe]
         else
           return
       end
