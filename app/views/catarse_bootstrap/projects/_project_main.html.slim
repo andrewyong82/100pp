@@ -60,9 +60,9 @@ section.section[itemtype="http://schema.org/CreativeWork"]
                 .fontsize-largest = @project.remaining_days
                 .fontsize-small #{@project.time_to_go[:unit]} #{pluralize_without_number(@project.time_to_go[:time], t('remaining_singular'), t('remaining_plural'))}
 
-          - if @project.online? && !@project.expired? && @project.partner[:name] != "webe"
+          - if @project.online? && !@project.expired? && !(@project.partner.present? && @project.partner[:name] == "webe")
             = link_to t('.contribute_project.submit'), new_project_contribution_path(@project), id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20", target: "_top"
-          - if (@project.partner[:name] == "webe")
+          - if (@project.partner.present? && @project.partner[:name] == "webe")
             = link_to t('.contribute_project.submit'), "https://community.webe.com.my/projects/a+container+classroom+for+special+needs_p293", id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20", target: "_top"
 
 
@@ -81,8 +81,11 @@ section.section[itemtype="http://schema.org/CreativeWork"]
             .btn.btn-medium.btn-fb.btn-tweet
               = render_twitter_mobile(url: project_by_slug_url(permalink: @project.permalink, ref: 'twitter'), title: @project.name)
               = t('.tweet')
-        #rewards.u-marginbottom-30[data-index_path=project_rewards_path(@project)]
-          .u-text-center = image_tag 'catarse_bootstrap/loader.gif'
+
+        - if !(@project.partner.present? && @project.partner[:name] == "webe")
+          #rewards.u-marginbottom-30[data-index_path=project_rewards_path(@project)]
+            .u-text-center = image_tag 'catarse_bootstrap/loader.gif'
+
         - if @project.published?
           .fontsize-small.fontweight-semibold.u-text-center-small-only = t('.funding_period')
           .fontsize-small.u-text-center-small-only = "#{@project.display_online_date} - #{@project.display_expires_at}  (#{t('datetime.distance_in_words.x_days', count: @project.online_days)})"
