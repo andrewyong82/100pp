@@ -46,12 +46,13 @@ section.section[itemtype="http://schema.org/CreativeWork"]
       #project-sidebar.aside.w-col.w-col-4
         .project-stats
           .project-stats-numbers.u-marginbottom-20.w-hidden-small.w-hidden-tiny
-            .w-hidden-small.w-hidden-tiny.u-marginbottom-10
-              .fontsize-largest = @project.display_pledged
-              .fontsize-small = t('.sidebar.goal', total: @project.display_goal).html_safe
-            .w-hidden-small.w-hidden-tiny.u-marginbottom-10
-              .fontsize-largest = @project.total_contributions
-              .fontsize-small = t('.sidebar.contributions')
+            - if !(@project.partner.present? && @project.partner[:name] == "webe")
+              .w-hidden-small.w-hidden-tiny.u-marginbottom-10
+                .fontsize-largest = @project.display_pledged
+                .fontsize-small = t('.sidebar.goal', total: @project.display_goal).html_safe
+              .w-hidden-small.w-hidden-tiny.u-marginbottom-10
+                .fontsize-largest = @project.total_contributions
+                .fontsize-small = t('.sidebar.contributions')
             .w-hidden-small.w-hidden-tiny.u-marginbottom-10
               - if @project.draft? || @project.rejected?
                 .fontsize-largest = @project.online_days
@@ -63,7 +64,7 @@ section.section[itemtype="http://schema.org/CreativeWork"]
           - if @project.online? && !@project.expired? && !(@project.partner.present? && @project.partner[:name] == "webe")
             = link_to t('.contribute_project.submit'), new_project_contribution_path(@project), id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20", target: "_top"
           - if (@project.partner.present? && @project.partner[:name] == "webe")
-            = link_to t('.contribute_project.submit'), "https://community.webe.com.my/projects/a+container+classroom+for+special+needs_p293", id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20", target: "_top"
+            = link_to 'Make it happen!', "https://community.webe.com.my/projects/a+container+classroom+for+special+needs_p293", id: 'contribute_project_form', class: "btn btn-large u-marginbottom-20", target: "_top"
 
 
           .fontsize-smaller.u-marginbottom-30[class=@project.display_card_class]

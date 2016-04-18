@@ -28,12 +28,18 @@ div[itemtype="http://schema.org/CreativeWork" class="#{defined?(wrapper_class) ?
     .card-project-stats
       .w-row
         .w-col.w-col-4.w-col-small-4.w-col-tiny-4
-          .fontsize-base.fontweight-semibold 
-            = "#{@project.progress}%"
+          .fontsize-base.fontweight-semibold
+            - if !(@project.partner.present? && @project.partner[:name] == "webe")
+              = "#{@project.progress}%"
+            -else
+              = "Special"
         .w-col.w-col-4.w-col-small-4.w-col-tiny-4.u-text-center-small-only
-          .fontsize-smaller.fontweight-semibold 
-            = @project.display_pledged
-          .fontsize-smallest.lineheight-tightest raised
+          - if !(@project.partner.present? && @project.partner[:name] == "webe")
+            .fontsize-smaller.fontweight-semibold
+              = @project.display_pledged
+            .fontsize-smallest.lineheight-tightest raised
+          - else
+            .fontsize-smallest.fontweight-semibold backed by webe!
         .w-col.w-col-4.w-col-small-4.w-col-tiny-4.u-text-right
           - unless @project.expired?
             .fontsize-smaller.fontweight-semibold 
