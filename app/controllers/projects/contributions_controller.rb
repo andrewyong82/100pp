@@ -176,8 +176,8 @@ class Projects::ContributionsController < ApplicationController
     end
 
     if ( status == "00" ) #success
-      vcode = Digest::MD5.hexdigest(('%.2f' % amount) + 'edspace' + orderid.to_s + verifykey)
-      payment = PaymentEngines.find_payment({ gateway_id: params[:vcode] })
+      vcode = Digest::MD5.hexdigest(('%.2f' % amount) + 'edspace' + orderid.to_s + vkey)
+      payment = PaymentEngines.find_payment({ gateway_id: vcode })
       if (payment)
         payment.pay;
         payment.save!
