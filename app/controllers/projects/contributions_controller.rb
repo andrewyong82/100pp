@@ -1,8 +1,8 @@
 class Projects::ContributionsController < ApplicationController
   inherit_resources
   actions :index, :show, :new, :update, :review, :create
-  skip_before_filter :verify_authenticity_token, only: [:moip, :bill_paid]
-  after_filter :verify_authorized, except: [:index, :bill_paid]
+  skip_before_filter :verify_authenticity_token, only: [:moip, :bill_paid, :bill_paid_MOLPay]
+  after_filter :verify_authorized, except: [:index, :bill_paid, :bill_paid_MOLPay]
   belongs_to :project
   before_filter :detect_old_browsers, only: [:new, :create]
 

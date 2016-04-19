@@ -54,6 +54,7 @@ Catarse::Application.routes.draw do
         get 'toggle_anonymous'
         get :second_slip
         post :prepare_bill
+        post :prepare_bill_MOLPay
       end
       put :credits_checkout, on: :member
     end
@@ -105,6 +106,7 @@ Catarse::Application.routes.draw do
   get "/team" => 'high_voltage/pages#show', id: 'team'
 
   post "/bill_paid" => 'projects/contributions#bill_paid'
+  post "/bill_paid_MOLPay" => 'projects/contributions#bill_paid_MOLPay'
 
   # User permalink profile
   constraints SubdomainConstraint do

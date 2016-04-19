@@ -28,6 +28,10 @@ class ContributionPolicy < ApplicationPolicy
     done_by_owner_or_admin?
   end
 
+  def prepare_bill_MOLPay?
+    done_by_owner_or_admin?
+  end
+
   def second_slip?
     done_by_owner_or_admin?
   end
