@@ -115,6 +115,84 @@ class Projects::ContributionsController < ApplicationController
     render json: payment.to_json
   end
 
+  def prepare_bill_MOLPay
+    authorize resource
+    resource.update_attributes(permitted_params)
+
+    amount = (@contribution.value + @contribution.payment_service_fee) * 100
+    merchantID = 'edspace'
+    orderid = @contribution.id
+    verifykey = CatarseSettings[:molpay_key]
+
+    vcode = Digest::MD5.hexdigest(amount.to_s + merchantID + orderid.to_s + verifykey)
+
+    url = "https://www.onlinepayment.com.my/MOLPay/pay/​edspace​"
+    data = {
+        :orderid => orderid,
+        :bill_email => @contribution.payer_email,
+        :bill_name => @contribution.payer_name,
+        :bill_dec => @contribution.project.name,
+        :amount => amount,
+        :vcode => vcode
+    }
+
+    uri = URI(url)
+    uri.query = URI.encode_www_form(data)
+
+    # create transaction
+    attributes = {
+        contribution: @contribution,
+        value: @contribution.value,
+        payment_method: "CreditCard",
+        gateway_id: vcode,
+        gateway: 'MOLPay',
+        gateway_data: data,
+        gateway_fee: @contribution.payment_service_fee,
+        installments: 1
+    }
+    payment = PaymentEngines.new_payment(attributes)
+    payment.save!
+    payment.payment_notifications.create(contribution_id: payment.contribution_id, extra_data: data)
+
+    render json: { :url => uri.to_s }
+  end
+
+  def bill_paid_MOLPay
+
+    vkey = CatarseSettings[:molpay_key]
+
+    tranid = params[:tranID]
+    orderid = params[:orderid]
+    status = params[:status]
+    domain = params[:domain]
+    amount = params[:amount]
+    currency = params[:currency]
+    appcode = params[:appcode]
+    paydate = params[:paydate]
+    skey = params[:skey]
+
+    key0 = Digest::MD5.hexdigest( tranid + orderid + status + domain + amount + currency )
+    key1 = Digest::MD5.hexdigest( paydate + domain + key0 + appcode + vkey )
+
+    if( skey != key1 )
+      status = -1
+    end
+
+    if ( status == "00" ) #success
+      vcode = Digest::MD5.hexdigest(amount.to_s + 'edspace' + orderid.to_s + verifykey)
+      payment = PaymentEngines.find_payment({ gateway_id: params[:vcode] })
+      if (payment)
+        payment.pay;
+        payment.save!
+      end
+    else
+
+    end
+
+    contribution = PaymentEngines.find_contribution(orderid)
+    redirect_to project_contribution_path(project_id: contribution.project_id, id: contribution.id)
+  end
+
   # def second_slip
   #   authorize resource
   #   redirect_to resource.details.ordered.first.second_slip_path

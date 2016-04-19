@@ -7,6 +7,7 @@ App.addChild('ReviewForm', _.extend({
     'change #contribution_country_id' : 'onCountryChange',
     'change #contribution_anonymous' : 'toggleAnonymousConfirmation',
     'change #toggle-fee' : 'toggleFee',
+    'change #toggle-creditcard' : 'toggleCreditCard',
     'click #next-step' : 'onNextStepClick'
   },
 
@@ -18,12 +19,38 @@ App.addChild('ReviewForm', _.extend({
       //this.parent.payment.show();
       this.$('#next-step').hide();
       this.$('#loader').show();
-      this.prepareBill();
+
+        if (this.$("#toggle-creditcard").is(":checked"))
+        {
+            this.prepareBill_MOLPay();
+        }
+        else
+        {
+            this.prepareBill();
+        }
     }
     else{
       this.$errorMessage.slideDown('slow');
     }
   },
+
+    toggleCreditCardConfirmation: function(){
+        this.$('#creditcard-confirmation').slideToggle('slow');
+    },
+
+    toggleCreditCard: function(){
+        this.toggleCreditCardConfirmation();
+        //if (this.$("#toggle-creditcard").is(":checked"))
+        //{
+        //    var fee = 0.15 * parseFloat($("#contribution_value").val());
+        //    this.$("#contribution_payment_service_fee").val(fee);
+        //    this.$("#bill-amount").text((parseFloat($("#contribution_value").val()) + parseFloat($("#contribution_payment_service_fee").val())).toFixed(2));
+        //}
+        //else{
+        //    this.$("#contribution_payment_service_fee").val(0);
+        //    this.$("#bill-amount").text(parseFloat($("#contribution_value").val()).toFixed(2));
+        //}
+    },
 
     toggleFeeConfirmation: function(){
         this.$('#fee-confirmation').slideToggle('slow');
@@ -140,6 +167,36 @@ App.addChild('ReviewForm', _.extend({
                     location.href = response.url;
                 }
         });
+    },
+
+    prepareBill_MOLPay: function() {
+        var contribution_data = {
+            //anonymous: this.$('#contribution_anonymous').is(':checked'),
+            //country_id: this.$('#contribution_country_id').val(),
+            payer_name: this.$('#contribution_payer_name').val(),
+            payer_email: this.$('#contribution_payer_email').val(),
+            payment_service_fee: this.$('#contribution_payment_service_fee').val()
+            //payer_document: this.$('#contribution_payer_document').val(),
+            //address_street: this.$('#contribution_address_street').val(),
+            //address_number: this.$('#contribution_address_number').val(),
+            //address_complement: this.$('#contribution_address_complement').val(),
+            //address_neighbourhood: this.$('#contribution_address_neighbourhood').val(),
+            //address_zip_code: this.$('#contribution_address_zip_code').val(),
+            //address_city: this.$('#contribution_address_city').val(),
+            //address_state: this.$('#contribution_address_state').val(),
+            //address_phone_number: this.$('#contribution_address_phone_number').val()
+        };
+        $.post(this.$el.data('prepare-bill-MOLPay-path'), {
+                contribution: contribution_data
+            },
+            function(response) {
+                if (response.error) {
+
+                }
+                else {
+                    location.href = response.url;
+                }
+            });
     }
 
 }, Skull.Form));
