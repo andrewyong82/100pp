@@ -270,7 +270,7 @@ en:
     payment_details:
       bill: "Billplz"
       manual: "Manual"
-      creditcard: "MOLPay"
+      credit_card: "MOLPay"
       desconhecido: ""
       creditos: "Créditos"
       boleto_bancario: "Boleto Bancário"
