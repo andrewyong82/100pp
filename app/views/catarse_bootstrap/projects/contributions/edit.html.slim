@@ -8,7 +8,7 @@
   .w-container
     .w-row
       .w-col.w-col-8
-        = simple_form_for [@project, @contribution], html: { data: { update_info_path: project_contribution_path(project_id: @contribution.project.id, id: @contribution.id, format: :json), prepare_bill_path: prepare_bill_project_contribution_path(project_id: @contribution.project.id, id: @contribution.id), prepare_bill_MOLPay_path: prepare_bill_MOLPay_project_contribution_path(project_id: @contribution.project.id, id: @contribution.id)}, id: 'review_form', method: 'put' } do |form|
+        = simple_form_for [@project, @contribution], html: { data: { update_info_path: project_contribution_path(project_id: @contribution.project.id, id: @contribution.id, format: :json), prepare_bill_path: prepare_bill_project_contribution_path(project_id: @contribution.project.id, id: @contribution.id), prepare_bill_molpay_path: prepare_bill_MOLPay_project_contribution_path(project_id: @contribution.project.id, id: @contribution.id)}, id: 'review_form', method: 'put' } do |form|
           = form.input :id, as: :hidden, label: false
           = form.input :project_id, as: :hidden, label: false
           = form.input :value, as: :hidden
@@ -48,7 +48,7 @@
               .w-col.w-col-12
                 #creditcard-confirmation.card.card-message.u-radius.zindex-10.fontsize-smallest.w-hidden
                   .fontweight-bold Credit card fees
-                  = ('Please note that credit card transaction incur an additional 2.2% in fees. You can save this amount by unchecking this option and use online banking')
+                  = ('Please note that credit card transaction incur an additional 2.2% in fees. You can save this amount by unchecking this option to use online banking')
 
             .w-row.u-margintop-10
               .w-col.w-col-12

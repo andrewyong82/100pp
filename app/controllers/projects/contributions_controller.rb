@@ -71,7 +71,7 @@ class Projects::ContributionsController < ApplicationController
     authorize resource
     resource.update_attributes(permitted_params)
 
-    url = "https://www.billplz.com/api/v2/bills"
+    url = 'https://www.billplz.com/api/v2/bills'
     data = {
         :collection_id => CatarseSettings[:billplz_collection_id],
         :email => @contribution.payer_email,
@@ -91,7 +91,7 @@ class Projects::ContributionsController < ApplicationController
     attributes = {
         contribution: @contribution,
         value: @contribution.value,
-        payment_method: "Bill",
+        payment_method: 'Bill',
         gateway_id: response_data['id'],
         gateway: 'Billplz',
         gateway_data: response_data,
@@ -119,31 +119,28 @@ class Projects::ContributionsController < ApplicationController
     authorize resource
     resource.update_attributes(permitted_params)
 
-    amount = (@contribution.value + @contribution.payment_service_fee) * 100
+    amount = (@contribution.value + @contribution.payment_service_fee)
     merchantID = 'edspace'
     orderid = @contribution.id
     verifykey = CatarseSettings[:molpay_key]
 
-    vcode = Digest::MD5.hexdigest(amount.to_s + merchantID + orderid.to_s + verifykey)
+    vcode = Digest::MD5.hexdigest(('%.2f' % amount)  + merchantID + orderid.to_s + verifykey)
 
-    url = "https://www.onlinepayment.com.my/MOLPay/pay/​edspace​"
+    url = 'https://www.onlinepayment.com.my/MOLPay/pay/edspace/?​'
     data = {
         :orderid => orderid,
         :bill_email => @contribution.payer_email,
         :bill_name => @contribution.payer_name,
-        :bill_dec => @contribution.project.name,
-        :amount => amount,
+        :bill_desc => @contribution.project.name,
+        :amount => ('%.2f' % amount),
         :vcode => vcode
     }
-
-    uri = URI(url)
-    uri.query = URI.encode_www_form(data)
 
     # create transaction
     attributes = {
         contribution: @contribution,
         value: @contribution.value,
-        payment_method: "CreditCard",
+        payment_method: 'CreditCard',
         gateway_id: vcode,
         gateway: 'MOLPay',
         gateway_data: data,
@@ -154,7 +151,7 @@ class Projects::ContributionsController < ApplicationController
     payment.save!
     payment.payment_notifications.create(contribution_id: payment.contribution_id, extra_data: data)
 
-    render json: { :url => uri.to_s }
+    render json: { :url => url + URI.encode_www_form(data)}
   end
 
   def bill_paid_MOLPay
@@ -179,7 +176,7 @@ class Projects::ContributionsController < ApplicationController
     end
 
     if ( status == "00" ) #success
-      vcode = Digest::MD5.hexdigest(amount.to_s + 'edspace' + orderid.to_s + verifykey)
+      vcode = Digest::MD5.hexdigest(('%.2f' % amount) + 'edspace' + orderid.to_s + verifykey)
       payment = PaymentEngines.find_payment({ gateway_id: params[:vcode] })
       if (payment)
         payment.pay;

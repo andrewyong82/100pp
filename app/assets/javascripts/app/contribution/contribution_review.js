@@ -186,7 +186,7 @@ App.addChild('ReviewForm', _.extend({
             //address_state: this.$('#contribution_address_state').val(),
             //address_phone_number: this.$('#contribution_address_phone_number').val()
         };
-        $.post(this.$el.data('prepare-bill-MOLPay-path'), {
+        $.post(this.$el.data('prepare-bill-molpay-path'), {
                 contribution: contribution_data
             },
             function(response) {
@@ -194,7 +194,7 @@ App.addChild('ReviewForm', _.extend({
 
                 }
                 else {
-                    location.href = response.url;
+                    location.href = decodeURIComponent(response.url);
                 }
             });
     }
