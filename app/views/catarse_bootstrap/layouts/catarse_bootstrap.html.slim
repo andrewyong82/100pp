@@ -45,6 +45,7 @@ html
     /= render 'layouts/new_zendesk'
     = render 'layouts/zendesk_widget'
     = render_facebook_sdk
+    = render_google_tagmanager_script
     = render 'layouts/flash' if notice.present?
     = yield
 

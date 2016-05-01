@@ -30,6 +30,12 @@ module Project::Partner
               link: "https://community.webe.com.my/projects/a+container+classroom+for+special+needs_p293",
               image: baselink + "webe.png",
               description: "Head on to www.webe.com.my to download the webe community app to support Cikgu Tan's Project. You can #makeithappen!"
+          },
+          piktochart: {
+              name: "Piktochart",
+              link: "https://piktochart.com",
+              image: baselink + "piktochart.png",
+              description: "Get rewarded with a FREE one month pro plan from Piktochart if you donate RM50 or more to a classroom project you believe in!"
           }
       }
 
@@ -44,7 +50,7 @@ module Project::Partner
         when self.id == 17
           partner = partners[:webe]
         else
-          return
+          partner = partners[:piktochart]
       end
 
       return partner
