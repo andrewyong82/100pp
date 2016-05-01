@@ -49,8 +49,10 @@ module Project::Partner
           partner = partners[:foodpanda]
         when self.id == 17
           partner = partners[:webe]
-        else
+        when self.state = 'online'
           partner = partners[:piktochart]
+        else
+          return
       end
 
       return partner
