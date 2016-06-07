@@ -36,6 +36,12 @@ module Project::Partner
               link: "https://piktochart.com",
               image: baselink + "piktochart.png",
               description: "Get rewarded with a FREE one month pro plan from Piktochart if you donate RM50 or more to a classroom project you believe in!"
+          },
+          repsol: {
+              name: "Repsol",
+              link: "https://www.repsol.com",
+              image: baselink + "repsol.png",
+              description: "This project was fully realised by the team at Repsol"
           }
       }
 
@@ -49,6 +55,8 @@ module Project::Partner
           partner = partners[:foodpanda]
         when self.id == 17
           partner = partners[:webe]
+        when self.id == 54
+          partner = partners[:repsol]
         when self.state == 'online'
           partner = partners[:piktochart]
         else
