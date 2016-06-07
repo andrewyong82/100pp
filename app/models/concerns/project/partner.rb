@@ -41,7 +41,13 @@ module Project::Partner
               name: "Repsol",
               link: "https://www.repsol.com",
               image: baselink + "repsol.png",
-              description: "This project was fully realised by the team at Repsol"
+              description: "This project was fully realised by the team at Repsol!"
+          },
+          ytl: {
+              name: "YTL Foundation",
+              link: "http://frogclassroom.com",
+              image: baselink + "ytlf.png",
+              description: "This project is backed by YTL Foundation"
           }
       }
 
@@ -57,6 +63,8 @@ module Project::Partner
           partner = partners[:webe]
         when self.id == 54
           partner = partners[:repsol]
+        when self.category_id == 11
+          partner = partners[:ytl]
         when self.state == 'online'
           partner = partners[:piktochart]
         else
