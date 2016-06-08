@@ -45,8 +45,8 @@ module Project::Partner
           },
           ytl: {
               name: "YTL Foundation",
-              link: "http://frogclassroom.com",
-              image: baselink + "ytlf.png",
+              link: "https://www.frogclassroom.com",
+              image: baselink + "ytlf2.png",
               description: "This project is backed by YTL Foundation"
           }
       }
