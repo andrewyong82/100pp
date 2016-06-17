@@ -102,3 +102,49 @@ en:
       sidebar:
         contributions: contributions
         goal: out of %{total} raised
+    cardfrogproject:
+      post_call: 'All posts published here will be sent directly to the email from those who have supported your project and is also available for viewing on the site. You can choose to let it public, or visible only to its supporters here in this tab.'
+      send_post: 'Publish post'
+      twitter_profile: Twitter Profile
+      facebook_profile: Facebook Profile
+      author_website: Site
+      share: Share It
+      tweet: Tweet
+      contact_author: Send Message
+      contribute_project:
+        display_status:
+          reached_goal: This campaign will be successful and funded %{date}
+          not_reached_goal: You will only be charged if at least %{goal} is achieved by %{date}
+          failed: This campaign did not reach the minimum %{goal} %{date} up and was
+            not funded
+          rejected: This campaign was not accepted.
+          in_analysis: This campaign is under review and is not yet open to receive
+            support .
+          successful: This campaign was successful and was funded in %{date}
+          waiting_funds: Awaiting confirmation slips to know if this campaign will
+            be funded .
+          draft: This design is just a draft and still can not receive support .
+        submit: Support this campaign
+      project_by: design by
+      funding_period: Campaign period
+      project_header:
+        subtitle_html: A %{link} campaign
+        without_city: A campaign
+        with_city: A %{category_name} %{author} campaign by in %{city}
+      menu:
+        about: About
+        add_reward: Add reward
+        comments: Comments
+        contributions: Contributions
+        metrics: Metrics
+        edit: Edit
+        reports: Reports
+        posts: News
+      no_rewards_warning: Do not travel !
+      no_rewards_warning_title: Create here your rewards
+      contribution_states:
+        confirmed: confirmed
+        pending: pending
+      sidebar:
+        contributions: contributions
+        goal: out of %{total} raised

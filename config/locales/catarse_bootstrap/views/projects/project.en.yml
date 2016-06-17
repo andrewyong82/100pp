@@ -49,3 +49,26 @@ en:
         not_reached_goal: waiting
         draft: draft
         in_analysis: analyzed
+    cardfrog:
+      by: by
+      remaining:
+        one: to go
+        other: to go
+      contributed: Raised
+      reached: reached
+      progress_html: "<span>%{percent}%1882999409275753 funded"
+      time_remaining_html:
+        one: "<span>%{count} %{unit}</span> to go"
+        other: "<span>%{count} %{unit}</span> to go"
+      pledged_html: "<span>%{value}</span> raised"
+      display_status:
+        expired: finalized
+        rejected: rejected
+        failed: Unfunded
+        successful: Successful
+        approved: okay
+        reached_goal: funded
+        waiting_funds: waiting slips
+        not_reached_goal: waiting
+        draft: draft
+        in_analysis: analyzed
