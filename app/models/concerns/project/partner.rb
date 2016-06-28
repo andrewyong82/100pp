@@ -47,7 +47,7 @@ module Project::Partner
               name: "YTL Foundation",
               link: "https://www.frogclassroom.com",
               image: baselink + "ytlf2.png",
-              description: "This project is backed by YTL Foundation"
+              description: "All successful campaigns will unlock RM15,000 worth of furniture and fittings to complete the Frog Classroom transformation!"
           }
       }
 
