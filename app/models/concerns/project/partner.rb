@@ -70,7 +70,7 @@ module Project::Partner
         when self.id == 54
           partner = partners[:repsol]
         when self.id == 51
-          partner = partners[:repsol]
+          partner = partners[:slb]
         when self.category_id == 11
           partner = partners[:ytl]
         when self.state == 'online'
