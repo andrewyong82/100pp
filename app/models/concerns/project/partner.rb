@@ -48,6 +48,12 @@ module Project::Partner
               link: "https://www.frogclassroom.com",
               image: baselink + "ytlf2.png",
               description: "All successful campaigns will unlock RM15,000 worth of furniture and fittings to complete the Frog Classroom transformation!"
+          },
+          slb: {
+              name: "Schlumberger",
+              link: "https://www.slb.com",
+              image: baselink + "schlumberger.png",
+              description: "This project has been adopted by Schlumberger!"
           }
       }
 
@@ -62,6 +68,8 @@ module Project::Partner
         when self.id == 17
           partner = partners[:webe]
         when self.id == 54
+          partner = partners[:repsol]
+        when self.id == 51
           partner = partners[:repsol]
         when self.category_id == 11
           partner = partners[:ytl]
