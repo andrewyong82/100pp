@@ -54,6 +54,12 @@ module Project::Partner
               link: "https://www.slb.com",
               image: baselink + "schlumberger.png",
               description: "This project has been adopted by Schlumberger!"
+          },
+          nbs: {
+              name: "Nation Building School",
+              link: "http://nationbuildingschool.com",
+              image: baselink + "nbs.jpg",
+              description: "This project has been adopted by Nation Building School!"
           }
       }
 
@@ -71,6 +77,8 @@ module Project::Partner
           partner = partners[:repsol]
         when self.id == 51
           partner = partners[:slb]
+        when self.id == 72
+          partner = partners[:nbs]
         when self.category_id == 11
           partner = partners[:ytl]
         when self.state == 'online'
