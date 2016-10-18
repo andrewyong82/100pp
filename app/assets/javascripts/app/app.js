@@ -18,7 +18,7 @@ var App = window.App = Skull.View.extend({
             $('.main-header, .hero-search').addClass('with-fixed-alert');
             this.fixedAlert = true;
         }
-        if(!window.store.get('globalClosedCookies')){
+        if(!window.store.get('globalClosedCookies2')){
             $('#global-alert').slideDown(400);
             $('.main-header').addClass('with-global-alert');
             if(this.fixedAlert){
@@ -31,7 +31,7 @@ var App = window.App = Skull.View.extend({
     closeAlert: function(event){
         $('#global-alert').slideUp(400);
         $('.main-header').removeClass('with-global-alert').removeClass('with-two-alerts');
-        window.store.set('globalClosedCookies', true);
+        window.store.set('globalClosedCookies2', true);
         this.globalAlert = false;
     },
 
