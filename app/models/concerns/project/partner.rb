@@ -60,6 +60,12 @@ module Project::Partner
               link: "http://nationbuildingschool.com",
               image: baselink + "nbs.jpg",
               description: "This project has been adopted by Nation Building School!"
+          },
+          biggive: {
+              name: "The BIG GIVE",
+              link: "http://biggive.100percentproject.org",
+              image: baselink + "biggive.png",
+              description: "Join Malaysia's BIGGEST giving campaign aimed at helping teachers and students start their school year with a dose of inspiration!"
           }
       }
 
@@ -81,7 +87,9 @@ module Project::Partner
           partner = partners[:nbs]
         when self.category_id == 11
           partner = partners[:ytl]
-        when self.state == 'online'
+        when self.category_id == 13
+          partner = partners[:biggive]
+        when self.state == ('online')
           partner = partners[:piktochart]
         else
           return
