@@ -78,7 +78,7 @@ en:
           waiting_funds: Awaiting confirmation slips to know if this campaign will
             be funded .
           draft: This design is just a draft and still can not receive support .
-        submit: Support this campaign
+        submit: Fund this project
       project_by: design by
       funding_period: Campaign period
       project_header:
@@ -124,7 +124,7 @@ en:
           waiting_funds: Awaiting confirmation slips to know if this campaign will
             be funded .
           draft: This design is just a draft and still can not receive support .
-        submit: Support this campaign
+        submit: Fund this project
       project_by: design by
       funding_period: Campaign period
       project_header:
