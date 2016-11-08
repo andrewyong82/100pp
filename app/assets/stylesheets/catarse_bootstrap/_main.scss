@@ -1,9 +1,12 @@
 body {
   font-family: brandon-grotesque, sans-serif;
-  color: #3f4752;
+  color: #262626;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing:auto;
+  -webkit-font-smoothing:subpixel-antialiased;
 }
 p {
   margin-top: 0px;
@@ -22,9 +25,18 @@ p {
   color: white;
   text-align: center;
   text-decoration: none;
+
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 21px 34px;
+  //letter-spacing: 2px;
+  text-transform: uppercase;
+  border-color: #161616;
+  border-width: 2px;
+  color: #262626;
 }
 .btn:hover {
-  border-color: #ffd839;
+//  border-color: #ffd839;
   background-color: #ffd839;
   box-shadow: rgba(63, 71, 82, 0.38) 1px 1px 3px 0px;
 }
