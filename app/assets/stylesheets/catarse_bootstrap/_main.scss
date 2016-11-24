@@ -34,6 +34,7 @@ p {
   border-color: #161616;
   border-width: 2px;
   color: #262626;
+  white-space:nowrap;
 }
 .btn:hover {
 //  border-color: #ffd839;
@@ -2958,6 +2959,8 @@ html.w-mod-js *[data-ix="icon-funded-with"] {
   .btn-large {
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
     font-size: 16px;
   }
   .btn-medium {
@@ -3401,6 +3404,7 @@ html.w-mod-js *[data-ix="icon-funded-with"] {
     padding-top: 8px;
     padding-bottom: 0px;
     text-align: left;
+    white-space: nowrap;
   }
   .back-reward-error-form {
     width: 80%;
@@ -3471,6 +3475,10 @@ html.w-mod-js *[data-ix="icon-funded-with"] {
     width: 85px;
     margin-top: 0px;
     margin-right: 0px;
+  }
+  .btn-large {
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .u-marginbottom-60 {
     padding-right: 0px;
@@ -3935,6 +3943,7 @@ html.w-mod-js *[data-ix="icon-funded-with"] {
     padding-bottom: 0px;
     padding-left: 8px;
     border-top-style: none;
+    white-space: nowrap;
   }
   .back-reward-error-form {
     width: 100%;
@@ -3997,6 +4006,11 @@ html.w-mod-js *[data-ix="icon-funded-with"] {
   }
   .header-logo {
     width: 85px;
+  }
+  .btn-large {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 13px;
   }
   .btn-dark.btn-attached {
     width: 100%;
