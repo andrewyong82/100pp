@@ -32,9 +32,8 @@ nav#user-menu-dropdown.w-dropdown-list.dropdown-list.user-menu
                   = link_to truncate(project.name), project_by_slug_path(project.permalink, ref: 'user_menu_my_contributions'), class: 'alt-link fontsize-smaller'
           li.u-margintop-20
             .w-row
-              .w-col.w-col-6
+              .w-col.w-col-12
                 = link_to t('projects.index.see_all'), edit_user_path(current_user, anchor: :contributions), class: 'btn btn-small btn-terciary'
-              .w-col.w-col-6
     .w-col.w-col-4.w-hidden-small.w-hidden-tiny
       .fontweight-semibold.fontsize-smaller.u-marginbottom-10 = t('shared.menus.user.projects_created')
       - if current_user.projects.present?
@@ -48,9 +47,8 @@ nav#user-menu-dropdown.w-dropdown-list.dropdown-list.user-menu
                   = link_to truncate(project.name), edit_project_path(project, ref: 'user_menu_my_projects', anchor: 'home'), class: 'alt-link fontsize-smaller'
           li.u-margintop-20
             .w-row
-              .w-col.w-col-6
+              .w-col.w-col-12
                 = link_to t('projects.index.see_all'), edit_user_path(current_user, anchor: :projects), class: 'btn btn-small btn-terciary'
-              .w-col.w-col-6
   - if current_user.admin?
     .divider.u-marginbottom-20
     .fontweight-semibold.fontsize-smaller.u-marginbottom-10 Admin

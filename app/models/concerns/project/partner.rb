@@ -31,12 +31,12 @@ module Project::Partner
               image: baselink + "webe.png",
               description: "Head on to www.webe.com.my to download the webe community app to support Cikgu Tan's Project. You can #makeithappen!"
           },
-          piktochart: {
-              name: "Piktochart",
-              link: "https://piktochart.com",
-              image: baselink + "piktochart.png",
-              description: "Get rewarded with a FREE one month pro plan from Piktochart if you donate RM50 or more to a classroom project you believe in!"
-          },
+          # piktochart: {
+          #     name: "Piktochart",
+          #     link: "https://piktochart.com",
+          #     image: baselink + "piktochart.png",
+          #     description: "Get rewarded with a FREE one month pro plan from Piktochart if you donate RM50 or more to a classroom project you believe in!"
+          # },
           repsol: {
               name: "Repsol",
               link: "https://www.repsol.com",
@@ -60,6 +60,12 @@ module Project::Partner
               link: "http://nationbuildingschool.com",
               image: baselink + "nbs.jpg",
               description: "This project has been adopted by Nation Building School!"
+          },
+          getdoc: {
+              name: "GetDoc",
+              link: "http://getdoc.co",
+              image: baselink + "getdoc.png",
+              description: "This project has been adopted by GetDoc!"
           },
           biggive: {
               name: "The BIG GIVE",
@@ -85,12 +91,14 @@ module Project::Partner
           partner = partners[:slb]
         when self.id == 72
           partner = partners[:nbs]
+        when self.id == 122
+          partner = partners[:getdoc]
         when self.category_id == 11
           partner = partners[:ytl]
         when self.category_id == 13
           partner = partners[:biggive]
-        when self.state == ('online')
-          partner = partners[:piktochart]
+        # when self.state == ('online')
+        #   partner = partners[:piktochart]
         else
           return
       end
