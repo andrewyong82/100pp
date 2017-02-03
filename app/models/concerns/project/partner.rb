@@ -65,7 +65,7 @@ module Project::Partner
               name: "GetDoc",
               link: "http://getdoc.co",
               image: baselink + "getdoc.png",
-              description: "This project has been adopted by GetDoc!"
+              description: "This project has been adopted by GetDoc! As a token of appreciation, GetDoc will be giving out exclusive deals to thank contributors of this project"
           },
           biggive: {
               name: "The BIG GIVE",
