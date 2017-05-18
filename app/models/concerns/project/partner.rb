@@ -99,12 +99,12 @@ module Project::Partner
           partner = partners[:nbs]
         when self.id == 122
           partner = partners[:getdoc]
+        when self.id == 127
+          partner = partners[:futurelab]
         when self.category_id == 11
           partner = partners[:ytl]
         when self.category_id == 13
           partner = partners[:biggive]
-        when self.category_id == 127
-          partner = partners[:futurelab]
         # when self.state == ('online')
         #   partner = partners[:piktochart]
         else
