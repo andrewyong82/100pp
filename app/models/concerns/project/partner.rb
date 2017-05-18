@@ -72,6 +72,12 @@ module Project::Partner
               link: "http://biggive.100percentproject.org",
               image: baselink + "biggive.png",
               description: "Join Malaysia's BIGGEST giving campaign aimed at helping teachers and students start their school year with a dose of inspiration!"
+          },
+          futurelab: {
+              name: "FutureLab",
+              link: "https://futurelab.my/subscriptions",
+              image: baselink + "futurelab.png",
+              description: "This project has been adopted by FutureLab! FutureLab is giving out exclusive deals to those who subscribe to their mentor plans with the promo code FL100PERCENT. All proceeds will then be contributed to this project."
           }
       }
 
@@ -97,6 +103,8 @@ module Project::Partner
           partner = partners[:ytl]
         when self.category_id == 13
           partner = partners[:biggive]
+        when self.category_id == 127
+          partner = partners[:futurelab]
         # when self.state == ('online')
         #   partner = partners[:piktochart]
         else
