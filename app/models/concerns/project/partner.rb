@@ -78,6 +78,12 @@ module Project::Partner
               link: "https://futurelab.my/subscriptions",
               image: baselink + "futurelab.png",
               description: "This project has been adopted by FutureLab! FutureLab is giving out exclusive deals to those who subscribe to their mentor plans with the promo code FL100PERCENT. All proceeds will then be contributed to this project."
+          },
+          nangelz: {
+              name: "Nanyang Angelz",
+              link: "https://www.nanyangangelz.com",
+              image: baselink + "nanyangangelz.jpg",
+              description: "This project has been adopted by Nanyang Angelz! Nanyang Angelz consists of an Alumni of Angels & Entrepreneurs. Their business is to identify potential startups, and thereafter facilitate the process of funding & mentoring for their success."
           }
       }
 
@@ -101,6 +107,8 @@ module Project::Partner
           partner = partners[:getdoc]
         when self.id == 127
           partner = partners[:futurelab]
+        when self.id == 129
+          partner = partners[:nangelz]
         when self.category_id == 11
           partner = partners[:ytl]
         when self.category_id == 13
