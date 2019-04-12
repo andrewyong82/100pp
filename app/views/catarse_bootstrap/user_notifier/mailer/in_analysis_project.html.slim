@@ -7,36 +7,36 @@
 |Hello, #{user.name}!
 br
 br
-| Thank you for sending us the project #{link_to project.name, project_link, target: '__blank'}
+| Thank you for submitting the project #{link_to project.name, project_link, target: '__blank'}
 br/
 br/
-| From now, our project team will be <strong>evaluating all content</strong> you have placed on the page and (in a maximum of 4 days)
-'  you will receive and email whether it has been <strong>Approved, Denied</strong> or whether to continue <strong>in analysis</strong> for a while.
+| From now, our project team will be <strong>evaluating all content</strong> you have placed on the page and within 5 days
+'  you will receive an email whether it has been <strong>approved, denied</strong> or whether it needs more time to be <strong>in review</strong>.
 br
 br
 strong What does that mean?
 br/
 br/
-strong Page was refused
+strong Project page was refused
 br/
-| Your project does not have the profile #{company_name} and / or we find information that violate our rules. This page cannot be published on the platform.
-br/
-br/
-strong Page continues in analysis
-br/
-| The project has the profile #{company_name} and complies with the rules, only that the page is not yet ready to be published on the platform. Receive our comments , tips and suggestions. Finalize the issues in the project page and let our support agent when you want it to do a reassessment.
+| Your project does not have a profile and/or we find information that violate our rules. This page cannot be published on the platform.
 br/
 br/
-strong Page has been approved
+strong Project page continues in review
 br/
-| Let's move on, start the collection is up to you! Choose the best date and publish the page of your project on the platform.
+| The project has a profile and complies with the rules, only that the page is not yet ready to be published on the platform. Receive our comments, tips and suggestions. Finalise the issues on the project page and let our support agent know when you are ready for a reassessment.
+br/
+br/
+strong Project page has been approved
+br/
+| Let's begin the campaign whenever you're ready! Choose the best date and publish your project on the platform.
 br/
 br/
 strong
-  | To accompany the change of status of the project page #{link_to project.name, project_link, target: '__blank'} keep an eye on the inbox of your email and your project page.
+  | To follow the status of your project #{link_to project.name, project_link, target: '__blank'}, keep an eye on your inbox and your project page.
 br/
 br/
-| Remembering that you can ask questions us at any time responding directly to this message or by e- mail #{mail_to CatarseSettings[:email_projects]}
+| Remember that you can ask us questions at any time by responding directly to this message or by e-mail #{mail_to CatarseSettings[:email_projects]}
 br/
 br/
 |Regards,

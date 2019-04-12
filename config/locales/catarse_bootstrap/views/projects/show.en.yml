@@ -10,7 +10,7 @@ en:
       active_btn: Remember me this campaign
       deactive_btn: Do not want to be remembered
     send_to_analysis: Your campaign has been sent to our team.
-    send_to_analysis_error: Error sending campaign for analysis.
+    send_to_analysis_error: Error submitting campaign for review.
     push_to_online: Your campaign is online!
     push_to_online_error: Error while placing the online campaign.
     twitter:

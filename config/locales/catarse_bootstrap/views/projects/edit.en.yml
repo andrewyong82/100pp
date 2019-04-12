@@ -45,23 +45,23 @@ en:
 #        reward_deliver_time: "<b>Estimated delivery: </b> %{estimate}"
 #        reward_title: "%{minimum}"
     dashboard_user_settings:
-      natural: Name of Holder
+      natural: Name of Project Owner
       juridical: Company Name
       title: Registration and banking payout details
       subtitle_html: You need to quickly fill out these details so we can quickly pay you after a successfull campaign.
       owner_document_natural: "CPF do titular da conta bancária"
       owner_document_juridical: "CNPJ do titular da conta bancária"
       user_data_title: Registration data and address
-      user_data_subtitle_html: We need the data below for the issuance of tax notes for successful projects.
-      account_subtitle_html: We need the data below to make a financial transfer for successful projects.
+      user_data_subtitle_html: We need the details below for the disbursement of funds for successful projects.
+      account_subtitle_html: We need the details below for the disbursement of funds for successful projects.
       account_edit_disabled_html: "The details below were submitted by you when your project went live. To change these values, please contact us."
       submit: Save
     dashboard_home_templates:
       status: 'Status:'
       project_numbers:
         financed: funded
-        backed: Raised
-        contributions: support
+        backed: raised
+        contributions: contributions
         left: to go
       waiting_funds:
         title: "%{name}, we are processing the final payments."
@@ -73,19 +73,17 @@ en:
         good_luck: Good luck!
       successful:
         title: "%{name}, congratulations!"
-        subtitle_html: His campaign was successful and now is the time to start
-          talking with their supporters!
+        subtitle_html: The campaign was successful - now is the time to start engaging with your supporters!
         header1: 'And do not forget: Transparency is everything.'
         transparent_html: Keep your buyers informed and happy to have a long time customer.
         header2: 'Be sure to read:'
       rejected:
         title: "%{name} unfortunately was not approved this time."
-        subtitle_html: You sent your campaign for analysis of 100% Project and we understand
-          that it is not according to the site profile.
+        subtitle_html: You sent your campaign for review from 100% Project and it does not meet the requirements.
       online:
         title: "%{name}, your campaign is published online!"
         subtitle_html: Your campaign is published online and your campaign will end on the
-          day 23hs59min59s %{date}. Until that day and time you may receive support.
+          day 23hs59min59s %{date}. Until that day and time you may receive contributions from the public.
         explanation_html: "<div class='fontsize-base u-marginbottom-40 card card-terciary'>
           22266988645918961 With the project in the air, some information may no longer
           be edited 6442732454340981 6221264374851357 You can no longer change : 36714498411431307
@@ -93,21 +91,20 @@ en:
           - the URL of the project; <br> - the user owner"
       failed:
         title: "%{name}, do not be discouraged!"
-        subtitle_html: Your campaign did not hit the target and we know that this
-          is not the best of feelings.
+        subtitle_html: Sorry your campaign did not reach the funding target :(
         questions: We also sent an email to you with two short questions.
       draft:
         title: "%{name}, build your campaign!"
-        subtitle: The more carefully formatted your campaign is, the greater
-          the chances are your campaign will be successful.
+        subtitle: Remember, a thoughtfully planned campaign with a strong story will have a better chance of getting your project funded.
         study_title: Felt need to study more to build your campaign?
       approved:
         title: "%{name}, your campaign has been approved!"
         subtitle_html: To publish this campaign online, fill
-          in the required data in tab %{link1}. It is important to know that we charge
-          the rate of 10% of the total amount collected only for successful 100% Project Campaigns.
+          in the required data in tab %{link1}.
+#          It is important to know that we charge
+#          the rate of 10% of the total amount collected only for successful 100% Project Campaigns.
       in_analysis:
-        title: "%{name}, you sent your campaign for analysis. You will receive our response
+        title: "%{name}, you've sent your campaign for review. You will receive our response
           within 4 working days."
         subtitle_html: Thank you very much!
     dashboard_analysis_success:
@@ -116,12 +113,12 @@ en:
       next_steps: "In the meantime, you can continue editing your project! We also recommend that you go collect feedback from people nearby and plan this campaign."
     dashboard_nav:
       leave_link_html: "&nbsp; Exit control panel"
-      start_tab: Useful info
+      start_tab: Home
       reports_tab: Reports
       preview_tab: Preview
       posts_tab: News
       edit_project: Edit project
-      send: Send
+      send: Submit
       publish: Publish
     dashboard_nav_links:
       preview_tab: Preview
@@ -162,8 +159,7 @@ en:
       reward: "Reward"
     dashboard_preview:
       header_subtitle: It's time for feedback!
-      header_text: Share the link below with your friends and enjoy the moment to
-        make fine adjustments to help in your campaign.
+      header_text: Share the link below with your friends so you can hear from others how to improve your campaign.
     dashboard_posts:
       title: Write a Campaign Update
       only_to_backers: I want this campaign update only visible to supporters.

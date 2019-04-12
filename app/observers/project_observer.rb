@@ -19,7 +19,7 @@ class ProjectObserver < ActiveRecord::Observer
   end
 
   def after_create(project)
-    deliver_default_notification_for(project, :project_received)
+    # deliver_default_notification_for(project, :project_received)
   end
 
   def from_draft_to_in_analysis(project)

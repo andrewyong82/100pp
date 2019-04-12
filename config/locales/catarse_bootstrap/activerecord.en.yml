@@ -10,7 +10,7 @@ en:
     attributes:
       project_account:
         address_city: City
-        address_complement: Building
+        address_complement: Unit/Building
         address_neighbourhood: Suburb
         address_number: Number
         address_state: State
@@ -18,17 +18,21 @@ en:
         address_zip_code: Postcode
         cpf: 'CPF / CNPJ '
         state_inscription: 'Inscrição Estadual'
-        email: Email
+        email: 'Email of Project Owner'
         full_name: "Full name"
         phone_number: "Telephone"
         bank: 'Bank'
         bank_id: 'Bank ID'
-        owner_name: 'Name'
+        owner_name: 'Name of Project Owner'
         owner_document: 'CPF do titular da conta bancária'
-        agency: 'Agency'
+#        agency: 'Agency'
+#        agency_digit: 'Agency Digits'
+#        account: 'Account Number'
+#        account_digit: 'Account Digits'
+        agency: 'Bank'
         agency_digit: 'Agency Digits'
-        account: 'Account Number'
-        account_digit: 'Account Digits'
+        account: 'Account Name'
+        account_digit: 'Account Number'
         account_type: 'Account Type'
       bank_account:
         input_bank_number: "Bank number"

@@ -170,7 +170,7 @@ en:
       project:
         category: Category
         expires_at: Deadline
-        online_days: Days into the campaign
+        online_days: Campaign duration
         headline: Headline
         image_url: "Image URL"
         name: Name

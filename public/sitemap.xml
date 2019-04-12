@@ -6,7 +6,7 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>http://biggive.100percentproject.org</loc>
+    <loc>https://www.edspace.my</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -14,11 +14,6 @@
     <loc>https://www.100percentproject.org/en</loc>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://www.100percentproject.org/en/hello</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.100percentproject.org/en/explore</loc>

@@ -18,7 +18,7 @@ en:
       form:
         blocks:
           first:
-            title: You Welcome!
+            title: Welcome!
             description: Complete the information below to begin your
               project.
         info:

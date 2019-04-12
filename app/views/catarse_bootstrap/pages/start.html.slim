@@ -8,8 +8,8 @@
       h1.fontweight-semibold.fontsize-jumbo.u-text-center.u-marginbottom-70.u-margintop-40 Are you a teacher in need of funding?
       .w-row.u-margintop-20.u-marginbottom-60.u-text-center
         .w-col.w-col-4.w-col-push-4
-          a.btn.btn-large.btn-inline href="https://docs.google.com/forms/d/1lRbPRqiTNFroyFartTeO5lryAOzPv7fc5LU4NhoNGi4/viewform" Submit your project
-
+          /a.btn.btn-large.btn-inline href="https://docs.google.com/forms/d/1lRbPRqiTNFroyFartTeO5lryAOzPv7fc5LU4NhoNGi4/viewform" Submit your project
+          = link_to t('.submit'), new_project_path, class: 'btn btn-large'
 .section-large
   .w-container
     .w-row.u-text-center
