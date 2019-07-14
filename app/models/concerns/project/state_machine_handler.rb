@@ -17,7 +17,7 @@ module Project::StateMachineHandler
           end
           self.user.errors.each {|error, error_message| self.errors.add('user.' + error.to_s, error_message)}
           self.errors['rewards.size'] << "There must at least be one reward" if self.rewards.size == 0
-          self.errors['account.agency_size'] << "Agência deve ter pelo menos 4 dígitos" if self.account && self.account.agency.size < 4
+          # self.errors['account.agency_size'] << "Agência deve ter pelo menos 4 dígitos" if self.account && self.account.agency.size < 4
         end
       end
 
@@ -29,9 +29,9 @@ module Project::StateMachineHandler
 
       #validations starting in online
       state :online, :successful, :waiting_funds, :failed do
-        validates_presence_of :account, message: 'Dados Bancários não podem ficar em branco'
+        validates_presence_of :account, message: 'Bank details cannot be left blank'
         validate do
-          [:email, :address_street, :address_number, :address_city, :address_state, :address_zip_code, :phone_number, :bank, :agency, :account, :account_digit, :owner_name, :owner_document, :account_type].each do |attr|
+          [:email, :address_street, :address_city, :address_state, :address_zip_code, :phone_number, :agency, :account, :account_digit, :owner_name].each do |attr|
             self.account.errors.add_on_blank(attr) if self.account.present?
           end
           self.account.errors.each {|error, error_message| self.errors.add('project_account.' + error.to_s, error_message)} if self.account.present?

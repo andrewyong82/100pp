@@ -20,7 +20,7 @@ en:
         state_inscription: 'Inscrição Estadual'
         email: 'Email of Project Owner'
         full_name: "Full name"
-        phone_number: "Telephone"
+        phone_number: "Phone Number of Project Owner"
         bank: 'Bank'
         bank_id: 'Bank ID'
         owner_name: 'Name of Project Owner'
@@ -167,35 +167,35 @@ en:
         project_account:
           attributes:
             full_name:
-              blank: "Razão social do usuário não pode ficar em branco"
+              blank: "Name cannot be empty"
             email:
-              blank: "Email do usuário não pode ficar em branco"
+              blank: "Email cannot be empty"
             cpf:
               blank: "CPF do usuário não pode ficar em branco"
             address_street:
-              blank: "Endereço do usuário não pode ficar em branco"
+              blank: "Street address cannot be empty"
             address_number:
-              blank: "Número no endereço do usuário não pode ficar em branco"
+              blank: ""
             address_city:
-              blank: "Cidade do usuário não pode ficar em branco"
+              blank: "City cannot be empty"
             address_state:
-              blank: "Estado do usuário não pode ficar em branco"
+              blank: "State cannot be empty"
             address_zip_code:
-              blank: "CEP do usuário não pode ficar em branco"
+              blank: "Postcode cannot be empty"
             phone_number:
-              blank: "Telefone do usuário não pode ficar em branco"
+              blank: "Phone number cannot be empty"
             bank:
-              blank: "Banco do usuário não pode ficar em branco"
+              blank: "Bank details cannot be empty"
             agency:
-              blank: "Agência do usuário não pode ficar em branco"
+              blank: "Bank details cannot be empty"
             agency_digit:
-              blank: "Dígito agência do usuário não pode ficar em branco"
+              blank: "Bank details cannot be empty"
             account:
-              blank: "No. da conta do usuário não pode ficar em branco"
+              blank: "Bank details cannot be empty"
             account_digit:
-              blank: "Dígito conta do usuário não pode ficar em branco"
+              blank: "Bank details cannot be empty"
             owner_name:
-              blank: "Nome do titular do usuário não pode ficar em branco"
+              blank: "Name cannot be empty"
             owner_document:
               blank: "CPF / CNPJ do titular do usuário não pode ficar em branco"
               not_same: "CPF/CNPJ dos dados cadastrais e bancários preenchidos não estão iguais."
@@ -292,22 +292,22 @@ en:
       a recompensa selecionada
   contribution_report_to_project_owner:
     reward_description: Descrição da recompensa
-    deliver_at: Data de entrega da recompensa
+    deliver_at: Reward delivery date
     confirmed_at: Data da confirmação do pagamento
-    contribution_value: Valor do apoio
+    contribution_value: Contribution value
     service_fee: Taxa do Catarse
     user_name: Nome do apoiador
     user_email: Email perfil Catarse
-    cpf: Cpf do apoiador
+    cpf: Contributor ID
     payer_email: Email do meio de pagamento
-    gateway: Meio de pagamento
-    street: Rua
+    gateway: Payment method
+    street: Street
     address_number: Número
-    complement: Complemento
-    neighbourhood: Bairro
-    city: Cidade
-    address_state: Estado
-    zip_code: CEP
+    complement: Building
+    neighbourhood: Neighbourhood
+    city: City
+    address_state: State
+    zip_code: Postcode
     anonymous: Anônimo
   user:
     no_name: nameless

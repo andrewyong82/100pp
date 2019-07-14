@@ -24,9 +24,12 @@
                   .w-col.w-col-6.w-sub-col
                     = form.hidden_field :project_id, value: @project.id
                     = form.input :owner_name, as: :string, input_html: { class: 'positive', data: {natural: t('.natural'), juridical: t('.juridical') } }
-                  .w-col.w-col-6
-                    = form.input :email, as: :string, 
+                .w-row
+                  .w-col.w-col-6.w-sub-col
+                    = form.input :email, as: :string,
                     input_html: { class: 'positive' }
+                  .w-col.w-col-6
+                    = form.input :phone_number, as: :string, input_html: {class: 'positive'}
                 .w-row
                   .w-col.w-col-6.w-sub-col
                     = form.hidden_field :owner_document, as: :tel,
@@ -86,9 +89,6 @@
                     .w-row
                       .w-col.w-col-6.w-col-small-6.w-col-tiny-6.w-sub-col-middle
                         = form.input :address_zip_code, as: :string, 
-                        input_html: { class: 'positive' }
-                      .w-col.w-col-6.w-col-small-6.w-col-tiny-6
-                        = form.input :phone_number, as: :string, 
                         input_html: { class: 'positive' }
               
       div
