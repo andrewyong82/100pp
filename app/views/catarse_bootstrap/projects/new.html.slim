@@ -10,6 +10,7 @@
 
           fieldset
             legend.fontsize-largest.lineheight-loose.u-text-center = t('.form.blocks.first.title')
+            p.fontsize-small.u-marginbottom-60.u-text-center.text-error = "NOTE: We have stopped processing submissions for 2019. We will return in January 2020 to help you fundraise for your classrooms. Please follow us for updates on our 2020 crowdfunding schedule!"
             p.fontsize-small.u-marginbottom-60.u-text-center = t('.form.blocks.first.description')
             = render 'devise/shared/alert'
 
@@ -20,7 +21,7 @@
             .u-marginbottom-40
               = form.label :category, class: 'fontsize-large', required: false
               .fontsize-small.fontcolor-secondary.u-marginbottom-10= form.hint :category
-              = form.association :category, as: :select, collection: Category.order(:name_pt), prompt: t('simple_form.prompts.project.category'), class: 'medium', label: '', required: false, hint: ''
+              = form.association :category, as: :select, collection: Category.where("id <= 10").order(:name_pt), prompt: t('simple_form.prompts.project.category'), class: 'medium', label: '', required: false, hint: ''
             .u-marginbottom-40
               = form.label :permalink, class: 'fontsize-large', required: false, as: :string
               .fontsize-small.fontcolor-secondary.u-marginbottom-10= form.hint :permalink
