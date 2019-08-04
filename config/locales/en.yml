@@ -61,7 +61,7 @@ en:
 #    address_neighbourhood: 'Suburb'
 #    address_city: 'City'
     address_state: 'State'
-    address_zip_code: 'Postcode'
+#    address_zip_code: 'Postcode'
     anonymous: 'Anonymous'
   edit_project: 'Edit this project'
   facebook_locale: 'en_US'
