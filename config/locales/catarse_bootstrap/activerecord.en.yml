@@ -307,7 +307,7 @@ en:
     neighbourhood: Neighbourhood
     city: City
     address_state: State
-    zip_code: Postcode
+    address_zip_code: Postcode
     anonymous: Anônimo
   user:
     no_name: nameless
