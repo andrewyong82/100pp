@@ -30,7 +30,7 @@
 
             .w-row.u-margintop-10
               .w-col.w-col-12
-                input type="checkbox" class= 'boolean optional w-input checkbox-fix text-field' checked="checked" id="toggle-fee" value="1"
+                input type="checkbox" class= 'boolean optional w-input checkbox-fix text-field' checked="" id="toggle-fee" value="0"
                 =" "
                 label.w-form-label.fontsize-smallest for="toggle-fee" =("Include a 15% service fee (RM" + number_with_precision(@contribution.payment_service_fee, precision: 2) + ") for 100% Project to cover expenses")
             .w-row
