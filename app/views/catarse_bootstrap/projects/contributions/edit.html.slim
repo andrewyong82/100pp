@@ -30,9 +30,9 @@
 
             .w-row.u-margintop-10
               .w-col.w-col-12
-                input type="checkbox" class= 'boolean optional w-input checkbox-fix text-field' checked="" id="toggle-fee" value="0"
+                input type="checkbox" class= 'boolean optional w-input checkbox-fix text-field' id="toggle-fee" value="0"
                 =" "
-                label.w-form-label.fontsize-smallest for="toggle-fee" =("Include a 15% service fee (RM" + number_with_precision(@contribution.payment_service_fee, precision: 2) + ") for 100% Project to cover expenses")
+                label.w-form-label.fontsize-smallest for="toggle-fee" =("Include a 15% service fee for 100% Project to cover expenses")
             .w-row
               .w-col.w-col-12
                 #fee-confirmation.card.card-message.u-radius.zindex-10.fontsize-smallest.w-hidden
@@ -82,7 +82,8 @@
             .w-col.w-col-push-3.w-col-6
               a#next-step.btn.btn-large href="#payment-engines"
                 text Fund RM
-                text#bill-amount =number_with_precision(@contribution.value + @contribution.payment_service_fee, precision: 2)
+                /text#bill-amount =number_with_precision(@contribution.value + @contribution.payment_service_fee, precision: 2)
+                text#bill-amount =number_with_precision(@contribution.value, precision: 2)
               #loader.u-text-center.u-marginbottom-30 style="display:none"
                 = image_tag "catarse_bootstrap/loader.gif"
                 br
