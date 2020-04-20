@@ -20,16 +20,16 @@ section#hero-home.hero-full.hero-knowmore
       .w-col.w-col-4.w-col-push-4
         a.btn.btn-large.u-marginbottom-10 href="#{explore_path(ref: 'home_banner')}" Start now
 
-/.section
-/  .w-container
-/    /.w-hidden-main.w-hidden-medium.u-margintop-30
-/    .w-row.u-text-center
-/      .w-col.w-col-12
-/        /.fontweight-semibold.fontsize-jumbo.lineheight-tighter Help great teachers provide<br/> the best learning experience
-/        a href="https://www.edspace.my"
-/          = image_tag "https://s3.amazonaws.com/100pp/assets/edspacebanner.jpg", width: "100%", class: "u-margintop-10"
-/        /<div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="January 15, 2016 23:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
-/    /.w-hidden-main.w-hidden-medium.u-marginbottom-40
+.section.card-alert
+  .w-container
+    /.w-hidden-main.w-hidden-medium.u-margintop-30
+    .w-row.u-text-center
+      .w-col.w-col-12
+        .fontsize-large.lineheight-looser 100% Project is now open to any initiatives that need to raise funds to help those who are heavily affected by the <strong>COVID-19 pandemic</strong>. Click on "Start a project" to write about your initiative.
+        /a href="https://www.edspace.my"
+        /  = image_tag "https://s3.amazonaws.com/100pp/assets/edspacebanner.jpg", width: "100%", class: "u-margintop-10"
+        /<div class="countdown countdown-lg" data-labels="years,months,weeks,days,hour,min,sec" data-from="January 15, 2016 23:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+    /.w-hidden-main.w-hidden-medium.u-marginbottom-40
 
 section#projects
   /- if current_user && @projects_near.present?
