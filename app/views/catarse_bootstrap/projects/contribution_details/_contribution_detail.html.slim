@@ -1,22 +1,26 @@
 - contribution = contribution_detail
--  if !contribution.anonymous || policy(@project).update?
-  .w-clearfix.u-marginbottom-20
-
-    .w-row
-      .w-col.w-col-2  
+/-  if !contribution.anonymous || policy(@project).update?
+.w-clearfix.u-marginbottom-20
+  .w-row
+    .w-col.w-col-2
+      - if !contribution.anonymous? || policy(@project).update?
         = link_to user_path(contribution.user) do
           .thumb.u-left.u-round[style="background-image: url('#{contribution.user.display_image}'); background-size: contain;"]
-
-      .w-col.w-col-10
-        .fontsize-base.fontweight-semibold
+      - else
+         .thumb.u-left.u-round[style="background-image: url('/assets/catarse_bootstrap/user.jpg'); background-size: contain;"]
+    .w-col.w-col-10
+      .fontsize-base.fontweight-semibold
+        - if !contribution.anonymous? || policy(@project).update?
           = link_to user_path(contribution.user), class: 'link-hidden-dark' do
             = contribution.payer_name
-        /- if policy(@project).update?
-        .fontsize-smaller
-          = number_to_currency contribution.value
-          - if contribution.anonymous?
-            = " - "
-            strong= t('.anonymous_contribution')
-        .fontsize-smaller = l(contribution.created_at, format: :simple)
-        .fontsize-smaller = contribution.user.contributions_text
-  .divider.u-marginbottom-20
+        - else
+          =t('.anonymous_contribution')
+      /- if policy(@project).update?
+      .fontsize-smaller
+        = number_to_currency contribution.value
+        - if contribution.anonymous? && policy(@project).update?
+          = " - "
+          strong= t('.anonymous_contribution')
+      .fontsize-smaller = l(contribution.created_at, format: :simple)
+      .fontsize-smaller = contribution.user.contributions_text
+.divider.u-marginbottom-20
