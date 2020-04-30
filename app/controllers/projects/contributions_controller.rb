@@ -15,12 +15,12 @@ class Projects::ContributionsController < ApplicationController
       return redirect_to new_project_contribution_path(@project)
     end
 
+    return render :existing_payment if resource.payments.exists?
+
     if (@contribution.payer_email == "thankyou@100percentproject.org")
       @contribution.payer_name = ''
       @contribution.payer_email = ''
     end
-
-    return render :existing_payment if resource.payments.exists?
   end
 
   def update
