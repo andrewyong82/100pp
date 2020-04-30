@@ -14,6 +14,12 @@ class Projects::ContributionsController < ApplicationController
       flash[:alert] = t('.reward_sold_out')
       return redirect_to new_project_contribution_path(@project)
     end
+
+    if (@contribution.payer_email == "thankyou@100percentproject.org")
+      @contribution.payer_name = ''
+      @contribution.payer_email = ''
+    end
+
     return render :existing_payment if resource.payments.exists?
   end
 
@@ -52,6 +58,7 @@ class Projects::ContributionsController < ApplicationController
     @contribution.payment_service_fee = 0 #@contribution.value.gsub(',','').to_d * 0.15
     authorize @contribution
     @contribution.update_current_billing_info
+
     create! do |success,failure|
       failure.html do
         flash[:alert] = resource.errors.full_messages.to_sentence
