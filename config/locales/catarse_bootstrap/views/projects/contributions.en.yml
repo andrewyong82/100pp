@@ -111,7 +111,7 @@ en:
         braintree: Click Here For Credit Card
       thank_you:
         thank_you: 'Thanks!'
-        thank_you_text_html: 'You just took an important step in the campaign to get %{link1} funded! You will receive a payment confirmation by email once it is processed. You can also track your contributions on your %{link2}.'
+        thank_you_text_html: 'You just took an important step in the campaign to get %{link1} funded! You will receive a payment confirmation by email once it is processed.</br></br>You can also track your contributions on your %{link2} or %{link3} to the the project owner.'
         share: Share
         tweet: Tweet
         share_back: 'Share your support and increase the chances of this project hitting the target!'
