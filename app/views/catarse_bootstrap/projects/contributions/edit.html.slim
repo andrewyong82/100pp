@@ -27,17 +27,17 @@
             .w-row
               = form.input :payer_email, as: :email, wrapper_html: {class: 'w-col w-col-6 w-sub-col'}, input_html: {required: true}, validation_text: true, required: true
               /= form.input :payer_document, as: :tel, wrapper_html: {class: 'w-col w-col-6'}, validation_text: true, input_html: { data: { :'validate-cpf-cnpj' => true } }
-            - if @project.id != 270
-              .w-row.u-margintop-10
-                .w-col.w-col-12
-                  input type="checkbox" class= 'boolean optional w-input checkbox-fix text-field' id="toggle-fee" value="0"
-                  =" "
-                  label.w-form-label.fontsize-smallest for="toggle-fee" =("Include a 15% service fee for 100% Project to cover expenses")
-              .w-row
-                .w-col.w-col-12
-                  #fee-confirmation.card.card-message.u-radius.zindex-10.fontsize-smallest
-                    .fontweight-bold Please, we need your help!
-                    = ('This platform is free for teachers to use - 100% of funds raised go directly to their projects. This fee helps keep us running and covers the cost of connecting you to classrooms in need - e.g running our website, vetting teachers and projects, processing transactions and rewards for contributors, etc.')
+            /- if @project.id != 270
+            /  .w-row.u-margintop-10
+            /    .w-col.w-col-12
+            /      input type="checkbox" class= 'boolean optional w-input checkbox-fix text-field' id="toggle-fee" value="0"
+            /      =" "
+            /      label.w-form-label.fontsize-smallest for="toggle-fee" =("Include a 15% service fee for 100% Project to cover expenses")
+            /  .w-row
+            /    .w-col.w-col-12
+            /      #fee-confirmation.card.card-message.u-radius.zindex-10.fontsize-smallest
+            /        .fontweight-bold Please, we need your help!
+            /        = ('This platform is free for teachers to use - 100% of funds raised go directly to their projects. This fee helps keep us running and covers the cost of connecting you to classrooms in need - e.g running our website, vetting teachers and projects, processing transactions and rewards for contributors, etc.')
 
             .w-row.u-margintop-10
               .w-col.w-col-12
